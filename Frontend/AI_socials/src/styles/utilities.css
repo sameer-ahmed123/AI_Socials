@@ -1,0 +1,39 @@
+.sketch{
+
+    filter:var(--sketch-filter);
+
+}
+
+.paper{
+
+    background:var(--color-paper);
+
+}
+
+.border{
+
+    border:
+
+    var(--border-width)
+
+    solid
+
+    var(--color-border);
+
+}
+
+.rounded{
+
+    border-radius:var(--radius-sm);
+
+}
+
+.container{
+
+    width:100%;
+
+    max-width:var(--container-max-width);
+
+    margin:auto;
+
+}

@@ -1,0 +1,49 @@
+.card {
+  background: var(--color-paper);
+
+  border: var(--border-width) solid var(--color-border);
+
+  border-radius: var(--radius-sm);
+
+  filter: var(--sketch-filter);
+
+  transition: var(--transition-normal);
+}
+
+/* ---------- Variants ---------- */
+
+.card--default {
+  background: var(--color-paper);
+}
+
+.card--surface {
+  background: var(--color-surface);
+}
+
+.card--accent {
+  background: var(--color-accent-surface);
+}
+
+/* ---------- Padding ---------- */
+
+.card--padding-none {
+  padding: 0;
+}
+
+.card--padding-sm {
+  padding: var(--space-3);
+}
+
+.card--padding-md {
+  padding: var(--space-4);
+}
+
+.card--padding-lg {
+  padding: var(--space-5);
+}
+
+/* ---------- Hover ---------- */
+
+.card--hover:hover {
+  transform: translateY(-2px);
+}
