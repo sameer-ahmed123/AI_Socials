@@ -25,6 +25,10 @@
   --color-danger: #ffb3ba;
   --color-info: #bae1ff;
 
+  --sidebar-width:220px;
+  --timeline-width:620px;
+  --widget-width:340px;
+
   /* ==========================================
      TYPOGRAPHY
   ========================================== */

@@ -1,35 +1,23 @@
-body{
-
-    background:var(--color-background);
-
-    min-height:100vh;
-
+body {
+  background: var(--color-background);
+  min-height: 100vh;
 }
 
 button,
 input,
-textarea{
-
-    font-family:inherit;
-
+textarea {
+  font-family: inherit;
 }
 
-img{
-
-    display:block;
-
-    max-width:100%;
-
+img {
+  display: block;
+  max-width: 100%;
 }
 
-textarea{
-
-    resize:none;
-
+textarea {
+  resize: none;
 }
 
-button{
-
-    cursor:pointer;
-
+button {
+  cursor: pointer;
 }

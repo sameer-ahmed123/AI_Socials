@@ -22,3 +22,11 @@ Styling
 
 - Tailwind CSS
 - SVG sketch filter
+
+### Completed
+- AppLayout
+- SideBar
+- Navigation
+- Logo
+- NavItems
+- 

@@ -35,4 +35,10 @@ Shared
 - Dropdown
 - Toast
 - Spinner
-- 
+
+
+## Feature Components
+### sidebar
+- logo
+- navigation
+- navitems
