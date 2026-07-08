@@ -2,6 +2,7 @@ import SketchFilter from "./components/layout/SketchFilter";
 import AppLayout from "./components/layout/AppLayout";
 import Sidebar from "./components/features/sidebar/Sidbar";
 import Timeline from "./components/features/Timeline/Timeline";
+import Widgets from "./components/features/widgets/Widgets";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <AppLayout
         sidebar={<Sidebar />}
         timeline={<Timeline />}
-        widgets={<div>Widgets</div>}
+        widgets={<Widgets />}
       />
     </>
   );

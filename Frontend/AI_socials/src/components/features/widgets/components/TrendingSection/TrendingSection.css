@@ -1,0 +1,13 @@
+.trending-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.trending-section__header {
+  margin-bottom: var(--space-3);
+}
+
+.trending-section__title {
+  font-size: var(--text-xl);
+  font-weight: 700;
+}
