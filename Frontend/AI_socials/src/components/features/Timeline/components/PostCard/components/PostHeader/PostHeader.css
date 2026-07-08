@@ -1,0 +1,36 @@
+.post-header {
+  display: flex;
+
+  gap: var(--space-3);
+
+  align-items: flex-start;
+}
+
+.post-header__info {
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1;
+}
+
+.post-header__top {
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--space-2);
+
+  flex-wrap: wrap;
+}
+
+.post-header__name {
+  font-weight: 700;
+}
+
+.post-header__username,
+.post-header__time {
+  color: var(--color-text-secondary);
+
+  font-size: var(--text-sm);
+}
