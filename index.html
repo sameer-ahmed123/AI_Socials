@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X - Notebook Edition</title>
+    <style>
+        /* --- Import a handwritten font styling fallback --- */
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Chilanka&family=Architects+Daughter&display=swap');
+
+        :root {
+            --bg-color: #f7f5ee; /* Off-white notebook paper background */
+            --border-color: #1a1a1a;
+            --text-main: #111111;
+            --text-muted: #555555;
+            /* Applying the SVG filter to give elements a shaky hand-drawn edge */
+            --sketch-filter: url(#hand-drawn-filter);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Architects Daughter', 'Chilanka', 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px 10px;
+        }
+
+        /* --- Global Sketched Box Styles --- */
+        .sketch-card {
+            background: #ffffff;
+            border: 2px solid var(--border-color);
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 20px;
+            filter: var(--sketch-filter); /* Applies the hand-drawn wobble */
+        }
+
+        /* --- 3-Column Layout --- */
+        .container {
+            display: grid;
+            grid-template-columns: 220px 620px 340px;
+            gap: 25px;
+            width: 100%;
+            max-width: 1220px;
+        }
+
+        /* --- Left Sidebar Menu --- */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            padding-left: 15px;
+            margin-bottom: 10px;
+            font-family: sans-serif;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 8px 15px;
+            font-size: 1.25rem;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: bold;
+        }
+
+        .nav-item .icon {
+            font-family: sans-serif;
+            font-size: 1.4rem;
+            width: 25px;
+        }
+
+        .post-btn-main {
+            background: #111;
+            color: #fff;
+            border: 2px solid var(--border-color);
+            border-radius: 20px;
+            padding: 12px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            text-align: center;
+            filter: var(--sketch-filter);
+        }
+
+        /* --- Center Feed --- */
+        .feed-header {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            background: #fff;
+        }
+
+        .tab {
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            padding-bottom: 4px;
+        }
+
+        .tab.active {
+            border-bottom: 3px solid var(--border-color);
+        }
+
+        /* Compose Area */
+        .compose-area {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .avatar {
+            width: 45px;
+            height: 45px;
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            filter: var(--sketch-filter);
+            flex-shrink: 0;
+        }
+
+        .compose-wrap {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .compose-input {
+            width: 100%;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 1.2rem;
+            outline: none;
+            resize: none;
+            height: 55px;
+            filter: var(--sketch-filter);
+        }
+
+        .btn-sm {
+            background: #ddd;
+            border: 2px solid var(--border-color);
+            padding: 4px 16px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            align-self: flex-end;
+            filter: var(--sketch-filter);
+        }
+
+        /* Posts Styling */
+        .post-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .author-name { font-weight: bold; font-size: 1.1rem; }
+        .author-handle { color: var(--text-muted); font-size: 0.95rem; }
+        
+        .post-body {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding-left: 55px;
+            margin-top: -10px;
+        }
+
+        /* Embedded Design Notes Box */
+        .nested-notes {
+            background: #f0f0f0;
+            border: 2px solid var(--border-color);
+            border-radius: 4px;
+            padding: 12px;
+            margin: 10px 0;
+            filter: var(--sketch-filter);
+        }
+
+        .emoticon-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 20px 0;
+        }
+
+        .emoticon-circle {
+            width: 90px;
+            height: 90px;
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            background: #ffe6cc;
+            filter: var(--sketch-filter);
+        }
+
+        /* Special Large Demo Notes Box */
+        .demo-notes-accent {
+            background: #cccccc;
+            border: 2px solid var(--border-color);
+            padding: 20px;
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin: 15px 0;
+            filter: var(--sketch-filter);
+            border-radius: 4px;
+        }
+
+        .post-actions {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 55px;
+            max-width: 550px;
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .post-actions span { cursor: pointer; }
+
+        /* --- Right Sidebar --- */
+        .search-box {
+            width: 100%;
+            border: 2px solid var(--border-color);
+            border-radius: 20px;
+            padding: 10px 15px;
+            font-size: 1.1rem;
+            outline: none;
+            background: #fff;
+            margin-bottom: 20px;
+            filter: var(--sketch-filter);
+        }
+
+        .widget-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .news-item {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #999;
+        }
+        .news-item:last-child { border-bottom: none; }
+
+        .news-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .color-dots {
+            display: flex;
+            gap: 4px;
+            margin: 4px 0;
+        }
+        .dot {
+            width: 10px;
+            height: 10px;
+            border: 1px solid #000;
+            border-radius: 50%;
+        }
+
+        /* Follow Profile Rows */
+        .follow-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .follow-row:last-child { margin-bottom: 0; }
+
+        .follow-btn {
+            background: #000;
+            color: #fff;
+            border: 2px solid #000;
+            padding: 4px 14px;
+            border-radius: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            filter: var(--sketch-filter);
+        }
+
+        .footer-text {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            padding: 0 10px;
+            line-height: 1.5;
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 1100px) {
+            .container { grid-template-columns: 80px 1fr; }
+            .widgets, .nav-label { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <svg style="position: absolute; width: 0; height: 0;">
+        <filter id="hand-drawn-filter" x="-2%" y="-2%" width="104%" height="104%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+    </svg>
+
+    <div class="container">
+        
+        <aside class="sidebar">
+            <div class="logo">X</div>
+            <nav>
+                <a href="#" class="nav-item"><span class="icon">H</span> <span class="nav-label">Home</span></a>
+                <a href="#" class="nav-item"><span class="icon">Q</span> <span class="nav-label">Explore</span></a>
+                <a href="#" class="nav-item"><span class="icon">N</span> <span class="nav-label">Notifications</span></a>
+                <a href="#" class="nav-item"><span class="icon">C</span> <span class="nav-label">Chat</span></a>
+                <a href="#" class="nav-item"><span class="icon">G</span> <span class="nav-label">SuperGrok</span></a>
+                <a href="#" class="nav-item"><span class="icon">P</span> <span class="nav-label">Premium+</span></a>
+                <a href="#" class="nav-item"><span class="icon">B</span> <span class="nav-label">Bookmarks</span></a>
+                <a href="#" class="nav-item"><span class="icon">S</span> <span class="nav-label">Creator Studio</span></a>
+                <a href="#" class="nav-item"><span class="icon">A</span> <span class="nav-label">Articles</span></a>
+                <a href="#" class="nav-item"><span class="icon">U</span> <span class="nav-label">Profile</span></a>
+                <a href="#" class="nav-item"><span class="icon">M</span> <span class="nav-label">More</span></a>
+            </nav>
+            <button class="post-btn-main">Post</button>
+        </aside>
+
+        <main class="feed">
+            <div class="sketch-card feed-header">
+                <div class="tab active">For you</div>
+                <div class="tab">Following</div>
+                <div class="tab">AI Video & Filmmakers</div>
+            </div>
+
+            <div class="sketch-card compose-area">
+                <div class="avatar" style="background: #ffebcc;">y</div>
+                <div class="compose-wrap">
+                    <textarea class="compose-input" placeholder="What's happening?"></textarea>
+                    <button class="btn-sm">Post</button>
+                </div>
+            </div>
+
+            <div class="sketch-card">
+                <div class="post-header">
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <div class="avatar" style="background: #cce6ff;">N</div>
+                        <div>
+                            <span class="author-name">Nora Sketch</span>
+                            <span class="author-handle">@norasketch · 3h</span>
+                        </div>
+                    </div>
+                    <span style="cursor:pointer; font-weight: bold;">...</span>
+                </div>
+                <div class="post-body">
+                    <p>Spent the morning testing tighter hand-drawn borders. The square corners feel more like wireframes, while the soft corners make every panel look like it belongs in a notebook.</p>
+                    
+                    <div class="nested-notes">
+                        <div style="font-weight: bold; font-size: 0.95rem;">Design Notes <span style="font-weight:normal; color:#666;">@designnotes · 11h</span></div>
+                        <p style="font-size: 0.95rem; margin-top: 4px;">A small UI study compares straight borders, rounded borders, and gently wobbly borders for dashboard cards.</p>
+                        
+                        <div class="emoticon-container">
+                            <div class="emoticon-circle">:-)</div>
+                            <div class="emoticon-circle">:D</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-actions">
+                    <span>20</span> <span>28</span> <span>465</span> <span>30K</span> <span>Save</span>
+                </div>
+            </div>
+
+            <div class="sketch-card">
+                <div class="post-header">
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <div class="avatar" style="background: #ffccd5;">D</div>
+                        <div>
+                            <span class="author-name">Dev Garden</span>
+                            <span class="author-handle">@devgarden · 16h</span>
+                        </div>
+                    </div>
+                    <span style="cursor:pointer; font-weight: bold;">...</span>
+                </div>
+                <div class="post-body">
+                    <p>Today I learned that tiny CSS variables can make a whole page feel more adjustable. One value for wobble, one value for corners, and suddenly the sketch style is much easier to tune.</p>
+                    
+                    <div class="demo-notes-accent">
+                        border-shape demo notes: keep the lines subtle, make the corners intentional, and let the content stay readable.
+                    </div>
+                </div>
+                <div class="post-actions">
+                    <span>136</span> <span>377</span> <span>6.6K</span> <span>217K</span> <span>Save</span>
+                </div>
+            </div>
+        </main>
+
+        <aside class="widgets">
+            <input type="text" class="search-box" placeholder="Search">
+
+            <div class="sketch-card">
+                <h3 class="widget-title">Today's News</h3>
+                
+                <div class="news-item">
+                    <h4>Local Design Meetup Announces Spring Workshop Schedule</h4>
+                    <div class="color-dots">
+                        <div class="dot" style="background: #ffb3ba;"></div>
+                        <div class="dot" style="background: #bae1ff;"></div>
+                        <div class="dot" style="background: #baffc9;"></div>
+                    </div>
+                    <div class="news-meta">15 hours ago · News · 486 posts</div>
+                </div>
+
+                <div class="news-item">
+                    <h4>New CSS Demo Shows Hand-Drawn Borders with Custom Properties</h4>
+                    <div class="color-dots">
+                        <div class="dot" style="background: #ffdfba;"></div>
+                        <div class="dot" style="background: #bae1ff;"></div>
+                        <div class="dot" style="background: #baffc9;"></div>
+                    </div>
+                    <div class="news-meta">23 hours ago · Web · 9,947 posts</div>
+                </div>
+
+                <div class="news-item">
+                    <h4>Sketchy UI Trend Brings Notebook Energy to Dashboards</h4>
+                    <div class="color-dots">
+                        <div class="dot" style="background: #ffdfba;"></div>
+                        <div class="dot" style="background: #bae1ff;"></div>
+                        <div class="dot" style="background: #ffb3ba;"></div>
+                    </div>
+                    <div class="news-meta">Trending now · Design · 148 posts</div>
+                </div>
+            </div>
+
+            <div class="sketch-card">
+                <h3 class="widget-title">What's happening</h3>
+                <div class="news-item" style="border: none;">
+                    <div class="news-meta">Trending in Design</div>
+                    <h4 style="font-size: 1.1rem;">Sketchy Borders</h4>
+                </div>
+                <div class="news-item" style="border: none;">
+                    <div class="news-meta">CSS · Trending</div>
+                    <h4 style="font-size: 1.1rem;">border-shape</h4>
+                </div>
+                <div class="news-item" style="border: none;">
+                    <div class="news-meta">Trending in Frontend</div>
+                    <h4 style="font-size: 1.1rem;">Custom Properties</h4>
+                </div>
+                <div class="news-item" style="border: none;">
+                    <div class="news-meta">Trending in UI</div>
+                    <h4 style="font-size: 1.1rem;">Notebook Layouts</h4>
+                </div>
+                <a href="#" style="color: #111; font-weight: bold; font-size: 0.95rem;">Show more</a>
+            </div>
+
+            <div class="sketch-card">
+                <h3 class="widget-title">Who to follow</h3>
+                
+                <div class="follow-row">
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <div class="avatar" style="background: #baffc9; width: 35px; height: 35px; font-size: 1rem;">R</div>
+                        <div>
+                            <div style="font-weight: bold; font-size: 0.95rem;">Ryan Kaufman</div>
+                            <div class="news-meta" style="margin: 0;">@ryankaufman</div>
+                        </div>
+                    </div>
+                    <button class="follow-btn">Follow</button>
+                </div>
+
+                <div class="follow-row">
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <div class="avatar" style="background: #ffb3ba; width: 35px; height: 35px; font-size: 1rem;">A</div>
+                        <div>
+                            <div style="font-weight: bold; font-size: 0.95rem;">Andrew Clark</div>
+                            <div class="news-meta" style="margin: 0;">@acdlite</div>
+                        </div>
+                    </div>
+                    <button class="follow-btn">Follow</button>
+                </div>
+
+                <div class="follow-row">
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <div class="avatar" style="background: #bae1ff; width: 35px; height: 35px; font-size: 1rem;">B</div>
+                        <div>
+                            <div style="font-weight: bold; font-size: 0.95rem;">Brooklyn!</div>
+                            <div class="news-meta" style="margin: 0;">@imbabybrooklyn</div>
+                        </div>
+                    </div>
+                    <button class="follow-btn">Follow</button>
+                </div>
+            </div>
+
+            <div class="footer-text">
+                Terms of Service &nbsp; Privacy Policy &nbsp; Cookie settings <br>
+                Accessibility &nbsp; Ads info &nbsp; More &nbsp; © 2026 X Corp.
+            </div>
+        </aside>
+
+    </div>
+
+</body>
+</html>

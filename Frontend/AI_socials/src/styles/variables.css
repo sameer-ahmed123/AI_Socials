@@ -1,0 +1,119 @@
+/* ==========================================
+   COLORS
+========================================== */
+
+:root {
+
+  /* Backgrounds */
+  --color-background: #f7f5ee;
+  --color-paper: #ffffff;
+  --color-surface: #f0f0f0;
+  --color-accent-surface: #cccccc;
+
+  /* Text */
+  --color-text: #111111;
+  --color-text-muted: #555555;
+
+  /* Borders */
+  --color-border: #1a1a1a;
+
+  /* Accent Colors */
+  --color-primary: #3b82f6;
+
+  --color-success: #baffc9;
+  --color-warning: #ffdfba;
+  --color-danger: #ffb3ba;
+  --color-info: #bae1ff;
+
+  --sidebar-width:220px;
+  --timeline-width:620px;
+  --widget-width:340px;
+
+  /* ==========================================
+     TYPOGRAPHY
+  ========================================== */
+
+  --font-body:
+    "Architects Daughter",
+    "Chilanka",
+    "Comic Sans MS",
+    cursive,
+    sans-serif;
+
+  --font-heading:
+    "Caveat",
+    cursive;
+
+  --font-logo:
+    sans-serif;
+
+  /* ==========================================
+     FONT SIZES
+  ========================================== */
+
+  --text-xs: .80rem;
+  --text-sm: .95rem;
+  --text-base: 1rem;
+  --text-md: 1.10rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.50rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.5rem;
+
+  /* ==========================================
+     FONT WEIGHTS
+  ========================================== */
+
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* ==========================================
+     SPACING
+  ========================================== */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+
+  /* ==========================================
+     BORDER
+  ========================================== */
+
+  --border-width: 2px;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+
+  /* ==========================================
+     LAYOUT
+  ========================================== */
+
+  --sidebar-width: 220px;
+  --feed-width: 620px;
+  --widget-width: 340px;
+
+  --container-max-width: 1220px;
+  --container-gap: 25px;
+
+  /* ==========================================
+     TRANSITIONS
+  ========================================== */
+
+  --transition-fast: .15s ease;
+  --transition-normal: .25s ease;
+
+  /* ==========================================
+     SVG FILTER
+  ========================================== */
+
+  --sketch-filter: url(#hand-drawn-filter);
+
+}

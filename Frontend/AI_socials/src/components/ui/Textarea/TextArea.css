@@ -1,0 +1,83 @@
+/* ===========================
+   Base
+=========================== */
+
+.textarea {
+  width: 100%;
+
+  padding: var(--space-3);
+
+  border: var(--border-width) solid var(--color-border);
+
+  border-radius: var(--radius-md);
+
+  background: var(--color-paper);
+
+  color: var(--color-text);
+
+  font-family: var(--font-body);
+
+  font-size: var(--text-md);
+
+  line-height: 1.5;
+
+  filter: var(--sketch-filter);
+
+  transition: var(--transition-normal);
+
+  outline: none;
+
+  min-height: 100px;
+}
+
+/* ===========================
+   Variants
+=========================== */
+
+.textarea--default {
+  min-height: 100px;
+}
+
+.textarea--composer {
+  min-height: 60px;
+
+  font-size: var(--text-lg);
+}
+
+/* ===========================
+   Resize
+=========================== */
+
+.textarea--resize-none {
+  resize: none;
+}
+
+.textarea--resize-vertical {
+  resize: vertical;
+}
+
+.textarea--resize-horizontal {
+  resize: horizontal;
+}
+
+.textarea--resize-both {
+  resize: both;
+}
+
+/* ===========================
+   States
+=========================== */
+
+.textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.textarea:focus {
+  border-color: var(--color-border);
+}
+
+.textarea:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
