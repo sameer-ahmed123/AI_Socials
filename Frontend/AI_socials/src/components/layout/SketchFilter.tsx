@@ -10,20 +10,26 @@ const SketchFilter = () => {
       <defs>
         <filter
           id="hand-drawn-filter"
-          x="-5%"
-          y="-5%"
-          width="110%"
-          height="110%"
+          x="-2%"
+          y="-2%"
+          width="104%"
+          height="104%"
         >
           <feTurbulence
             type="fractalNoise"
-            baseFrequency="0.012"
-            numOctaves="2"
-            seed="8"
+            baseFrequency="0.04"
+            numOctaves="3"
+            // seed="8"
             result="noise"
           />
 
-          <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.8" />
+          <feDisplacementMap
+            in="SourceGraphic"
+            in2="noise"
+            scale="3"
+            xChannelSelector="R"
+            yChannelSelector="G"
+          />
         </filter>
       </defs>
     </svg>

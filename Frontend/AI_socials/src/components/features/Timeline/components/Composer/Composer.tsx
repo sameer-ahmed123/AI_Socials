@@ -35,7 +35,8 @@ const Composer = ({ onSubmit }: ComposerProps) => {
           />
 
           <div className="composer__footer">
-            <Button onClick={handleSubmit}>Post</Button>
+            <Button style={{paddingLeft:"15px",paddingRight:"15px",paddingTop:"3px",paddingBottom:"3px", borderRadius:"8px"
+            }} variant="secondary" onClick={handleSubmit}>Post</Button>
           </div>
         </div>
       </div>

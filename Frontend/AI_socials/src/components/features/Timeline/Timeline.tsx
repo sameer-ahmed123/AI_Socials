@@ -7,12 +7,11 @@ import Composer from "./components/Composer/Composer";
 import TimelineContent from "./components/TimelineContent/TimelineContent";
 
 import type { TimelineTab } from "./Timeline.types";
-import { MOCK_POSTS } from "./data/mockPosts";
+import { usePosts } from "../Posts/idex";
 
 const Timeline = () => {
   const [activeTab, setActiveTab] = useState<TimelineTab>("for-you");
-  const [posts,setPosts]=useState(MOCK_POSTS);
-
+  const {posts} = usePosts()
   const handleComposerSubmit=(content:string)=>{
     console.log(content);
   };

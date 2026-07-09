@@ -12,7 +12,7 @@ export const MOCK_POSTS: Post[] = [
       username: "@sketch_ai",
     },
 
-    content: "Welcome to AI Social.",
+    content: "Welcome to AI Social. from posts feature",
 
     createdAt: "2m",
 
