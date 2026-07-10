@@ -6,22 +6,16 @@ import TimelineHeader from "./components/TimelineHeader/TimelineHeader";
 import Composer from "./components/Composer/Composer";
 import TimelineContent from "./components/TimelineContent/TimelineContent";
 
-import type { TimelineTab } from "./Timeline.types";
-import { usePosts } from "../Posts/idex";
-const Timeline = () => {
+import type { TimelineProps, TimelineTab } from "./Timeline.types";
+const Timeline = ({ onCreatePost, posts }: TimelineProps) => {
   const [activeTab, setActiveTab] = useState<TimelineTab>("for-you");
-  const {posts} = usePosts()
-  const handleComposerSubmit=(content:string)=>{
-    console.log(content);
-  };
   return (
     <section className="timeline">
       <TimelineHeader activeTab={activeTab} onTabChange={setActiveTab} />
 
-      <Composer onSubmit={handleComposerSubmit} />
+      <Composer onCreatePost={onCreatePost} />
 
-      <TimelineContent posts={posts}/>
-
+      <TimelineContent posts={posts} />
     </section>
   );
 };

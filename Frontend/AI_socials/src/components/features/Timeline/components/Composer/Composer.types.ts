@@ -1,3 +1,5 @@
+import type { CreatePostInput } from "../../../../features/Posts";
+
 export interface ComposerProps {
-  onSubmit: (content: string) => void;
+  onCreatePost: (input: CreatePostInput) => void;
 }

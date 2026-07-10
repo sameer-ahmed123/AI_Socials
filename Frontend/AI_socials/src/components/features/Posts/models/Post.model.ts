@@ -17,5 +17,7 @@ export interface Post {
 
   liked: boolean;
 
+  reposted: boolean;
+
   bookmarked: boolean;
 }
