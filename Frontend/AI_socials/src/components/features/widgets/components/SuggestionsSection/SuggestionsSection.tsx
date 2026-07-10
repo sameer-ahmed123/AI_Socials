@@ -13,7 +13,7 @@ const SuggestionsSection = ({ users }: SuggestionsSectionProps) => {
 
       <div className="suggestions-section__content">
         {users.map((user) => (
-          <SuggestionItem key={user.id} user={user} />
+          <SuggestionItem color={user.color}  key={user.id} user={user} />
         ))}
       </div>
     </Card>

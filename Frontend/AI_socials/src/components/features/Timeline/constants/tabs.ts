@@ -10,4 +10,8 @@ export const TIMELINE_TABS = [
 
     label: "Following",
   },
+  {
+    id: "ai-vid-and-filmmakers",
+    label: "Ai Video & creators",
+  },
 ];

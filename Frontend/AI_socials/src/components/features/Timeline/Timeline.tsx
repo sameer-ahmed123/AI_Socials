@@ -8,7 +8,6 @@ import TimelineContent from "./components/TimelineContent/TimelineContent";
 
 import type { TimelineTab } from "./Timeline.types";
 import { usePosts } from "../Posts/idex";
-
 const Timeline = () => {
   const [activeTab, setActiveTab] = useState<TimelineTab>("for-you");
   const {posts} = usePosts()

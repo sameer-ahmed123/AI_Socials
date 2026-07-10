@@ -1,1 +1,1 @@
-export type TimelineTab = "for-you" | "following";
+export type TimelineTab = "for-you" | "following" | "ai-vid-and-filmmakers" ;

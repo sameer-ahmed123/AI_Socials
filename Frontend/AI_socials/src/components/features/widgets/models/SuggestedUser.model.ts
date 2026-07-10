@@ -6,4 +6,5 @@ export interface SuggestedUser {
   username: string;
 
   followed: boolean;
+  color:"yellow" | "blue" | "green" | "red" | "purple" | "gray";
 }

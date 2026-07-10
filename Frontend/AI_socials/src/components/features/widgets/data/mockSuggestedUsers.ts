@@ -9,6 +9,7 @@ export const MOCK_USERS: SuggestedUser[] = [
     username: "@sketch_ai",
 
     followed: false,
+    color: "yellow",
   },
 
   {
@@ -19,5 +20,26 @@ export const MOCK_USERS: SuggestedUser[] = [
     username: "@notebook",
 
     followed: false,
+    color: "blue",
+  },
+  {
+    id: "3",
+
+    name: "Notebook  ",
+
+    username: "@boti",
+
+    followed: false,
+    color: "purple",
+  },
+  {
+    id: "4",
+
+    name: "Notebook  ",
+
+    username: "@boti",
+
+    followed: false,
+    color: "red",
   },
 ];

@@ -2,7 +2,7 @@ import "./TagDots.css";
 
 import type { TagDotsProps } from "./TagDots.types";
 
-const TagDots = ({ colors = ["red","blue","green"] }: TagDotsProps) => {
+const TagDots = ({ colors = ["#ffb3ba","#bae1ff","#baffc9"] }: TagDotsProps) => {
   return (
     <div className="tag-dots">
       {colors.map((color, index) => (
