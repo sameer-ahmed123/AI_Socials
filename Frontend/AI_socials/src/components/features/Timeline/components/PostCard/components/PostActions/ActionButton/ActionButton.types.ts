@@ -1,15 +1,21 @@
 import type { ReactNode } from "react";
 
+export type ActionButtonVariant =
+  | "reply"
+  | "like"
+  | "repost"
+  | "bookmark";
+
 export interface ActionButtonProps {
   icon: ReactNode;
-
-  label: string;
 
   count?: number;
 
   active?: boolean;
 
-  activeClassName?: string;
+  variant: ActionButtonVariant;
 
-  onClick: () => void;
+  onClick?: () => void;
+
+  ariaLabel: string;
 }

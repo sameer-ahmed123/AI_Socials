@@ -1,9 +1,18 @@
+import { Newspaper } from "lucide-react";
+import EmptyState from "../../../../ui/EmptyState";
 import PostCard from "../PostCard/PostCard";
 import type { TimelineContentProps } from "./TimelineContent.types";
 
 const TimelineContent = ({ posts, handlers }: TimelineContentProps) => {
   if (posts.length === 0) {
-    return <div>No posts yet.</div>;
+    return (
+      <EmptyState
+      
+        icon={<Newspaper size={52} />}
+        title="No posts yet"
+        description="Be the first to share something with your community."
+      />
+    );
   }
 
   return (

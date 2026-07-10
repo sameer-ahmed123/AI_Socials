@@ -4,29 +4,28 @@ import type { ActionButtonProps } from "./ActionButton.types";
 
 const ActionButton = ({
   icon,
-  label,
   count,
   active = false,
-  activeClassName = "",
+  variant,
   onClick,
+  ariaLabel,
 }: ActionButtonProps) => {
   return (
     <button
       type="button"
+      aria-label={ariaLabel}
+      onClick={onClick}
       className={`
         action-button
+        action-button--${variant}
         ${active ? "action-button--active" : ""}
-        ${active ? activeClassName : ""}
       `}
-      onClick={onClick}
-      aria-label={label}
-      title={label}
     >
       <span className="action-button__icon">
         {icon}
       </span>
 
-      {typeof count === "number" && (
+      {count !== undefined && (
         <span className="action-button__count">
           {count}
         </span>

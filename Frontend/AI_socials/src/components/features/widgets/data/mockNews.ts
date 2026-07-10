@@ -12,7 +12,7 @@ export const MOCK_NEWS: NewsArticle[] = [
 
     posts: "486 Posts",
 
-    tags: ["#ffc9c9", "#b8d8ff", "#c8f7c5"],
+    dotColors: ["#ffc9c9", "#b8d8ff", "#c8f7c5"],
   },
 
   {
@@ -26,7 +26,7 @@ export const MOCK_NEWS: NewsArticle[] = [
 
     posts: "9,947 Posts",
 
-    tags: ["#ffd9a8", "#b8d8ff", "#c8f7c5"],
+    dotColors: ["#ffd9a8", "#b8d8ff", "#c8f7c5"],
   },
 
   {
@@ -40,6 +40,6 @@ export const MOCK_NEWS: NewsArticle[] = [
 
     posts: "148 Posts",
 
-    tags: ["#ffd9a8", "#b8d8ff", "#ffc9c9"],
+    dotColors: ["#ffd9a8", "#b8d8ff", "#ffc9c9"],
   },
 ];

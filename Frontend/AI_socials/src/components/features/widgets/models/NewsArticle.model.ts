@@ -3,6 +3,6 @@ export interface NewsArticle {
   headline: string;
   source: string;
   publishedAt: string;
-  posts: number;
+  posts: string;
   dotColors: string[];
 }

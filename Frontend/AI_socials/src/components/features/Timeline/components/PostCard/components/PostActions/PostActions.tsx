@@ -5,52 +5,48 @@ import {
   Repeat2,
 } from "lucide-react";
 
-import ActionButton from "./ActionButton";
+import ActionButton from "../PostActions/ActionButton";
 
 import "./PostActions.css";
 
 import type { PostActionsProps } from "./PostActions.type";
 
-const PostActions = ({
-  post,
-  handlers,
-}: PostActionsProps) => {
+const PostActions = ({ post, handlers }: PostActionsProps) => {
   return (
     <footer className="post-actions">
-
       <ActionButton
         icon={<MessageCircle size={18} />}
-        label="Reply"
         count={post.replies}
+        variant="reply"
+        ariaLabel="Reply to post"
         onClick={() => handlers.onReply(post.id)}
       />
 
       <ActionButton
         icon={<Repeat2 size={18} />}
-        label="Repost"
         count={post.reposts}
         active={post.reposted}
-        activeClassName="action-button--repost"
+        variant="repost"
+        ariaLabel="Repost post"
         onClick={() => handlers.onRepost(post.id)}
       />
 
       <ActionButton
         icon={<Heart size={18} />}
-        label="Like"
         count={post.likes}
         active={post.liked}
-        activeClassName="action-button--like"
+        variant="like"
+        ariaLabel="Like post"
         onClick={() => handlers.onLike(post.id)}
       />
 
       <ActionButton
         icon={<Bookmark size={18} />}
-        label="Bookmark"
+        variant="bookmark"
         active={post.bookmarked}
-        activeClassName="action-button--bookmark"
+        ariaLabel="Bookmark post"
         onClick={() => handlers.onBookmark(post.id)}
       />
-
     </footer>
   );
 };
