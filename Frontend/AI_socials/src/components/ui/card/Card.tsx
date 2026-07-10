@@ -1,6 +1,6 @@
 import "./Card.css";
 
-import type { CardProps } from "./card.types.ts";
+import type { CardProps } from "./Card.types";
 
 const Card = ({
   children,
