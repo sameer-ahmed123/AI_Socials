@@ -32,21 +32,18 @@ export const usePosts = () => {
   };
 
   const toggleLike = (postId: string) => {
-    setPosts((previous) =>
-      toggleLikeAction(previous, postId),
-    );
+    setPosts((previous) => toggleLikeAction(previous, postId));
   };
 
   const toggleBookmark = (postId: string) => {
-    setPosts((previous) =>
-      toggleBookmarkAction(previous, postId),
-    );
+    setPosts((previous) => toggleBookmarkAction(previous, postId));
   };
 
   const toggleRepost = (postId: string) => {
-    setPosts((previous) =>
-      toggleRepostAction(previous, postId),
-    );
+    setPosts((previous) => toggleRepostAction(previous, postId));
+  };
+  const handleReply = (postId: string) => {
+    console.log("Reply:", postId);
   };
 
   return {
@@ -59,5 +56,6 @@ export const usePosts = () => {
     toggleBookmark,
 
     toggleRepost,
+    handleReply,
   };
 };

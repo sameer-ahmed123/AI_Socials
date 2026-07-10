@@ -4,4 +4,5 @@ export interface PostHeaderProps {
   author: User;
 
   createdAt: string;
+  postId: string;
 }

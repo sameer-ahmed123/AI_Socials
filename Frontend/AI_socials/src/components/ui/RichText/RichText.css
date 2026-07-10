@@ -1,0 +1,37 @@
+
+.rich-text__external-link,
+.rich-text__internal-link {
+  color: var(--color-primary);
+
+  text-decoration: none;
+
+  font-weight: 500;
+
+  transition:
+    color var(--transition-fast),
+    text-decoration-color var(--transition-fast);
+}
+
+
+
+.rich-text__internal-link {
+  cursor: pointer;
+}
+
+
+
+.rich-text__external-link:hover,
+.rich-text__internal-link:hover {
+  text-decoration: underline;
+}
+
+
+
+.rich-text__external-link:focus-visible,
+.rich-text__internal-link:focus-visible {
+  outline: 2px solid var(--color-primary);
+
+  outline-offset: 2px;
+
+  border-radius: var(--radius-xs);
+}

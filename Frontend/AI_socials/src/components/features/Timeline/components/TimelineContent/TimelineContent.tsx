@@ -1,7 +1,7 @@
 import PostCard from "../PostCard/PostCard";
 import type { TimelineContentProps } from "./TimelineContent.types";
 
-const TimelineContent = ({ posts }: TimelineContentProps) => {
+const TimelineContent = ({ posts, handlers }: TimelineContentProps) => {
   if (posts.length === 0) {
     return <div>No posts yet.</div>;
   }
@@ -9,7 +9,7 @@ const TimelineContent = ({ posts }: TimelineContentProps) => {
   return (
     <>
       {posts.map((post) => (
-        <PostCard key={post.id} post={post} />
+        <PostCard handlers={handlers} key={post.id} post={post} />
       ))}
     </>
   );

@@ -6,16 +6,20 @@ import type { PostCardProps } from "./PostCard.types";
 
 import PostHeader from "./components/PostHeader/PostHeader";
 import PostBody from "./components/PostBody/PostBody";
-import PostFooter from "./components/PostFooter/PostFooter";
+import PostActions from "./components/PostActions/PostActions";
 
-const PostCard = ({ post }: PostCardProps) => {
+const PostCard = ({ post, handlers }: PostCardProps) => {
   return (
     <Card className="post-card">
-      <PostHeader author={post.author} createdAt={post.createdAt} />
+      <PostHeader
+        postId={post.id}
+        author={post.author}
+        createdAt={post.createdAt}
+      />
 
       <PostBody content={post.content} />
 
-      <PostFooter post={post} />
+      <PostActions post={post} handlers={handlers} />
     </Card>
   );
 };

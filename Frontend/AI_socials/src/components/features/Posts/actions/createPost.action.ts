@@ -19,7 +19,7 @@ export const createPostAction = ({
 
     content: input.content,
 
-    createdAt: "Now",
+    createdAt: new Date().toISOString(),
 
     likes: 0,
 

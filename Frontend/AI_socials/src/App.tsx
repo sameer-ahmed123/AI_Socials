@@ -6,14 +6,29 @@ import Widgets from "./components/features/widgets/Widgets";
 import { usePosts } from "./components/features/Posts";
 
 function App() {
-  const { posts, createPost } = usePosts();
+  const {
+    posts,
+    createPost,
+    toggleBookmark,
+    toggleLike,
+    toggleRepost,
+    handleReply,
+  } = usePosts();
   return (
     <>
       <SketchFilter />
-
       <AppLayout
         sidebar={<Sidebar />}
-        timeline={<Timeline posts={posts} onCreatePost={createPost} />}
+        timeline={
+          <Timeline
+            posts={posts}
+            onCreatePost={createPost}
+            onBookmark={toggleBookmark}
+            onLike={toggleLike}
+            onRepost={toggleRepost}
+            onReply={handleReply}
+          />
+        }
         widgets={<Widgets />}
       />
     </>

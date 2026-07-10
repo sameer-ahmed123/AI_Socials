@@ -6,4 +6,11 @@ export interface TimelineProps {
   posts: Post[];
 
   onCreatePost: (input: CreatePostInput) => void;
+  onReply(postId: string): void;
+
+  onLike(postId: string): void;
+
+  onRepost(postId: string): void;
+
+  onBookmark(postId: string): void;
 }

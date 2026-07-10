@@ -1,6 +1,6 @@
-import type { Post } from "../../../../features/Posts";
+import type { Post } from "../../../../../../features/Posts";
 
-export interface PostCardHandlers {
+export interface PostActionHandlers {
   onReply: (postId: string) => void;
 
   onLike: (postId: string) => void;
@@ -10,8 +10,8 @@ export interface PostCardHandlers {
   onBookmark: (postId: string) => void;
 }
 
-export interface PostCardProps {
+export interface PostActionsProps {
   post: Post;
 
-  handlers: PostCardHandlers;
+  handlers: PostActionHandlers;
 }

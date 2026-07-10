@@ -1,10 +1,11 @@
 import Avatar from "../../../../../../ui/Avatar/Avatar";
+import { formatRelativeTime } from "../../../../../../../utils/date/formatRelativeTime";
 
 import "./PostHeader.css";
-
+import PostMenu from "../PostMenu/PostMenu";
 import type { PostHeaderProps } from "./PostHeader.types";
 
-const PostHeader = ({ author, createdAt }: PostHeaderProps) => {
+const PostHeader = ({ author, createdAt,postId }: PostHeaderProps) => {
   return (
     <header className="post-header">
       <Avatar initials={author.name.charAt(0)} />
@@ -15,9 +16,10 @@ const PostHeader = ({ author, createdAt }: PostHeaderProps) => {
 
           <span className="post-header__username">{author.username}</span>
 
-          <span className="post-header__time">• {createdAt}</span>
+          <span className="post-header__time">• {formatRelativeTime(createdAt)}</span>
         </div>
       </div>
+       <PostMenu postId={postId} />
     </header>
   );
 };

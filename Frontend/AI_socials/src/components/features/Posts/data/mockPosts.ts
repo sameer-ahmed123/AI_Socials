@@ -14,7 +14,7 @@ export const MOCK_POSTS: Post[] = [
 
     content: "Welcome to AI Social. from posts feature",
 
-    createdAt: "2m",
+    createdAt: "2026-07-10T12:30:00Z",
 
     likes: 42,
 
@@ -40,7 +40,7 @@ export const MOCK_POSTS: Post[] = [
 
     content: "how's it going my bois.",
 
-    createdAt: "56m",
+    createdAt: "2026-06-10T12:30:00Z",
 
     likes: 152,
 
@@ -67,7 +67,7 @@ export const MOCK_POSTS: Post[] = [
     content:
       "Spent the morning testing tighter hand-drawn borders. The square corners feel more like wireframes, while the soft corners make every panel look like it belongs in a notebookSpent the morning testing tighter hand-drawn borders. The square corners feel more like wireframes, while the soft corners make every panel look like it belongs in a notebookSpent the morning testing tighter hand-drawn borders. The square corners feel more like wireframes, while the soft corners make every panel look like it belongs in a notebook Spent the morning testing tighter hand-drawn borders. The square corners feel more like wireframes, while the soft corners make every panel look like it belongs in a notebook Spent the morning testing tighter hand-drawn borders. The square corners feel more like wireframes, while the soft corners make every panel look like it belongs in a notebookSpent the morning testing tighter hand-drawn borders. The square corners feel more like wireframes, while the soft corners make every panel look like it belongs in a notebookSpent the morning testing tighter hand-drawn borders. The square corners feel more like wireframes, while the soft corners make every panel look like it belongs in a notebookSpent the morning testing tighter hand-drawn borders. The square corners feel more like wireframes, while the soft corners make every panel look like it belongs in a notebookSpent the morning testing tighter hand-drawn borders. The square corners feel more like wireframes, while the soft corners make every panel look like it belongs in a notebookSpent the morning testing tighter hand-drawn borders. The square corners feel more like wireframes, while the soft corners make every panel look like it belongs in a notebookSpent the morning testing tighter hand-drawn borders. The square corners feel more like wireframes, while the soft corners make every panel look like it belongs in a notebook",
 
-    createdAt: "56m",
+    createdAt: "2019-02-02T12:30:00Z",
 
     likes: 1,
 

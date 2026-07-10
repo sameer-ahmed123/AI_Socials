@@ -22,7 +22,8 @@
 
   --color-success: #baffc9;
   --color-warning: #ffdfba;
-  --color-danger: #ffb3ba;
+  /* --color-danger: #ffb3ba; */
+  --color-danger: #d64545;
   --color-info: #bae1ff;
 
   --sidebar-width:220px;
