@@ -1,0 +1,76 @@
+/* ==========================================
+   APPLICATION SHELL
+========================================== */
+
+.app-layout {
+  display: grid;
+
+  grid-template-columns:
+    var(--sidebar-width)
+    1fr
+    var(--widget-width);
+
+  gap: var(--container-gap);
+
+  width: 100%;
+
+  max-width: var(--container-max-width);
+
+  margin: 0 auto;
+
+  min-height: 100vh;
+
+  padding: var(--space-5);
+
+  transition:
+    grid-template-columns var(--transition-normal);
+}
+
+.app-layout--collapsed {
+  grid-template-columns:
+    var(--sidebar-width-collapsed)
+    1fr
+    var(--widget-width);
+}
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.app-layout__sidebar {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: var(--sidebar-width);
+
+  transition: min-width var(--transition-normal);
+}
+
+.app-layout--collapsed .app-layout__sidebar {
+  min-width: var(--sidebar-width-collapsed);
+}
+
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+
+.app-layout__main {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+/* ==========================================
+   WIDGETS
+========================================== */
+
+.app-layout__widgets {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+}

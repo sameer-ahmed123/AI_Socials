@@ -1,80 +1,16 @@
-.app-layout {
-  display: grid;
+/*
+==========================================
 
-  grid-template-columns:
-    var(--sidebar-width)
-    minmax(0, 1fr)
-    var(--widget-width);
+AppLayout
 
-  gap: var(--container-gap);
+This file is reserved for styles that are
+specific to the AppLayout component itself.
 
-  width: 100%;
+Global application layout lives in:
+- styles/layout.css
 
-  max-width: var(--container-max-width);
+Responsive layout rules live in:
+- styles/breakpoints.css
 
-  margin: 0 auto;
-
-  padding: var(--space-5);
-
-  transition: grid-template-columns 0.25s ease;
-}
-
-.app-layout--collapsed {
-  grid-template-columns:
-    var(--sidebar-width-collapsed)
-    minmax(0, 1fr)
-    var(--widget-width);
-}
-/* Sidebar */
-
-.app-layout__sidebar {
-  display: flex;
-
-  flex-direction: column;
-  min-width: var(--sidebar-width);
-}
-
-.app-layout--collapsed .app-layout__sidebar {
-  min-width: var(--sidebar-width-collapsed);
-}
-
-/* Timeline */
-
-.app-layout__main {
-  display: flex;
-
-  flex-direction: column;
-  min-width: 0;
-}
-
-/* Widgets */
-
-.app-layout__widgets {
-  display: flex;
-
-  flex-direction: column;
-}
-
-/* ---------- Responsive ---------- */
-
-@media (max-width: 1100px) {
-  .app-layout {
-    grid-template-columns:
-      var(--sidebar-width-collapsed)
-      minmax(0, 1fr);
-  }
-
-  .app-layout__widgets {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .app-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .app-layout__sidebar {
-    display: none;
-  }
-}
+==========================================
+*/
