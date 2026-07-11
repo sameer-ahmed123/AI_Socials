@@ -1,0 +1,53 @@
+.collapse-button {
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--space-3);
+
+  width: 100%;
+
+  padding: 12px;
+
+  margin-top: var(--space-3);
+
+  background: transparent;
+
+  border: none;
+
+  cursor: pointer;
+
+  border-radius: var(--radius-lg);
+
+  transition:
+    background .2s ease,
+    padding .25s ease;
+}
+
+.collapse-button:hover {
+  background: rgba(0,0,0,.05);
+}
+
+.collapse-button__label {
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  opacity: 1;
+
+  max-width: 120px;
+
+  transition:
+    opacity .25s ease,
+    max-width .25s ease;
+}
+
+.collapse-button--collapsed {
+  justify-content: center;
+}
+
+.collapse-button--collapsed .collapse-button__label {
+  opacity: 0;
+
+  max-width: 0;
+}

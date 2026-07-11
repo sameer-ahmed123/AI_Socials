@@ -3,7 +3,6 @@
 ========================================== */
 
 :root {
-
   /* Backgrounds */
   --color-background: #f7f5ee;
   --color-paper: #ffffff;
@@ -26,38 +25,27 @@
   --color-danger: #d64545;
   --color-info: #bae1ff;
 
-  --sidebar-width:220px;
-  --timeline-width:620px;
-  --widget-width:340px;
-
   /* ==========================================
      TYPOGRAPHY
   ========================================== */
 
   --font-body:
-    "Architects Daughter",
-    "Chilanka",
-    "Comic Sans MS",
-    cursive,
-    sans-serif;
+    "Architects Daughter", "Chilanka", "Comic Sans MS", cursive, sans-serif;
 
-  --font-heading:
-    "Caveat",
-    cursive;
+  --font-heading: "Caveat", cursive;
 
-  --font-logo:
-    sans-serif;
+  --font-logo: sans-serif;
 
   /* ==========================================
      FONT SIZES
   ========================================== */
 
-  --text-xs: .80rem;
-  --text-sm: .95rem;
+  --text-xs: 0.8rem;
+  --text-sm: 0.95rem;
   --text-base: 1rem;
-  --text-md: 1.10rem;
+  --text-md: 1.1rem;
   --text-lg: 1.25rem;
-  --text-xl: 1.50rem;
+  --text-xl: 1.5rem;
   --text-2xl: 2rem;
   --text-3xl: 2.5rem;
 
@@ -100,21 +88,27 @@
   --sidebar-width: 220px;
   --feed-width: 620px;
   --widget-width: 340px;
-
   --container-max-width: 1220px;
   --container-gap: 25px;
+  --sidebar-width-collapsed: 80px;
+  --container-max-width: 1220px;
+  --container-gap: 25px;
+  /* Responsive */
+
+  --tablet-breakpoint: 1100px;
+
+  --mobile-breakpoint: 768px;
 
   /* ==========================================
      TRANSITIONS
   ========================================== */
 
-  --transition-fast: .15s ease;
-  --transition-normal: .25s ease;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
 
   /* ==========================================
      SVG FILTER
   ========================================== */
 
   --sketch-filter: url(#hand-drawn-filter);
-
 }

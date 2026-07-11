@@ -12,4 +12,5 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
   disabled?: boolean;
   className?: string;
+  collapsed?: boolean;
 }

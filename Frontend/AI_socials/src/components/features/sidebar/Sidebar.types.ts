@@ -6,4 +6,5 @@ export interface SidebarItem {
   label: string;
 
   icon: IconName;
+  to: string;
 }

@@ -1,16 +1,18 @@
 import NavItem from "../NavItem/NavItem";
 
 import { SIDEBAR_ITEMS } from "../../constants/SidebarItems";
+import type { NavigationProps } from "./Navigation.types";
 
-const Navigation = () => {
+const Navigation = ({ collapsed }: NavigationProps) => {
   return (
-    <nav>
+    <nav className="navigation">
       {SIDEBAR_ITEMS.map((item) => (
         <NavItem
           key={item.id}
           icon={item.icon}
           label={item.label}
-          active={item.id === "home"}
+          to={item.to}
+          collapsed={collapsed}
         />
       ))}
     </nav>

@@ -5,8 +5,40 @@
   position: sticky;
   top: 0;
   padding: var(--space-4);
+  transition:
+    width 0.3s ease,
+    padding 0.3s ease;
+  filter: var(--sketch-filter);
 }
 
 .sidebar .button {
   margin-top: auto;
+}
+
+.sidebar--expanded {
+  width: 260px;
+}
+
+.sidebar--collapsed {
+  width: 90px;
+}
+
+.sidebar .button {
+  margin-top: auto;
+}
+
+.sidebar__post-button {
+  transition:
+    width 0.25s ease,
+    padding 0.25s ease;
+}
+
+.sidebar__post-button--collapsed {
+  width: 52px;
+
+  align-self: center;
+
+  padding-left: 0;
+
+  padding-right: 0;
 }

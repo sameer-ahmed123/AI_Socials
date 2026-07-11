@@ -1,8 +1,56 @@
 .sidebar-logo {
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: var(--space-2);
+  position: relative;
 
-  cursor: pointer;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: var(--space-4);
+
+  font-weight: 700;
+
+  font-size: 2rem;
+
+  overflow: hidden;
+}
+
+.sidebar-logo__full,
+.sidebar-logo__compact {
+  position: absolute;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Expanded */
+
+.sidebar-logo__full {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+.sidebar-logo__compact {
+  opacity: 0;
+
+  transform: translateY(10px);
+}
+
+/* Collapsed */
+
+.sidebar-logo--collapsed .sidebar-logo__full {
+  opacity: 0;
+
+  transform: translateY(-10px);
+}
+
+.sidebar-logo--collapsed .sidebar-logo__compact {
+  opacity: 1;
+
+  transform: translateY(0);
 }
