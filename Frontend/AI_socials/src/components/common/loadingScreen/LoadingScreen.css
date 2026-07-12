@@ -1,0 +1,48 @@
+.loading-screen {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  width: 100%;
+
+  min-height: 100vh;
+  filter: var(--sketch-filter);
+}
+
+.loading-screen__content {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: var(--space-4);
+}
+
+.loading-screen__title {
+  font-size: 2rem;
+
+  font-weight: 700;
+}
+
+.loading-screen__spinner {
+  width: 42px;
+
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+
+  border: 4px solid var(--color-border);
+
+  border-top-color: var(--color-primary);
+
+  animation: loading-spin 0.8s linear infinite;
+}
+
+.loading-screen__text {
+  color: var(--color-text-secondary);
+}
+
+

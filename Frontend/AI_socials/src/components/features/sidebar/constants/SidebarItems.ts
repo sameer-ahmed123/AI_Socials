@@ -5,62 +5,56 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
     id: "home",
     label: "Home",
     icon: "home",
-    to:"/"
+    to: "/",
+    requiresAuth: false,
   },
 
   {
     id: "explore",
     label: "Explore",
     icon: "explore",
-    to:"/explore"
+    to: "/explore",
+    requiresAuth: false,
   },
 
   {
     id: "notifications",
     label: "Notifications",
     icon: "notifications",
-    to:"/notifications"
-
+    to: "/notifications",
+    requiresAuth: true,
   },
 
   {
     id: "chat",
     label: "Chat",
     icon: "chat",
-    to:"/messages"
-
+    to: "/messages",
+    requiresAuth: true,
   },
 
-  {
-    id: "ai",
-    label: "AI Video",
-    icon: "ai",
-    to:"*"
+  // {
+  //   id: "bookmarks",
+  //   label: "Bookmarks",
+  //   icon: "bookmarks",
+  //   to:"/bookmarks",
+  // requiresAuth:true
 
-  },
-
-
-  {
-    id: "bookmarks",
-    label: "Bookmarks",
-    icon: "bookmarks",
-    to:"/bookmarks"
-
-  },
+  // },
 
   {
     id: "profile",
     label: "Profile",
     icon: "profile",
-    to:"/profile/:username"
-
+    to: "/profile/:username",
+    requiresAuth: true,
   },
 
-  {
-    id: "more",
-    label: "More",
-    icon: "more",
-    to:"/more"
+  // {
+  //   id: "more",
+  //   label: "More",
+  //   icon: "more",
+  //   to:"/more"
 
-  },
+  // },
 ];

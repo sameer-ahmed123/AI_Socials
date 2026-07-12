@@ -20,6 +20,8 @@ backend/db.sqlite3-journal
 backend/media/
 backend/staticfiles/
 backend/.env
+backend/config/credentials/
+
 
 # ==========================================
 # Global / IDE Files

@@ -10,14 +10,17 @@ import "./styles/reset.css";
 import "./styles/utilities.css";
 import App from "./App.tsx";
 import { BrowserRouter } from "react-router-dom";
-import { LayoutProvider } from "./components/layout/LayoutContext.tsx";
+import { LayoutProvider } from "./context/LayoutContext.tsx";
+import { AuthProvider } from "./context/AuthContext.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-      <LayoutProvider>
-        <App />
-      </LayoutProvider>
+      <AuthProvider>
+        <LayoutProvider>
+          <App />
+        </LayoutProvider>
+      </AuthProvider>
     </BrowserRouter>
   </StrictMode>,
 );

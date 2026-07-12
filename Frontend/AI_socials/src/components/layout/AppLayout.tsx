@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import "./AppLayout.css";
-import { useLayout } from "./LayoutContext";
+import { useLayout } from "../../context/LayoutContext";
 
 import type { AppLayoutProps } from "./AppLayout.types";
 

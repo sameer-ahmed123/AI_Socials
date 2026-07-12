@@ -47,6 +47,10 @@
 
   filter: none;
 }
+.button--ghost:hover {
+  background: var(--color-surface-hover);
+  background: rgba(0, 0, 0, 0.06);
+}
 
 /* -------------------- */
 /* Sizes                */

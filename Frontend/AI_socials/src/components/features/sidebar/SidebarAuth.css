@@ -1,0 +1,73 @@
+.sidebar-auth {
+  margin-top: auto;
+
+  padding-top: 3rem;
+
+  border-top: 1px solid var(--color-border);
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: var(--space-2);
+}
+
+.sidebar-auth__user {
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--space-2);
+}
+
+.sidebar-auth__avatar {
+  width: 28px;
+
+  height: 28px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  flex-shrink: 0;
+}
+
+.sidebar-auth__name {
+  font-size: var(--font-size-sm);
+
+  font-weight: 500;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+.sidebar-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Add this new rule below it */
+.sidebar-user--collapsed {
+  justify-content: center;
+  gap: 0;
+}
+
+.sidebar-user img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+
+
+.sidebar-user span {
+  font-size: 0.9rem;
+
+  font-weight: 500;
+}

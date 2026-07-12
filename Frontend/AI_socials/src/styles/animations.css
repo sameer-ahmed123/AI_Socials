@@ -1,11 +1,15 @@
-*{
+* {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
 
-    transition:
-
-        background-color .2s ease,
-
-        color .2s ease,
-
-        border-color .2s ease;
-
+.loading-screen__spinner {
+  animation: loading-spin 0.8s linear infinite;
+}
+@keyframes loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }

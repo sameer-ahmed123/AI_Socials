@@ -12,7 +12,9 @@ import NotFoundPage from "../pages/NotFound";
 import Widgets from "../components/features/widgets/Widgets";
 import Sidebar from "../components/features/sidebar/Sidbar";
 import MorePage from "../pages/More";
-
+import Login from "../pages/login/Login";
+import ProtectedRoute from "../routes/ProtectedRoute";
+import PublicRoute from "../routes/PublicRoute";
 const AppRouter = () => {
   return (
     <Routes>
@@ -23,15 +25,52 @@ const AppRouter = () => {
 
         <Route path="/explore" element={<ExplorePage />} />
 
-        <Route path="/notifications" element={<NotificationsPage />} />
+        <Route
+          path="/notifications"
+          element={
+            <ProtectedRoute>
+              <NotificationsPage />
+            </ProtectedRoute>
+          }
+        />
 
-        <Route path="/messages" element={<MessagesPage />} />
+        <Route
+          path="/messages"
+          element={
+            <ProtectedRoute>
+              <MessagesPage />
+            </ProtectedRoute>
+          }
+        />
 
-        <Route path="/bookmarks" element={<BookmarksPage />} />
+        <Route
+          path="/bookmarks"
+          element={
+            <ProtectedRoute>
+              <BookmarksPage />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/more" element={<MorePage />} />
 
-        <Route path="/profile/:username" element={<ProfilePage />} />
+        <Route
+          path="/profile/:username/"
+          element={
+            <ProtectedRoute>
+              <ProfilePage />
+            </ProtectedRoute>
+          }
+        />
       </Route>
+
+      <Route
+        path="/login"
+        element={
+          <PublicRoute>
+            <Login />
+          </PublicRoute>
+        }
+      />
 
       <Route path="*" element={<NotFoundPage />} />
     </Routes>

@@ -7,4 +7,5 @@ export interface SidebarItem {
 
   icon: IconName;
   to: string;
+  requiresAuth: boolean;
 }
