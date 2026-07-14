@@ -22,20 +22,39 @@ export const usePosts = () => {
   const [error, setError] = useState<string | null>(null);
 
   const createPost = async (input: CreatePostInput) => {
-    const newPost = await createPostApi(input);
+    setError(null);
+    try {
+      const newPost = await createPostApi(input);
 
-    setPosts((previous) =>
-      createPostAction({
-        posts: previous,
-        newPost,
-      }),
-    );
+      setPosts((previous) =>
+        createPostAction({
+          posts: previous,
+          newPost,
+        }),
+      );
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Failed to create post.");
+      }
+    }
   };
 
   const deletePost = async (postId: number) => {
-    await deletePostRequest(postId);
+    setError(null);
 
-    setPosts((previous) => deletePostAction(previous, postId));
+    try {
+      await deletePostRequest(postId);
+
+      setPosts((previous) => deletePostAction(previous, postId));
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Failed to delete post.");
+      }
+    }
   };
 
   const toggleLike = (postId: number) => {
@@ -58,11 +77,14 @@ export const usePosts = () => {
     setError(null);
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
       const posts = await getPostsApi();
       setPosts(posts);
     } catch (err) {
-      setError("Couldn't load posts.");
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Something went wrong.");
+      }
     } finally {
       setLoading(false);
     }

@@ -5,28 +5,33 @@ const SketchFilter = () => {
       height="0"
       style={{
         position: "absolute",
+        pointerEvents: "none", // Ensures it doesn't block clicks
       }}
     >
       <defs>
         <filter
           id="hand-drawn-filter"
-          x="-2%"
-          y="-2%"
-          width="104%"
-          height="104%"
+          /* Expanded bounds to prevent clipping with a larger wobble scale */
+          x="-10%"
+          y="-10%"
+          width="120%"
+          height="120%"
         >
           <feTurbulence
             type="fractalNoise"
-            baseFrequency="0.04"
+            /* Lower baseFrequency = larger, more sweeping hand-drawn waves.
+              0.015 gives excellent natural-looking wobbles along the lines.
+            */
+            baseFrequency="0.015"
             numOctaves="3"
-            // seed="8"
             result="noise"
           />
 
           <feDisplacementMap
             in="SourceGraphic"
             in2="noise"
-            scale="3"
+            /* Reduced from 12 to 11 to decrease the wobble intensity by 10% */
+            scale="11"
             xChannelSelector="R"
             yChannelSelector="G"
           />

@@ -6,7 +6,6 @@ import "./PostActions.css";
 
 import type { PostActionsProps } from "./PostActions.type";
 import { useAuth } from "../../../../../../../hooks/useAuth";
-
 const PostActions = ({ post, loading, handlers }: PostActionsProps) => {
   const { user } = useAuth();
   if (loading) {
@@ -59,9 +58,13 @@ const PostActions = ({ post, loading, handlers }: PostActionsProps) => {
           icon={<Trash2 size={18} />}
           variant="delete"
           ariaLabel="delete post"
-          onClick={() => {
-            if (window.confirm("Delete this post?")) {
-              handlers.onDelete(post.id);
+          onClick={async () => {
+            if (!window.confirm("Delete this post?")) return;
+
+            try {
+              await handlers.onDelete(post.id);
+            } catch {
+              alert("Couldn't delete post.");
             }
           }}
         />

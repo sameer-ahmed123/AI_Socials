@@ -1,4 +1,4 @@
-import type { Post } from "../models";
+import type { Post } from "../../../../models/Post.model";
 
 interface CreatePostParams {
   posts: Post[];
