@@ -95,6 +95,9 @@
   color: var(--color-primary);
 }
 
+.action-button--delete:hover {
+  color: #e0245e;
+}
 /* Keyboard */
 
 .action-button:focus-visible {

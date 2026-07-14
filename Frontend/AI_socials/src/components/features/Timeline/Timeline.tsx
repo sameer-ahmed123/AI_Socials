@@ -15,6 +15,7 @@ const Timeline = ({
   onLike,
   onReply,
   onRepost,
+  onDelete,
 }: TimelineProps) => {
   const [activeTab, setActiveTab] = useState<TimelineTab>("for-you");
   const handlers: PostCardHandlers = {
@@ -22,6 +23,7 @@ const Timeline = ({
     onLike,
     onRepost,
     onBookmark,
+    onDelete,
   };
   return (
     <section className="timeline">

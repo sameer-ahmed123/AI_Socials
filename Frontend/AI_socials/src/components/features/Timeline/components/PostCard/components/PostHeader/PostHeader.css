@@ -34,3 +34,16 @@
 
   font-size: var(--text-sm);
 }
+.post-header__name-skeleton {
+  width: 140px;
+
+  height: 16px;
+
+  margin-bottom: 8px;
+}
+
+.post-header__username-skeleton {
+  width: 90px;
+
+  height: 12px;
+}

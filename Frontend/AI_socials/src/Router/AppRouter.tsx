@@ -15,7 +15,14 @@ import MorePage from "../pages/More";
 import Login from "../pages/login/Login";
 import ProtectedRoute from "../routes/ProtectedRoute";
 import PublicRoute from "../routes/PublicRoute";
+import LoadingScreen from "../components/common/loadingScreen/LoadingScreen";
+import { useAuth } from "../hooks/useAuth";
 const AppRouter = () => {
+  const { loading } = useAuth();
+
+  if (loading) {
+    return <LoadingScreen />;
+  }
   return (
     <Routes>
       <Route

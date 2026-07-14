@@ -1,3 +1,3 @@
 export interface PostMenuProps {
-  postId: string;
+  postId: number;
 }

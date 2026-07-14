@@ -8,18 +8,14 @@ import PostHeader from "./components/PostHeader/PostHeader";
 import PostBody from "./components/PostBody/PostBody";
 import PostActions from "./components/PostActions/PostActions";
 
-const PostCard = ({ post, handlers }: PostCardProps) => {
+const PostCard = ({ post, loading = false, handlers }: PostCardProps) => {
   return (
     <Card className="post-card">
-      <PostHeader
-        postId={post.id}
-        author={post.author}
-        createdAt={post.createdAt}
-      />
+      <PostHeader loading={loading} post={post} />
 
-      <PostBody content={post.content} />
+      <PostBody loading={loading} content={post?.content ?? ""} />
 
-      <PostActions post={post} handlers={handlers} />
+      <PostActions loading={loading} post={post} handlers={handlers} />
     </Card>
   );
 };

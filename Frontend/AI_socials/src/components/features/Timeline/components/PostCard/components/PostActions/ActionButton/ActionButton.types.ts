@@ -4,7 +4,8 @@ export type ActionButtonVariant =
   | "reply"
   | "like"
   | "repost"
-  | "bookmark";
+  | "bookmark"
+  | "delete";
 
 export interface ActionButtonProps {
   icon: ReactNode;

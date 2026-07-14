@@ -2,30 +2,42 @@ import { auth } from "../firebase/config";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
+async function getAuthHeaders(
+  authenticated: boolean,
+): Promise<Record<string, string>> {
+  const headers: Record<string, string> = {
+    "Content-Type": "application/json",
+  };
+
+  if (!authenticated) {
+    return headers;
+  }
+
+  const user = auth.currentUser;
+
+  if (!user) {
+    throw new Error("User is not authenticated.");
+  }
+
+  const token = await user.getIdToken();
+
+  headers.Authorization = `Bearer ${token}`;
+
+  return headers;
+}
+
 export async function apiFetch<T>(
   endpoint: string,
   options: RequestInit = {},
   authenticated = false,
 ): Promise<T> {
-  const headers = new Headers(options.headers);
-
-  headers.set("Content-Type", "application/json");
-
-  if (authenticated) {
-    const firebaseUser = auth.currentUser;
-
-    if (!firebaseUser) {
-      throw new Error("User is not authenticated.");
-    }
-
-    const idToken = await firebaseUser.getIdToken();
-
-    headers.set("Authorization", `Bearer ${idToken}`);
-  }
-
   const response = await fetch(`${API_URL}${endpoint}`, {
     ...options,
-    headers,
+
+    headers: {
+      ...(await getAuthHeaders(authenticated)),
+      ...(options.headers ?? {}),
+    },
   });
 
   if (!response.ok) {
@@ -36,10 +48,14 @@ export async function apiFetch<T>(
 
       error = data.detail ?? error;
     } catch {
-      /* empty */
+      // ignore invalid JSON
     }
 
     throw new Error(error);
+  }
+
+  if (response.status === 204) {
+    return undefined as T;
   }
 
   return response.json();

@@ -3,6 +3,20 @@ from rest_framework import serializers
 from .models import User
 
 
+class PublicUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+
+        fields = (
+            "id",
+            "username",
+            "display_name",
+            "avatar",
+            "bio",
+            "is_verified",
+        )
+
+
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
@@ -22,27 +36,12 @@ class UserSerializer(serializers.ModelSerializer):
         read_only_fields = (
             "id",
             "email",
+            "is_verified",
             "date_joined",
-            "is_verified",
-        )
-
-
-class PublicUserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-
-        fields = (
-            "id",
-            "username",
-            "display_name",
-            "avatar",
-            "bio",
-            "is_verified",
         )
 
 
 class UpdateProfileSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = User
 
@@ -50,7 +49,6 @@ class UpdateProfileSerializer(serializers.ModelSerializer):
             "display_name",
             "bio",
             "avatar",
-            "cover_image",
             "website",
             "location",
             "is_private",

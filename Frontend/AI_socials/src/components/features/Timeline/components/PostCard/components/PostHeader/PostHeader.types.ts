@@ -1,8 +1,5 @@
-import type { User } from "../../../../models";
-
+import type { Post } from "../../../../../../../models/Post.model";
 export interface PostHeaderProps {
-  author: User;
-
-  createdAt: string;
-  postId: string;
+  post?: Post;
+  loading?: boolean;
 }

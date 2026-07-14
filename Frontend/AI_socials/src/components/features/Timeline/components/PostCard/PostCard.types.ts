@@ -1,17 +1,18 @@
-import type { Post } from "../../../../features/Posts";
+import type { Post } from "../../../../../models/Post.model";
 
 export interface PostCardHandlers {
-  onReply: (postId: string) => void;
+  onReply: (postId: number) => void;
 
-  onLike: (postId: string) => void;
+  onLike: (postId: number) => void;
 
-  onRepost: (postId: string) => void;
+  onRepost: (postId: number) => void;
 
-  onBookmark: (postId: string) => void;
+  onBookmark: (postId: number) => void;
+  onDelete(postId: number): Promise<void>;
 }
 
 export interface PostCardProps {
   post: Post;
-
+  loading?: boolean;
   handlers: PostCardHandlers;
 }

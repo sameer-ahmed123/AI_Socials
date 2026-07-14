@@ -2,7 +2,7 @@ import type { Post } from "../models";
 
 export const MOCK_POSTS: Post[] = [
   {
-    id: "1",
+    id: 1,
 
     author: {
       id: "1",
@@ -28,7 +28,7 @@ export const MOCK_POSTS: Post[] = [
     reposted: false,
   },
   {
-    id: "2",
+    id: 2,
 
     author: {
       id: "2",
@@ -54,7 +54,7 @@ export const MOCK_POSTS: Post[] = [
     reposted: false,
   },
   {
-    id: "3",
+    id: 3,
 
     author: {
       id: "2",

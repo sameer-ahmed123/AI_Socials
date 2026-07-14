@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, type FormEvent } from "react";
 
 import Avatar from "../../../../ui/Avatar/Avatar";
 import Button from "../../../../ui/Button/Button";
@@ -8,11 +8,14 @@ import TextArea from "../../../../ui/Textarea/TextArea";
 import type { ComposerProps } from "./Composer.types";
 
 import "./Composer.css";
+import { useAuth } from "../../../../../hooks/useAuth";
 
 const MAX_CHARACTERS = 280;
 
 const Composer = ({ onCreatePost }: ComposerProps) => {
+  const { user } = useAuth();
   const [content, setContent] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -23,9 +26,7 @@ const Composer = ({ onCreatePost }: ComposerProps) => {
     textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
   };
 
-  const handleChange = (
-    event: React.ChangeEvent<HTMLTextAreaElement>,
-  ) => {
+  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setContent(event.target.value);
 
     resizeTextarea();
@@ -39,27 +40,29 @@ const Composer = ({ onCreatePost }: ComposerProps) => {
     }
   };
 
-  const handleSubmit = () => {
-    const trimmedContent = content.trim();
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
 
-    if (!trimmedContent) return;
+    if (!content.trim()) return;
 
-    if (trimmedContent.length > MAX_CHARACTERS) return;
+    setLoading(true);
 
-    onCreatePost({
-      content: trimmedContent,
-    });
+    try {
+      await onCreatePost({
+        content,
+      });
 
-    resetComposer();
+      resetComposer();
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const handleKeyDown = (
-    event: React.KeyboardEvent<HTMLTextAreaElement>,
-  ) => {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (event.ctrlKey && event.key === "Enter") {
       event.preventDefault();
 
-      handleSubmit();
+      event.currentTarget.form?.requestSubmit();
     }
   };
 
@@ -67,56 +70,50 @@ const Composer = ({ onCreatePost }: ComposerProps) => {
 
   const isOverLimit = characterCount > MAX_CHARACTERS;
 
-  const canSubmit =
-    content.trim().length > 0 &&
-    !isOverLimit;
+  const canSubmit = content.trim().length > 0 && !isOverLimit && !loading;
 
   return (
     <Card>
-      <div className="composer">
-        <Avatar initials="AI" />
+      <form onSubmit={handleSubmit}>
+        <div className="composer">
+          <Avatar image={user?.avatar} initials={user?.display_name} />
 
-        <div className="composer__content">
-          <TextArea
-            ref={textareaRef}
-            placeholder="What's happening?"
-            value={content}
-            onChange={handleChange}
-            onKeyDown={handleKeyDown}
-          />
+          <div className="composer__content">
+            <TextArea
+              ref={textareaRef}
+              placeholder="What's happening?"
+              value={content}
+              onChange={handleChange}
+              onKeyDown={handleKeyDown}
+            />
 
-          <div className="composer__footer">
-            <div className="composer__status">
+            <div className="composer__footer">
+              <div className="composer__status">
+                <span
+                  className={`composer__counter ${
+                    isOverLimit ? "composer__counter--danger" : ""
+                  }`}
+                >
+                  {characterCount} / {MAX_CHARACTERS}
+                </span>
 
-              <span
-                className={`composer__counter ${
-                  isOverLimit
-                    ? "composer__counter--danger"
-                    : ""
-                }`}
+                {isOverLimit && (
+                  <p className="composer__error">Character limit exceeded.</p>
+                )}
+              </div>
+
+              <Button
+                type="submit"
+                variant="secondary"
+                disabled={!canSubmit}
+                className="composer__button"
               >
-                {characterCount} / {MAX_CHARACTERS}
-              </span>
-
-              {isOverLimit && (
-                <p className="composer__error">
-                  Character limit exceeded.
-                </p>
-              )}
-
+                {loading ? "Posting..." : "Post"}
+              </Button>
             </div>
-
-            <Button
-              variant="secondary"
-              onClick={handleSubmit}
-              disabled={!canSubmit}
-              className="composer__button"
-            >
-              Post
-            </Button>
           </div>
         </div>
-      </div>
+      </form>
     </Card>
   );
 };

@@ -9,6 +9,7 @@ const HomePage = () => {
     toggleLike,
     toggleRepost,
     handleReply,
+    deletePost
   } = usePosts();
   return (
     <PageContent>
@@ -19,6 +20,7 @@ const HomePage = () => {
         onLike={toggleLike}
         onRepost={toggleRepost}
         onReply={handleReply}
+        onDelete={deletePost}
       />
     </PageContent>
   );
