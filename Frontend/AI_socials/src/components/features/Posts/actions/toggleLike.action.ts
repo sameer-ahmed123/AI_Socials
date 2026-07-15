@@ -1,17 +1,22 @@
-import type { Post } from "../models";
+import type { Post } from "../../../../models/Post.model";
 
-export const toggleLikeAction = (posts: Post[], postId: string): Post[] => {
+interface ToggleLikePayload {
+  liked: boolean;
+  like_count: number;
+}
+
+export const toggleLikeAction = (
+  posts: Post[],
+  postId: number,
+  payload: ToggleLikePayload,
+): Post[] => {
   return posts.map((post) => {
     if (post.id !== postId) return post;
 
-    const liked = !post.liked;
-
     return {
       ...post,
-
-      liked,
-
-      likes: liked ? post.likes + 1 : post.likes - 1,
+      liked: payload.liked,
+      like_count: payload.like_count,
     };
   });
 };

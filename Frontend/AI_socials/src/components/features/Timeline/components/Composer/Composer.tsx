@@ -51,8 +51,9 @@ const Composer = ({ onCreatePost }: ComposerProps) => {
       await onCreatePost({
         content,
       });
-
       resetComposer();
+    } catch (error) {
+      alert(error);
     } finally {
       setLoading(false);
     }

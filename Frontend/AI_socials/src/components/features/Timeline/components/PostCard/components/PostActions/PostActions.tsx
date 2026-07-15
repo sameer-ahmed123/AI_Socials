@@ -22,7 +22,6 @@ const PostActions = ({ post, loading, handlers }: PostActionsProps) => {
     <footer className="post-actions">
       <ActionButton
         icon={<MessageCircle size={18} />}
-        count={post.replies}
         variant="reply"
         ariaLabel="Reply to post"
         onClick={() => handlers.onReply(post.id)}
@@ -30,7 +29,7 @@ const PostActions = ({ post, loading, handlers }: PostActionsProps) => {
 
       <ActionButton
         icon={<Repeat2 size={18} />}
-        count={post.reposts}
+        count={post.repost_count}
         active={post.reposted}
         variant="repost"
         ariaLabel="Repost post"
@@ -39,7 +38,7 @@ const PostActions = ({ post, loading, handlers }: PostActionsProps) => {
 
       <ActionButton
         icon={<Heart size={18} />}
-        count={post.likes}
+        count={post.like_count}
         active={post.liked}
         variant="like"
         ariaLabel="Like post"
@@ -49,10 +48,12 @@ const PostActions = ({ post, loading, handlers }: PostActionsProps) => {
       <ActionButton
         icon={<Bookmark size={18} />}
         variant="bookmark"
+        count={post.bookmark_count}
         active={post.bookmarked}
         ariaLabel="Bookmark post"
         onClick={() => handlers.onBookmark(post.id)}
       />
+
       {user?.id === post?.author.id && (
         <ActionButton
           icon={<Trash2 size={18} />}

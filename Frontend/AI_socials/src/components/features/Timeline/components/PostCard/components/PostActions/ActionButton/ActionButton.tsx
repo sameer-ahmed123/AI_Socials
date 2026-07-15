@@ -21,14 +21,10 @@ const ActionButton = ({
         ${active ? "action-button--active" : ""}
       `}
     >
-      <span className="action-button__icon">
-        {icon}
-      </span>
+      <span className="action-button__icon">{icon}</span>
 
       {count !== undefined && (
-        <span className="action-button__count">
-          {count}
-        </span>
+        <span className="action-button__count">{count}</span>
       )}
     </button>
   );

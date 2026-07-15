@@ -1,17 +1,24 @@
-import type { Post } from "../models";
+import type { Post } from "../../../../models/Post.model";
 
-export const toggleRepostAction = (posts: Post[], postId: string): Post[] => {
+interface ToggleRepostPayload {
+  reposted: boolean;
+  repost_count: number;
+}
+
+export const toggleRepostAction = (
+  posts: Post[],
+  postId: number,
+  payload: ToggleRepostPayload,
+): Post[] => {
   return posts.map((post) => {
-    if (post.id !== postId) return post;
-
-    const reposted = !post.reposted;
+    if (post.id !== postId) {
+      return post;
+    }
 
     return {
       ...post,
-
-      reposted,
-
-      reposts: reposted ? post.reposts + 1 : post.reposts - 1,
+      reposted: payload.reposted,
+      repost_count: payload.repost_count,
     };
   });
 };

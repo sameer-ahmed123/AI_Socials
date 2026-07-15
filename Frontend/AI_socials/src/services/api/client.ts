@@ -8,20 +8,18 @@ async function getAuthHeaders(
   const headers: Record<string, string> = {
     "Content-Type": "application/json",
   };
-
   if (!authenticated) {
     return headers;
   }
 
   const user = auth.currentUser;
 
-  if (!user) {
-    throw new Error("User is not authenticated.");
+  if (user) {
+    const token = await user.getIdToken();
+
+    headers.Authorization = `Bearer ${token}`;
   }
-
-  const token = await user.getIdToken();
-
-  headers.Authorization = `Bearer ${token}`;
+  // console.log("auth.currentUser =", auth.currentUser);
 
   return headers;
 }

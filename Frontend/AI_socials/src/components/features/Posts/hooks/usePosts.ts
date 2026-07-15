@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
-import { MOCK_POSTS } from "../data/mockPosts";
+import { useAuth } from "../../../../hooks/useAuth";
 import type { CreatePostInput } from "../types";
 
 import {
   getPosts as getPostsApi,
   createPost as createPostApi,
   deletePost as deletePostRequest,
+  toggleLike as toggleLikeRequest,
+  toggleBookmark as toggleBookmarkRequest,
+  toggleRepost as toggleRepostRequest,
 } from "../services/api/posts";
 import {
   createPostAction,
@@ -15,8 +18,11 @@ import {
   deletePostAction,
 } from "../actions";
 import type { Post } from "../../../../models/Post.model";
+import { useNavigate } from "react-router-dom";
 
 export const usePosts = () => {
+  const navigate = useNavigate();
+  const { initializing } = useAuth();
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -34,7 +40,10 @@ export const usePosts = () => {
       );
     } catch (err) {
       if (err instanceof Error) {
-        setError(err.message);
+        const errorMessage =
+          err instanceof Error ? err.message : "Failed to create post.";
+        setError(errorMessage);
+        throw new Error(errorMessage, { cause: err });
       } else {
         setError("Failed to create post.");
       }
@@ -57,19 +66,46 @@ export const usePosts = () => {
     }
   };
 
-  const toggleLike = (postId: number) => {
-    setPosts((previous) => toggleLikeAction(previous, postId));
+  const toggleLike = async (postId: number) => {
+    try {
+      const response = await toggleLikeRequest(postId);
+
+      setPosts((previous) => toggleLikeAction(previous, postId, response));
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Failed to Like post.");
+      }
+    }
   };
 
-  const toggleBookmark = (postId: number) => {
-    setPosts((previous) => toggleBookmarkAction(previous, postId));
+  const toggleBookmark = async (postId: number) => {
+    try {
+      const response = await toggleBookmarkRequest(postId);
+      setPosts((previous) => toggleBookmarkAction(previous, postId, response));
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Failed to bookmark post.");
+      }
+    }
   };
-
-  const toggleRepost = (postId: number) => {
-    setPosts((previous) => toggleRepostAction(previous, postId));
+  const toggleRepost = async (postId: number) => {
+    try {
+      const response = await toggleRepostRequest(postId);
+      setPosts((previous) => toggleRepostAction(previous, postId, response));
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Failed to bookmark post.");
+      }
+    }
   };
   const handleReply = (postId: number) => {
-    console.log("Reply:", postId);
+    navigate(`/posts/${postId}`);
   };
 
   const refreshPosts = async () => {
@@ -91,8 +127,10 @@ export const usePosts = () => {
   };
 
   useEffect(() => {
+    if (initializing) return;
+
     refreshPosts();
-  }, []);
+  }, [initializing]);
 
   return {
     posts,

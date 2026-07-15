@@ -16,6 +16,7 @@ import Login from "../pages/login/Login";
 import ProtectedRoute from "../routes/ProtectedRoute";
 import PublicRoute from "../routes/PublicRoute";
 import LoadingScreen from "../components/common/loadingScreen/LoadingScreen";
+import PostDetail from "../pages/PostDetail";
 import { useAuth } from "../hooks/useAuth";
 const AppRouter = () => {
   const { loading } = useAuth();
@@ -29,6 +30,7 @@ const AppRouter = () => {
         element={<AppLayout sidebar={<Sidebar />} widgets={<Widgets />} />}
       >
         <Route path="/" element={<HomePage />} />
+        <Route path="/posts/:postId" element={<PostDetail />} />
 
         <Route path="/explore" element={<ExplorePage />} />
 

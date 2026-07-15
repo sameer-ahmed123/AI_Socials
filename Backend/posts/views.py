@@ -1,10 +1,11 @@
 from rest_framework.decorators import api_view
+from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework import status
 
 from users.firebase import get_current_user
-
-from .models import Post
+from django.shortcuts import get_object_or_404
+from .models import Post, Like, Bookmark, Repost
 from .serializers import (
     CreatePostSerializer,
     PostSerializer,
@@ -13,7 +14,6 @@ from .serializers import (
 
 @api_view(["GET", "POST"])
 def posts(request):
-
     if request.method == "GET":
 
         posts = (
@@ -25,6 +25,7 @@ def posts(request):
         serializer = PostSerializer(
             posts,
             many=True,
+            context={"request": request}
         )
 
         return Response(serializer.data)
@@ -35,7 +36,7 @@ def posts(request):
 
     if user is None:
         return Response(
-            {"detail": "Authentication required."},
+            {"detail": "Authentication required. User must be logged in to Create a Post!"},
             status=status.HTTP_401_UNAUTHORIZED,
         )
 
@@ -48,7 +49,7 @@ def posts(request):
     post = serializer.save(author=user)
 
     return Response(
-        PostSerializer(post).data,
+        PostSerializer(post, context={"request": request}).data,
         status=status.HTTP_201_CREATED,
     )
 
@@ -71,7 +72,7 @@ def post_detail(request, post_id):
 
     if request.method == "GET":
 
-        serializer = PostSerializer(post)
+        serializer = PostSerializer(post, context={"request": request})
 
         return Response(serializer.data)
 
@@ -95,4 +96,128 @@ def post_detail(request, post_id):
 
     return Response(
         status=status.HTTP_204_NO_CONTENT,
+    )
+
+
+@api_view(["POST"])
+def toggle_like(request, post_id):
+
+    user = get_current_user(request)
+
+    if user is None:
+        return Response(
+            {"detail": "Authentication required."},
+            status=status.HTTP_401_UNAUTHORIZED,
+        )
+
+    post = get_object_or_404(Post, id=post_id)
+    like = Like.objects.filter(
+        user=user,
+        post=post,
+    )
+
+    if like.exists():
+        like.delete()
+
+        liked = False
+
+    else:
+        Like.objects.create(
+            user=user,
+            post=post,
+        )
+
+        liked = True
+
+    return Response(
+        {
+            "liked": liked,
+            "like_count": post.likes.count(),
+        },
+        status=status.HTTP_200_OK,
+    )
+
+
+@api_view(["POST"])
+def toggle_bookmark(request, post_id):
+
+    user = get_current_user(request)
+
+    if user is None:
+        return Response(
+            {"detail": "Authentication required."},
+            status=status.HTTP_401_UNAUTHORIZED,
+        )
+
+    post = get_object_or_404(Post, id=post_id)
+
+    bookmark = Bookmark.objects.filter(
+        user=user,
+        post=post,
+    )
+
+    if bookmark.exists():
+        bookmark.delete()
+
+        bookmarked = False
+
+    else:
+        Bookmark.objects.create(
+            user=user,
+            post=post,
+        )
+
+        bookmarked = True
+
+    return Response(
+        {
+            "bookmarked": bookmarked,
+            "bookmark_count": post.bookmarks.count(),
+        },
+        status=status.HTTP_200_OK,
+    )
+
+
+@api_view(["POST"])
+def toggle_repost(request, post_id):
+
+    user = get_current_user(request)
+
+    if user is None:
+        return Response(
+            {"detail": "Authentication required."},
+            status=status.HTTP_401_UNAUTHORIZED,
+        )
+
+    post = get_object_or_404(
+        Post,
+        id=post_id,
+    )
+
+    repost = Repost.objects.filter(
+        user=user,
+        post=post,
+    )
+
+    if repost.exists():
+
+        repost.delete()
+
+        reposted = False
+
+    else:
+
+        Repost.objects.create(
+            user=user,
+            post=post,
+        )
+
+        reposted = True
+
+    return Response(
+        {
+            "reposted": reposted,
+            "repost_count": post.reposts.count(),
+        },
+        status=status.HTTP_200_OK,
     )
