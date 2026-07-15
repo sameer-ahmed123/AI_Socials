@@ -18,6 +18,7 @@ class PostSerializer(serializers.ModelSerializer):
     bookmarked = serializers.SerializerMethodField()
     repost_count = serializers.SerializerMethodField()
     reposted = serializers.SerializerMethodField()
+    reply_count = serializers.SerializerMethodField()
 
     class Meta:
         model = Post
@@ -27,6 +28,7 @@ class PostSerializer(serializers.ModelSerializer):
             "author",
             "content",
             "image",
+            "reply_count",
             "like_count",
             "liked",
             "bookmark_count",
@@ -40,6 +42,7 @@ class PostSerializer(serializers.ModelSerializer):
         read_only_fields = (
             "id",
             "author",
+            "reply_count",
             "like_count",
             "liked",
             "bookmark_count",
@@ -109,6 +112,11 @@ class PostSerializer(serializers.ModelSerializer):
             user=user,
             post=obj,
         ).exists()
+
+    def get_reply_count(self, obj):
+        return obj.comments.filter(
+            parent__isnull=True
+        ).count()
 
 
 class CreatePostSerializer(serializers.ModelSerializer):

@@ -6,6 +6,8 @@ export interface Post {
   content: string;
   image: string | null;
 
+  reply_count: number;
+
   like_count: number;
   liked: boolean;
 
