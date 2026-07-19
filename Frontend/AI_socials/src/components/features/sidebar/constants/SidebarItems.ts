@@ -1,6 +1,7 @@
 import type { SidebarItem } from "../Sidebar.types";
 
-export const SIDEBAR_ITEMS: SidebarItem[] = [
+// Change this from an array to a function that returns the array
+export const getSidebarItems = (username?: string): SidebarItem[] => [
   {
     id: "home",
     label: "Home",
@@ -8,7 +9,6 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
     to: "/",
     requiresAuth: false,
   },
-
   {
     id: "explore",
     label: "Explore",
@@ -16,7 +16,6 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
     to: "/explore",
     requiresAuth: false,
   },
-
   {
     id: "notifications",
     label: "Notifications",
@@ -24,7 +23,6 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
     to: "/notifications",
     requiresAuth: true,
   },
-
   {
     id: "chat",
     label: "Chat",
@@ -32,29 +30,11 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
     to: "/messages",
     requiresAuth: true,
   },
-
-  // {
-  //   id: "bookmarks",
-  //   label: "Bookmarks",
-  //   icon: "bookmarks",
-  //   to:"/bookmarks",
-  // requiresAuth:true
-
-  // },
-
   {
     id: "profile",
     label: "Profile",
     icon: "profile",
-    to: "/profile/:username",
+    to: username ? `/profile/${username}` : "/login",
     requiresAuth: true,
   },
-
-  // {
-  //   id: "more",
-  //   label: "More",
-  //   icon: "more",
-  //   to:"/more"
-
-  // },
 ];

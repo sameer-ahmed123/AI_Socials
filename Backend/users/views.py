@@ -1,9 +1,11 @@
+from django.shortcuts import get_object_or_404
+from posts.serializers import PostSerializer
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from .firebase import get_current_user, verify_firebase_token
 from .models import User
-from .serializers import UpdateProfileSerializer, UserSerializer
+from .serializers import ProfileSerializer, UpdateProfileSerializer, UserSerializer
 
 
 @api_view(["GET"])
@@ -90,6 +92,24 @@ def current_user(request):
     return Response(serializer.data)
 
 
+@api_view(["GET"])
+def profile(request, username):
+
+    user = get_object_or_404(
+        User,
+        username=username,
+    )
+
+    serializer = ProfileSerializer(
+        user,
+        context={
+            "request": request,
+        },
+    )
+
+    return Response(serializer.data)
+
+
 @api_view(["PATCH"])
 def update_profile(request):
 
@@ -112,3 +132,86 @@ def update_profile(request):
     serializer.save()
 
     return Response(UserSerializer(user).data)
+
+
+@api_view(["GET"])
+def profile_posts(request, username):
+
+    user = get_object_or_404(
+        User,
+        username=username,
+    )
+
+    posts = (
+        user.posts
+        .select_related("author")
+        .order_by("-created_at")
+    )
+
+    serializer = PostSerializer(
+        posts,
+        many=True,
+        context={
+            "request": request,
+        },
+    )
+
+    return Response(serializer.data)
+
+
+# TODO will do when making the Replies tab in frontend
+#
+# @api_view(["GET"])
+# def profile_replies(request, username):
+
+#     user = get_object_or_404(
+#         User,
+#         username=username,
+#     )
+
+#     posts = (
+#         user.posts
+#         .filter(
+#             parent__isnull=False,
+#         )
+#         .select_related("author")
+#         .order_by("-created_at")
+#     )
+
+#     serializer = PostSerializer(
+#         posts,
+#         many=True,
+#         context={
+#             "request": request,
+#         },
+#     )
+
+#     return Response(serializer.data)
+
+
+# @api_view(["GET"])
+# def profile_replies(request, username):
+
+#     user = get_object_or_404(
+#         User,
+#         username=username,
+#     )
+
+#     posts = (
+#         user.posts
+#         .filter(
+#             parent__isnull=False,
+#         )
+#         .select_related("author")
+#         .order_by("-created_at")
+#     )
+
+#     serializer = PostSerializer(
+#         posts,
+#         many=True,
+#         context={
+#             "request": request,
+#         },
+#     )
+
+#     return Response(serializer.data)

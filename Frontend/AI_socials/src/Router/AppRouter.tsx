@@ -8,6 +8,7 @@ import NotificationsPage from "../pages/Notifications";
 import MessagesPage from "../pages/Messages";
 import BookmarksPage from "../pages/Bookmarks";
 import ProfilePage from "../pages/Profile";
+import EditProfilePage from "../pages/EditProfile";
 import NotFoundPage from "../pages/NotFound";
 import Widgets from "../components/features/widgets/Widgets";
 import Sidebar from "../components/features/sidebar/Sidbar";
@@ -63,7 +64,15 @@ const AppRouter = () => {
         <Route path="/more" element={<MorePage />} />
 
         <Route
-          path="/profile/:username/"
+          path="/profile/edit"
+          element={
+            <ProtectedRoute>
+              <EditProfilePage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/profile/:username"
           element={
             <ProtectedRoute>
               <ProfilePage />

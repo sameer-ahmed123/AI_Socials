@@ -39,7 +39,9 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
     setUser(null);
   };
-
+  const updateUser = (updatedUser: AuthUser) => {
+    setUser(updatedUser);
+  };
   useEffect(() => {
     const unsubscribe = onFirebaseAuthChange(async (firebaseUser) => {
       try {
@@ -67,6 +69,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         initializing,
         login,
         logout,
+        updateUser
       }}
     >
       {children}

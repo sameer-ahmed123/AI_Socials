@@ -1,0 +1,18 @@
+.profile-stats {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.profile-stats__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-stats__value {
+  font-weight: 600;
+}
+
+.profile-stats__label {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}

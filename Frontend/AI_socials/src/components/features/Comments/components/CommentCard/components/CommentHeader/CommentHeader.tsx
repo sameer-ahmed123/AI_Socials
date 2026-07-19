@@ -5,6 +5,7 @@ import "./CommentHeader.css";
 
 import type { CommentHeaderProps } from "./CommentHeader.types";
 import { formatRelativeTime } from "../../../../../../../utils/date/formatRelativeTime";
+import { Link } from "react-router-dom";
 
 const CommentHeader = ({ comment, loading }: CommentHeaderProps) => {
   if (loading) {
@@ -22,12 +23,13 @@ const CommentHeader = ({ comment, loading }: CommentHeaderProps) => {
 
   return (
     <header className="comment-header">
-      <Avatar
-        image={comment.author.avatar}
-        alt={comment.author.display_name}
-        size="sm"
-      />
-
+      <Link to={`/profile/${comment.author.username}`}>
+        <Avatar
+          image={comment.author.avatar}
+          alt={comment.author.display_name}
+          size="sm"
+        />
+      </Link>
       <div className="comment-header__content">
         <div className="comment-header__name-row">
           <span className="comment-header__display-name">

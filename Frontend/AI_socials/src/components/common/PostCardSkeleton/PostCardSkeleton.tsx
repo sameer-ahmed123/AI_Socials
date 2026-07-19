@@ -7,7 +7,6 @@ interface Props {
 }
 const SKELETON_POST: Post = {
   id: -1,
-
   author: {
     id: -1,
     username: "",
@@ -16,13 +15,16 @@ const SKELETON_POST: Post = {
     bio: "",
     is_verified: false,
   },
-
+  reply_count: 0,
+  like_count: 0,
+  bookmark_count: 0,
+  repost_count: 0,
   content: "",
-
+  liked: false,
+  reposted: false,
+  bookmarked: false,
   image: null,
-
   created_at: new Date().toISOString(),
-
   updated_at: new Date().toISOString(),
 };
 

@@ -23,6 +23,7 @@ const PostActions = ({ post, loading, handlers }: PostActionsProps) => {
       <ActionButton
         icon={<MessageCircle size={18} />}
         variant="reply"
+        count={post.reply_count}
         ariaLabel="Reply to post"
         onClick={() => handlers.onReply(post.id)}
       />

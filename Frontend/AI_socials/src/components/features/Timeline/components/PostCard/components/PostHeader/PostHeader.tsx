@@ -4,6 +4,7 @@ import { formatRelativeTime } from "../../../../../../../utils/date/formatRelati
 import "./PostHeader.css";
 import PostMenu from "../PostMenu/PostMenu";
 import type { PostHeaderProps } from "./PostHeader.types";
+import { Link } from "react-router-dom";
 
 const PostHeader = ({ post }: PostHeaderProps) => {
   const avatarImage = post?.author?.avatar;
@@ -13,7 +14,9 @@ const PostHeader = ({ post }: PostHeaderProps) => {
   // console.log("created",post.created_at)
   return (
     <header className="post-header">
-      <Avatar image={avatarImage} initials={avatarInitials} />
+      <Link to={`/profile/${post?.author.username}`}>
+        <Avatar image={avatarImage} initials={avatarInitials} />
+      </Link>
 
       <div className="post-header__info">
         <div className="post-header__top">

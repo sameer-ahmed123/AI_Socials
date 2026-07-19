@@ -1,11 +1,12 @@
 import NavItem from "../NavItem/NavItem";
 
-import { SIDEBAR_ITEMS } from "../../constants/SidebarItems";
+import { getSidebarItems } from "../../constants/SidebarItems";
 import type { NavigationProps } from "./Navigation.types";
 import { useAuth } from "../../../../../hooks/useAuth";
 
 const Navigation = ({ collapsed }: NavigationProps) => {
   const { user } = useAuth();
+  const SIDEBAR_ITEMS = getSidebarItems(user?.username);
   const visibleItems = SIDEBAR_ITEMS.filter((item) => {
     if (!item.requiresAuth) {
       return true;

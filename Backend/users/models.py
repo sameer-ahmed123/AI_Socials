@@ -41,5 +41,18 @@ class User(AbstractUser):
         default=False,
     )
 
+    website = models.URLField(
+        blank=True,
+    )
+
+    location = models.CharField(
+        max_length=100,
+        blank=True,
+    )
+
+    @property
+    def posts_count(self):
+        return self.posts.count()
+
     def __str__(self):
         return self.display_name or self.username

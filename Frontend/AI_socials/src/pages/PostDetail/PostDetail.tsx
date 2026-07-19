@@ -78,7 +78,7 @@ const PostDetail = () => {
   // function refreshComments(): void {
   //   throw new Error("Could not Load Replies");
   // }
-
+  console.log(commentsError);
   return (
     <main className="post-detail">
       <Button variant="ghost" onClick={() => navigate(-1)}>
