@@ -1,4 +1,4 @@
-import "./CommentList.css";
+import "./Commentlist.css";
 
 import type { CommentListProps } from "./CommentList.types";
 
