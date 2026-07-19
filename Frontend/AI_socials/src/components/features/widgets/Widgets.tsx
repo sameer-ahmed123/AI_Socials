@@ -8,11 +8,24 @@ import { MOCK_USERS } from "./data/mockSuggestedUsers";
 import { MOCK_NEWS } from "./data/mockNews";
 import WidgetFooter from "./components/WidgetFooter/WidgetFooter";
 import NewsSection from "./components/NewsSection/NewsSection";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Widgets = () => {
+  const navigate = useNavigate();
+  const [query, setQuery] = useState("");
+
+  const handleSubmit = () => {
+    const value = query.trim();
+
+    if (!value) return;
+
+    navigate(`/explore?q=${encodeURIComponent(value)}&scope=posts`);
+  };
+
   return (
     <aside className="widgets">
-      <SearchBar />
+      <SearchBar value={query} onChange={setQuery} onSubmit={handleSubmit} />
       <NewsSection news={MOCK_NEWS} />
       <TrendingSection />
 

@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'ai',
     'chat',
     'posts',
+    'search',
 ]
 
 REST_FRAMEWORK = {

@@ -1,1 +1,6 @@
-export interface SearchBarProps {}
+export interface SearchBarProps {
+  value: string;
+  onChange(value: string): void;
+  onSubmit?(): void;
+  placeholder?: string;
+}

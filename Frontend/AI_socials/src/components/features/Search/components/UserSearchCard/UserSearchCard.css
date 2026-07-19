@@ -1,0 +1,23 @@
+.user-search-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-search-card__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-search-card__content h4 {
+  margin: 0;
+}
+
+.user-search-card__content span {
+  color: var(--color-text-secondary);
+}
+
+.user-search-card__link {
+  color: inherit;
+  text-decoration: none;
+}

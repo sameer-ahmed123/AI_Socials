@@ -1,0 +1,18 @@
+.hashtag-search-card {
+  cursor: pointer;
+}
+
+.hashtag-search-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.hashtag-search-card__content h4 {
+  margin: 0;
+}
+
+.hashtag-search-card__content span {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
