@@ -1,0 +1,16 @@
+.media-viewer {
+  margin-top: 0.75rem;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.media-viewer__image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+
+}
+
+.media-viewer__image:hover {
+  cursor: zoom-in;
+}
