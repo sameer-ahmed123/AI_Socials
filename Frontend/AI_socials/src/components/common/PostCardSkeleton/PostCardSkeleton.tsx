@@ -23,7 +23,7 @@ const SKELETON_POST: Post = {
   liked: false,
   reposted: false,
   bookmarked: false,
-  image: null,
+  media: [],
   created_at: new Date().toISOString(),
   updated_at: new Date().toISOString(),
 };
