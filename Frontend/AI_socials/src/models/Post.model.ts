@@ -1,10 +1,11 @@
+import type { PostMedia } from "./PostMedia.model";
 import type { User } from "./User.model";
 
 export interface Post {
   id: number;
   author: User;
   content: string;
-  image: string | null;
+  media: PostMedia[];
 
   reply_count: number;
 

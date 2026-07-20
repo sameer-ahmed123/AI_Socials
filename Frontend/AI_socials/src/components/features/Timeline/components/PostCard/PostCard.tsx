@@ -13,7 +13,7 @@ const PostCard = ({ post, loading = false, handlers }: PostCardProps) => {
     <Card className="post-card">
       <PostHeader loading={loading} post={post} />
 
-      <PostBody loading={loading} content={post?.content ?? ""} />
+      <PostBody media={post?.media} loading={loading} content={post?.content ?? ""} />
 
       <PostActions loading={loading} post={post} handlers={handlers} />
     </Card>

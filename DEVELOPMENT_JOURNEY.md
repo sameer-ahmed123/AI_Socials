@@ -127,6 +127,8 @@ Throughout development I tried to follow a few guiding principles:
 - Clickable usernames
 - Modular hooks
 - Shared UI component library
+- Post , User Lookup (search ,hashtags comming next)
+- Media Image Uploads (currently using Cloudinary)
 
 ---
 
@@ -144,32 +146,23 @@ Some items have intentionally been postponed:
 
 # Roadmap
 
-## Sprint 11
+## Sprint 13
 
 - Follow / Unfollow
 - Followers
 - Following
 
-## Sprint 12
 
-- Search
-- Discovery
-- Hashtags
-
-## Sprint 13
+## Sprint 14
 
 - Notifications
 
-## Sprint 14
+## Sprint 15
 
 - Media improvements
 - UI polish
 
-## Sprint 15
-
-- Technical debt cleanup
-
-## Sprint 16
+## Sprint END
 
 - Production readiness
 - Documentation

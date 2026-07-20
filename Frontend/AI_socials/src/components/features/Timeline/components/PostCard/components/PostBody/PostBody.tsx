@@ -3,8 +3,9 @@ import "./PostBody.css";
 import RichText from "../../../../../../ui/RichText";
 import type { PostBodyProps } from "./PostBody.types";
 import Skeleton from "../../../../../../ui/Skeleton/Skeleton";
+import PostMedia from "../PostMedia/PostMedia";
 
-const PostBody = ({ content, loading = false }: PostBodyProps) => {
+const PostBody = ({ media, content, loading = false }: PostBodyProps) => {
   if (loading) {
     return (
       <>
@@ -16,12 +17,12 @@ const PostBody = ({ content, loading = false }: PostBodyProps) => {
       </>
     );
   }
-
   return (
     <div className="post-body">
       <p>
         <RichText text={content} />
       </p>
+      {media && <PostMedia media={media} />}
     </div>
   );
 };

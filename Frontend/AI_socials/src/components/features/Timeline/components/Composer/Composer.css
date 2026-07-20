@@ -47,3 +47,72 @@
   padding: 4px 16px;
   border-radius: 8px;
 }
+
+.composer__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-top: var(--space-2);
+}
+
+/* New: Wraps both buttons tightly on the right side */
+.composer__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.composer__file-button {
+  padding: 4px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Optional helper styling for file text indicator */
+.composer__attached-file {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.composer__button {
+  padding: 4px 16px;
+  border-radius: 8px;
+}
+
+.composer__preview {
+  position: relative;
+
+  margin-top: 1rem;
+}
+
+.composer__preview-image {
+  width: 100%;
+
+  max-height: 420px;
+
+  object-fit: cover;
+
+  border-radius: var(--radius-lg);
+}
+
+.composer__remove-media {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid red;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+.composer__remove-media:hover {
+  background: var(--color-danger);
+  color: var(--color-paper);
+}

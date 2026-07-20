@@ -1,7 +1,9 @@
 from rest_framework import serializers
 
 from .models import Post, Like, Bookmark, Repost
+from media_app.models import PostMedia
 from users.serializers import PublicUserSerializer
+from media_app.serializers import PostMediaSerializer
 from users.firebase import get_current_user
 from users.serializers import PublicUserSerializer
 
@@ -19,6 +21,10 @@ class PostSerializer(serializers.ModelSerializer):
     repost_count = serializers.SerializerMethodField()
     reposted = serializers.SerializerMethodField()
     reply_count = serializers.SerializerMethodField()
+    media = PostMediaSerializer(
+        many=True,
+        read_only=True,
+    )
 
     class Meta:
         model = Post
@@ -27,7 +33,7 @@ class PostSerializer(serializers.ModelSerializer):
             "id",
             "author",
             "content",
-            "image",
+            "media",
             "reply_count",
             "like_count",
             "liked",
@@ -120,12 +126,17 @@ class PostSerializer(serializers.ModelSerializer):
 
 
 class CreatePostSerializer(serializers.ModelSerializer):
+    uploaded_media = serializers.DictField(
+        write_only=True,
+        required=False,
+    )
+
     class Meta:
         model = Post
 
         fields = (
             "content",
-            "image",
+            "uploaded_media",
         )
 
     def validate_content(self, value):
@@ -137,3 +148,22 @@ class CreatePostSerializer(serializers.ModelSerializer):
             )
 
         return value
+
+    def create(self, validated_data):
+        uploaded_media = validated_data.pop(
+            "uploaded_media",
+            None,
+        )
+
+        post = Post.objects.create(**validated_data)
+
+        if uploaded_media:
+            PostMedia.objects.create(
+                post=post,
+                public_id=uploaded_media["public_id"],
+                image_url=uploaded_media["image_url"],
+                width=uploaded_media["width"],
+                height=uploaded_media["height"],
+            )
+
+        return post

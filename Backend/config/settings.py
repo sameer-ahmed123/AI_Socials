@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
+from config.cloudinary import initialize_cloudinary
 from pathlib import Path
 import os
 
@@ -28,8 +29,8 @@ DEBUG = os.environ.get("DEBUG")
 
 host_string = os.environ.get("ALLOWED_HOSTS", "http://localhost:5173")
 ALLOWED_HOSTS = [
-    origin.strip().rstrip("/") 
-    for origin in host_string.split(",") 
+    origin.strip().rstrip("/")
+    for origin in host_string.split(",")
     if origin.strip()
 ]
 
@@ -53,6 +54,7 @@ INSTALLED_APPS = [
     'chat',
     'posts',
     'search',
+    'media_app',
 ]
 
 REST_FRAMEWORK = {
@@ -70,8 +72,8 @@ FIREBASE_CREDENTIALS = os.environ.get("FIREBASE_CREDENTIALS")
 
 cors_string = os.environ.get("CORS_ALLOWED_ORIGINS", "http://localhost:5173")
 CORS_ALLOWED_ORIGINS = [
-    origin.strip().rstrip("/") 
-    for origin in cors_string.split(",") 
+    origin.strip().rstrip("/")
+    for origin in cors_string.split(",")
     if origin.strip()
 ]
 
@@ -167,6 +169,12 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+CLOUDINARY_CLOUD_NAME = os.environ.get("CLOUDINARY_CLOUD_NAME")
+CLOUDINARY_API_KEY = os.environ.get("CLOUDINARY_API_KEY")
+CLOUDINARY_API_SECRET = os.environ.get("CLOUDINARY_API_SECRET")
 
 
 AUTH_USER_MODEL = "users.User"
+
+
+initialize_cloudinary()

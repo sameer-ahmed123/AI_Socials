@@ -1,0 +1,12 @@
+.post-media {
+  margin-top: 12px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.post-media__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}

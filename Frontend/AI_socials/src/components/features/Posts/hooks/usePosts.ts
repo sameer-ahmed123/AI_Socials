@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useAuth } from "../../../../hooks/useAuth";
 import type { CreatePostInput } from "../types";
+import { useUploadMedia } from "../../Media/hooks/useUploadMedia";
 
 import {
   getPosts as getPostsApi,
@@ -23,14 +24,29 @@ import { useNavigate } from "react-router-dom";
 export const usePosts = () => {
   const navigate = useNavigate();
   const { initializing } = useAuth();
+  const { upload } = useUploadMedia();
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   const createPost = async (input: CreatePostInput) => {
+    console.log("CreatePostInput:", input);
     setError(null);
     try {
-      const newPost = await createPostApi(input);
+      let uploadedMedia = null;
+
+      if (input.media) {
+        uploadedMedia = await upload(input.media);
+        console.log(
+          "what django returns after cloudinary upload",
+          uploadedMedia,
+        );
+      }
+      const payload = {
+        content: input.content,
+        uploaded_media: uploadedMedia ?? undefined,
+      };
+      const newPost = await createPostApi(payload);
 
       setPosts((previous) =>
         createPostAction({

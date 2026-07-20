@@ -4,10 +4,17 @@ const API_URL = import.meta.env.VITE_API_URL;
 
 async function getAuthHeaders(
   authenticated: boolean,
+  body?: BodyInit | null,
 ): Promise<Record<string, string>> {
-  const headers: Record<string, string> = {
-    "Content-Type": "application/json",
-  };
+  const headers: Record<string, string> = {};
+
+  // Only JSON requests should set Content-Type manually.
+  // FormData must be left alone so the browser can generate
+  // multipart/form-data with the correct boundary.
+  if (!(body instanceof FormData)) {
+    headers["Content-Type"] = "application/json";
+  }
+
   if (!authenticated) {
     return headers;
   }
@@ -19,7 +26,6 @@ async function getAuthHeaders(
 
     headers.Authorization = `Bearer ${token}`;
   }
-  // console.log("auth.currentUser =", auth.currentUser);
 
   return headers;
 }
@@ -33,7 +39,7 @@ export async function apiFetch<T>(
     ...options,
 
     headers: {
-      ...(await getAuthHeaders(authenticated)),
+      ...(await getAuthHeaders(authenticated, options.body)),
       ...(options.headers ?? {}),
     },
   });
@@ -46,7 +52,7 @@ export async function apiFetch<T>(
 
       error = data.detail ?? error;
     } catch {
-      // ignore invalid JSON
+      // Ignore invalid JSON responses.
     }
 
     throw new Error(error);

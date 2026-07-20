@@ -19,6 +19,7 @@ def posts(request):
         posts = (
             Post.objects
             .select_related("author")
+            .prefetch_related("media")
             .order_by("-created_at")
         )
 

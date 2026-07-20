@@ -24,4 +24,5 @@ urlpatterns = [
     path("api/posts/", include("posts.urls")),
     path("api/", include("comments.urls")),
     path("api/search/", include("search.urls")),
+    path("api/media/", include("media_app.urls")),
 ]
