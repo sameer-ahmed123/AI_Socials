@@ -1,5 +1,6 @@
-import type { NewsArticle } from "../../../../models";
+import type { NewsArticle } from "../../../../types/NewsArticle";
 
 export interface NewsItemProps {
   article: NewsArticle;
 }
+

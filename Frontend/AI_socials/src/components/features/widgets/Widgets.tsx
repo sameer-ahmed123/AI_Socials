@@ -5,7 +5,6 @@ import SuggestionsSection from "./components/SuggestionsSection/SuggestionsSecti
 import TrendingSection from "./components/TrendingSection/TrendingSection";
 
 import { MOCK_USERS } from "./data/mockSuggestedUsers";
-import { MOCK_NEWS } from "./data/mockNews";
 import WidgetFooter from "./components/WidgetFooter/WidgetFooter";
 import NewsSection from "./components/NewsSection/NewsSection";
 import { useState } from "react";
@@ -26,7 +25,7 @@ const Widgets = () => {
   return (
     <aside className="widgets">
       <SearchBar value={query} onChange={setQuery} onSubmit={handleSubmit} />
-      <NewsSection news={MOCK_NEWS} />
+      <NewsSection />
       <TrendingSection />
 
       <SuggestionsSection users={MOCK_USERS} />

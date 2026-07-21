@@ -1,4 +1,4 @@
-import { StrictMode } from "react";
+// import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles/global.css";
 import "./styles/layout.css";
@@ -14,7 +14,7 @@ import { LayoutProvider } from "./context/LayoutContext.tsx";
 import { AuthProvider } from "./context/AuthContext.tsx";
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
+  // <StrictMode>
     <BrowserRouter>
       <AuthProvider>
         <LayoutProvider>
@@ -22,5 +22,5 @@ createRoot(document.getElementById("root")!).render(
         </LayoutProvider>
       </AuthProvider>
     </BrowserRouter>
-  </StrictMode>,
+  // </StrictMode>,
 );
