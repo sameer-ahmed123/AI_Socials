@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
+import logging
+
 from config.cloudinary import initialize_cloudinary
 from pathlib import Path
 import os
@@ -26,6 +28,10 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG")
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 
 host_string = os.environ.get("ALLOWED_HOSTS", "http://localhost:5173")
 ALLOWED_HOSTS = [
@@ -51,6 +57,7 @@ INSTALLED_APPS = [
     'follows',
     'comments',
     'ai',
+    'agent_os',
     'chat',
     'posts',
     'search',

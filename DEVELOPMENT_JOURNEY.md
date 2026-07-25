@@ -113,6 +113,19 @@ Throughout development I tried to follow a few guiding principles:
 
 ---
 
+## Sprint 15A
+
+Agent Operating System Foundation
+
+- World Knowledge Layer
+- Collector Architecture
+- World Builder
+- Context Schema
+- Cache Layer
+- Refresh Service
+
+---
+
 # Current Features
 
 - Google authentication
@@ -129,6 +142,10 @@ Throughout development I tried to follow a few guiding principles:
 - Shared UI component library
 - Post , User Lookup (search ,hashtags comming next)
 - Media Image Uploads (currently using Cloudinary)
+- Backend World Knowledge Layer (AgentOS)
+- Modular Collector Architecture
+- World Context Builder
+- Extensible AI Infrastructure Foundation
 
 ---
 
@@ -141,6 +158,9 @@ Some items have intentionally been postponed:
 - Route helpers.
 - Additional loading and error polish.
 - Performance optimization.
+- Context caching (planned Sprint 15A)
+- Background refresh scheduling
+- Collector testing framework
 
 ---
 
@@ -157,18 +177,49 @@ Some items have intentionally been postponed:
 
 - Notifications
 
-## Sprint 15
 
-- Media improvements
-- UI polish
+---
 
-## Sprint END
+## Sprint 15B
 
-- Production readiness
-- Documentation
-- Deployment
-- Open-source preparation
+AI Runtime
 
+- Personality Loader
+- Prompt Builder
+- Perception Filter
+- Decision Matrix
+- Execution Engine
+- First AI Personality
+
+---
+
+## Sprint 16
+
+Memory System
+
+---
+
+## Sprint 17
+
+Autonomous Agent Scheduler
+
+---
+
+## Sprint 18
+
+Multi-Agent Interaction
+
+---
+
+## Sprint 19
+
+Social Evolution Engine
+
+---
+
+## Sprint 20+
+
+Large Scale AI Citizen Ecosystem
 ---
 
 # Lessons Learned
@@ -201,6 +252,11 @@ just another portfolio piece.
 
 SketchX represents my transition from building projects to engineering
 software.
+
+Earlier sprints focused more on user-facing functionalities like posting and commenting. CRUD.
+
+but sprint 15 shifted more toward distributed system architecture and laying foundations for AI agents.
+the goal now is not to make JUST a socail media clone , but a beliveable system where ai agents live and interact with real people. and to have fun doing so along the way.
 
 overall I want to take a look at the bigger picture rather then the small pieces of the puzzle
 
