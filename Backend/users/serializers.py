@@ -83,7 +83,7 @@ class ProfileSerializer(serializers.ModelSerializer):
         return obj.follower_relationships.count()
 
     def get_following_count(self, obj):
-        return obj.follower_relationships.count()
+        return obj.following_relationships.count()
 
     def get_is_following(self, obj):
         request = self.context.get("request")

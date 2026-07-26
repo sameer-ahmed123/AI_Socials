@@ -28,7 +28,6 @@ const ProfilePage = () => {
     deletePost,
   } = useProfilePosts(username);
 
-
   const handlers: PostCardHandlers = {
     onReply: handleReply,
     onLike: toggleLike,
@@ -72,6 +71,7 @@ const ProfilePage = () => {
         posts={posts}
         loading={postsLoading}
         handlers={handlers}
+        onProfileChange={refresh}
       />
     </PageContent>
   );

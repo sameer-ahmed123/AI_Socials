@@ -19,6 +19,8 @@ import PublicRoute from "../routes/PublicRoute";
 import LoadingScreen from "../components/common/loadingScreen/LoadingScreen";
 import PostDetail from "../pages/PostDetail";
 import { useAuth } from "../hooks/useAuth";
+import FollowersPage from "../pages/FollowersPage/FollowersPage";
+import FollowingPage from "../pages/FollowingPage/FollowingPage";
 const AppRouter = () => {
   const { loading } = useAuth();
 
@@ -76,6 +78,23 @@ const AppRouter = () => {
           element={
             <ProtectedRoute>
               <ProfilePage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/profile/:user_id/followers"
+          element={
+            <ProtectedRoute>
+              <FollowersPage />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/profile/:user_id/following"
+          element={
+            <ProtectedRoute>
+              <FollowingPage />
             </ProtectedRoute>
           }
         />

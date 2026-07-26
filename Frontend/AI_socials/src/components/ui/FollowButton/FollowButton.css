@@ -1,0 +1,30 @@
+.follow-button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  background: #111;
+
+  color: white;
+  filter: var(--sketch-filter);
+  transition: 0.2s ease;
+}
+
+.follow-button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.follow-button.following {
+  background: transparent;
+  color: rgb(66, 60, 60);
+  border: 1px solid #555;
+}
+
+.follow-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}

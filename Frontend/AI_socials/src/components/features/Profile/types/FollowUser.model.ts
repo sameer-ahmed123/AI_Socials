@@ -1,7 +1,6 @@
-export interface SearchUser {
+export interface FollowUser {
   id: number;
   username: string;
   display_name: string;
   avatar: string;
-  bio?: string;
 }

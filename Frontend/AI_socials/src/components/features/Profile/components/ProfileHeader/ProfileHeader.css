@@ -64,3 +64,40 @@
   color: var(--color-primary);
   text-decoration: underline;
 }
+
+
+.profile-header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.profile-header__edit-button {
+  padding: 0.6rem 1.2rem;
+
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+
+  background: transparent;
+  color: var(--color-text-primary);
+
+  cursor: pointer;
+
+  font-weight: 600;
+}
+
+.profile-header__edit-button:hover {
+  background: var(--color-surface-hover);
+}
+
+.profile-header__stats {
+  display: flex;
+  gap: var(--space-5);
+
+  font-size: var(--text-sm);
+}
+
+.profile-header__stats strong {
+  color: var(--color-text-primary);
+  margin-right: 0.25rem;
+}

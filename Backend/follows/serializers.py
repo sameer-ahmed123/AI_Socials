@@ -41,5 +41,5 @@ class FollowUserSerializer(serializers.ModelSerializer):
             "id",
             "username",
             "display_name",
-            "profile_picture",
+            "avatar",
         )

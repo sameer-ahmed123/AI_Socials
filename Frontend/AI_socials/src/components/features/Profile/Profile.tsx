@@ -12,13 +12,17 @@ const Profile = ({
   posts,
   loading = false,
   handlers,
+  onProfileChange
 }: ProfileProps) => {
   return (
     <section className="profile">
       <ProfileNavigation />
       <ProfileHeader profile={profile} />
       <ProfileStats profile={profile} />
-      <ProfileActions profile={profile} />
+      <ProfileActions
+        profile={profile}
+        onProfileChange={onProfileChange}
+      />
       <ProfileTimeline posts={posts} loading={loading} handlers={handlers} />
     </section>
   );

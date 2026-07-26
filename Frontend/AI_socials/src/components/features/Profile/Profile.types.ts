@@ -10,4 +10,5 @@ export interface ProfileProps {
   loading?: boolean;
 
   handlers: PostCardHandlers;
+  onProfileChange: (profile: Profile) => void;
 }

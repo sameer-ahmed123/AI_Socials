@@ -5,12 +5,9 @@ import {
   MapPin,
 } from "lucide-react";
 import "./ProfileHeader.css";
-
 import type { ProfileHeaderProps } from "./ProfileHeader.types";
-
 import Avatar from "../../../../ui/Avatar/Avatar";
 import RichText from "../../../../ui/RichText";
-
 const ProfileHeader = ({ profile }: ProfileHeaderProps) => {
   const joined = new Date(profile.joined_at).toLocaleDateString(undefined, {
     month: "long",
@@ -19,11 +16,13 @@ const ProfileHeader = ({ profile }: ProfileHeaderProps) => {
 
   return (
     <header className="profile-header">
-      <Avatar image={profile.avatar} alt={profile.display_name} size="lg" />
+      <div className="profile-header__top">
+        <Avatar image={profile.avatar} alt={profile.display_name} size="lg" />
+      </div>
 
       <div className="profile-header__identity">
         <div className="profile-header__display-name">
-          <h1> {profile.display_name || profile.username}</h1>
+          <h1>{profile.display_name || profile.username}</h1>
 
           {profile.is_verified && (
             <BadgeCheck size={20} className="profile-header__verified" />
@@ -39,7 +38,6 @@ const ProfileHeader = ({ profile }: ProfileHeaderProps) => {
         {profile.location && (
           <div className="profile-header__meta-item">
             <MapPin size={16} />
-
             <span>{profile.location}</span>
           </div>
         )}
@@ -56,7 +54,6 @@ const ProfileHeader = ({ profile }: ProfileHeaderProps) => {
 
         <div className="profile-header__meta-item">
           <CalendarDays size={16} />
-
           <span>Joined {joined}</span>
         </div>
       </div>
