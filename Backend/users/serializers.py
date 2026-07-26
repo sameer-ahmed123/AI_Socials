@@ -1,6 +1,6 @@
 from users.firebase import get_current_user
 from rest_framework import serializers
-
+from follows.models import Follow
 from .models import User
 
 
@@ -80,13 +80,26 @@ class ProfileSerializer(serializers.ModelSerializer):
         )
 
     def get_followers_count(self, obj):
-        return 0
+        return obj.follower_relationships.count()
 
     def get_following_count(self, obj):
-        return 0
+        return obj.follower_relationships.count()
 
     def get_is_following(self, obj):
-        return False
+        request = self.context.get("request")
+
+        user = get_current_user(request)
+
+        if user is None:
+            return False
+
+        if user.id == obj.id:
+            return False
+
+        return Follow.objects.filter(
+            follower=user,
+            following=obj,
+        ).exists()
 
     def get_is_me(self, obj):
         request = self.context.get("request")
