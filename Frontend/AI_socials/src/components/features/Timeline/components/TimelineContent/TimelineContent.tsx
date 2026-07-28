@@ -4,11 +4,10 @@ import PostCard from "../PostCard/PostCard";
 import type { TimelineContentProps } from "./TimelineContent.types";
 import ErrorState from "../../../../common/ErrorState";
 import Button from "../../../../ui/Button/Button";
-import { usePosts } from "../../../Posts";
-import PostCardSkeleton from "../../../../common/PostCardSkeleton";
+import PostCardSkeleton from "../../../../common/PostCardSkeleton";;
 
-const TimelineContent = ({ posts, handlers }: TimelineContentProps) => {
-  const { error, refreshPosts, loading } = usePosts();
+const TimelineContent = ({ posts, handlers, loading,error,onRetry }: TimelineContentProps) => {
+  console.log(posts)
   if (loading) {
     return <PostCardSkeleton count={3} />;
   }
@@ -18,7 +17,7 @@ const TimelineContent = ({ posts, handlers }: TimelineContentProps) => {
       <ErrorState
         title="Couldn't load posts"
         description={error}
-        action={<Button onClick={refreshPosts}>Retry</Button>}
+        action={<Button onClick={onRetry}>Retry</Button>}
       />
     );
   }

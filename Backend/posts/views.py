@@ -4,6 +4,8 @@ from rest_framework import status
 
 from users.firebase import get_current_user
 from django.shortcuts import get_object_or_404
+from posts.services.feed_service import FeedService
+from posts.pagination import FeedPagination
 from .models import Post, Like, Bookmark, Repost
 from .serializers import (
     CreatePostSerializer,
@@ -221,3 +223,60 @@ def toggle_repost(request, post_id):
         },
         status=status.HTTP_200_OK,
     )
+
+
+@api_view(["GET"])
+def feed(request):
+    """
+    Return a feed for the authenticated user.
+
+    Supported modes:
+        - following (default)
+        - for-you
+    """
+
+    user = get_current_user(request)
+
+    if user is None:
+        return Response(
+            {
+                "detail": "Authentication required."
+            },
+            status=status.HTTP_401_UNAUTHORIZED,
+        )
+
+    mode = request.GET.get(
+        "mode",
+        "following",
+    )
+
+    print("current mode is ", mode)
+    service = FeedService(user)
+
+    try:
+        queryset = service.get_feed(mode)
+
+    except ValueError:
+        return Response(
+            {
+                "detail": "Invalid feed mode.",
+            },
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+
+    paginator = FeedPagination()
+
+    page = paginator.paginate_queryset(
+        queryset,
+        request,
+    )
+
+    serializer = PostSerializer(
+        page,
+        many=True,
+        context={
+            "request": request,
+        },
+    )
+
+    return paginator.get_paginated_response(serializer.data)

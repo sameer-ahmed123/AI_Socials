@@ -1,14 +1,12 @@
-import { useState } from "react";
-
 import "./Timeline.css";
-
 import TimelineHeader from "./components/TimelineHeader/TimelineHeader";
 import Composer from "./components/Composer/Composer";
 import TimelineContent from "./components/TimelineContent/TimelineContent";
-
-import type { TimelineProps, TimelineTab } from "./Timeline.types";
+import type { TimelineProps } from "./Timeline.types";
 import type { PostCardHandlers } from "./components/PostCard/PostCard.types";
 const Timeline = ({
+  activeTab,
+  onTabChange,
   onCreatePost,
   posts,
   onBookmark,
@@ -16,8 +14,10 @@ const Timeline = ({
   onReply,
   onRepost,
   onDelete,
+  loading,
+  error,
+  onRetry,
 }: TimelineProps) => {
-  const [activeTab, setActiveTab] = useState<TimelineTab>("for-you");
   const handlers: PostCardHandlers = {
     onReply,
     onLike,
@@ -27,11 +27,17 @@ const Timeline = ({
   };
   return (
     <section className="timeline">
-      <TimelineHeader activeTab={activeTab} onTabChange={setActiveTab} />
+      <TimelineHeader activeTab={activeTab} onTabChange={onTabChange} />
 
       <Composer onCreatePost={onCreatePost} />
 
-      <TimelineContent handlers={handlers} posts={posts} />
+      <TimelineContent
+        handlers={handlers}
+        posts={posts}
+        loading={loading}
+        error={error}
+        onRetry={onRetry}
+      />
     </section>
   );
 };

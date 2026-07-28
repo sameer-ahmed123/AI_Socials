@@ -4,4 +4,7 @@ import type { PostCardHandlers } from "../PostCard/PostCard.types";
 export interface TimelineContentProps {
   posts: Post[];
   handlers: PostCardHandlers;
+  loading: boolean;
+  error: string | null;
+  onRetry: () => void;
 }

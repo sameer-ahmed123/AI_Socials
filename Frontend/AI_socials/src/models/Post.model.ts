@@ -21,3 +21,9 @@ export interface Post {
   created_at: string;
   updated_at: string;
 }
+
+export interface PaginatedResponse<T> {
+  next: string | null;
+  previous: string | null;
+  results: T[];
+}

@@ -1,13 +1,13 @@
 "After every <b>SPRINT</b>, we'd spend 10–15 minutes writing things like:
 
-What new engineering concepts you learned.
-What architectural patterns you encountered.
-Mistakes you made and why.
-Design decisions that surprised you.
-Questions you still have.
+What new engineering concepts I learned.
+What architectural patterns I encountered.
+Mistakes I made and why.
+Design decisions that surprised me.
+Questions I still have.
 Connections to previous knowledge.
 
-Over time, it becomes a personalized engineering textbook written from your own experience." ~ chatGPT
+Over time, it becomes a personalized engineering textbook written from my own experience." 
 
 
 ### 22/7/26
