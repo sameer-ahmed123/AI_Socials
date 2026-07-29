@@ -1,20 +1,23 @@
 import type { Post } from "../../../../../../models/Post.model";
 import { usePosts } from "../../../../Posts";
 import PostCard from "../../../../Timeline/components/PostCard/PostCard";
+import { useFeed } from "../../../../Posts/hooks/useFeed";
+import type { PostCardHandlers } from "../../../../Timeline/components/PostCard/PostCard.types";
 
 export interface SearchPostResultsProps {
   posts: Post[];
 }
 
 const SearchPostResults = ({ posts }: SearchPostResultsProps) => {
-  const { toggleLike, toggleBookmark, toggleRepost, handleReply, deletePost } =
-    usePosts();
+  const { handleReply } = usePosts();
+  const { deletePost, toggleBookmark, toggleLike, toggleRepost } =
+    useFeed("for-you");
 
-  const handlers = {
+  const handlers: PostCardHandlers = {
     onReply: handleReply,
     onLike: toggleLike,
-    onBookmark: toggleBookmark,
     onRepost: toggleRepost,
+    onBookmark: toggleBookmark,
     onDelete: deletePost,
   };
 

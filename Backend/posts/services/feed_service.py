@@ -1,4 +1,4 @@
-from email.feedparser import FeedParser
+from posts.services.feed_ranker import FeedRanker
 from django.db.models import Q
 from posts.models import Post
 
@@ -21,7 +21,7 @@ class FeedService:
 
     def __init__(self, user):
         self.user = user
-        self.ranker = FeedParser()
+        self.ranker = FeedRanker()
 
     def get_feed(self, mode: str):
         """

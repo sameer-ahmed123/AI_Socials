@@ -1,6 +1,6 @@
-import type { TimelineTab } from "../../Timeline.types";
+import type { FeedMode } from "../../../Posts/services/api/feed";
 
 export interface TimelineHeaderProps {
-  activeTab: TimelineTab;
-  onTabChange: (tab: TimelineTab) => void;
+  activeTab: FeedMode;
+  onTabChange: (tab: FeedMode) => void;
 }
