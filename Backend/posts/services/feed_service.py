@@ -45,9 +45,9 @@ class FeedService:
         """
 
         return (
+            #following_feed should return only the posts made by people you are following 
             Post.objects.filter(
-                Q(author=self.user)
-                | Q(author__follower_relationships__follower=self.user)
+                Q(author__follower_relationships__follower=self.user)
             )
             .select_related("author")
             .prefetch_related("media")

@@ -21,7 +21,9 @@ export const useFeed = (mode: FeedMode) => {
   const { initializing } = useAuth();
 
   const [posts, setPosts] = useState<Post[]>([]);
+  const [nextCursor, setNextCursor] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [loadingMore, setLoadingMore] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const refreshFeed = async () => {
@@ -29,9 +31,10 @@ export const useFeed = (mode: FeedMode) => {
     setError(null);
 
     try {
-      const data = await getFeed(mode);
+      const response = await getFeed(mode);
 
-      setPosts(data);
+      setPosts(response.results);
+      setNextCursor(response.next);
     } catch (err) {
       if (err instanceof Error) {
         setError(err.message);
@@ -40,6 +43,22 @@ export const useFeed = (mode: FeedMode) => {
       }
     } finally {
       setLoading(false);
+    }
+  };
+
+  const loadMore = async () => {
+    if (!nextCursor || loadingMore) return;
+
+    setLoadingMore(true);
+
+    try {
+      const response = await getFeed(mode, nextCursor);
+
+      setPosts((previous) => [...previous, ...response.results]);
+
+      setNextCursor(response.next);
+    } finally {
+      setLoadingMore(false);
     }
   };
   const deletePost = async (postId: number) => {
@@ -110,6 +129,7 @@ export const useFeed = (mode: FeedMode) => {
     posts,
     setPosts,
     loading,
+    loadMore,
     error,
     refreshFeed,
     toggleLike,
