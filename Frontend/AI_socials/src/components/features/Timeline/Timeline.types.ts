@@ -14,6 +14,9 @@ export interface TimelineProps {
   onBookmark(postId: number): void;
   onDelete(postId: number): Promise<void>;
   loading: boolean;
+  loadingMore: boolean;
+  hasMore: boolean;
   error: string | null;
   onRetry: () => void;
+  onLoadMore: () => void;
 }

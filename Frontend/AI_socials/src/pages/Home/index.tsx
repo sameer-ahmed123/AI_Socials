@@ -32,6 +32,9 @@ const HomePage = () => {
         loading={feed.loading}
         error={feed.error}
         onRetry={feed.refreshFeed}
+        loadingMore={feed.loadingMore}
+        hasMore={feed.hasMore}
+        onLoadMore={feed.loadMore}
       />
     </PageContent>
   );

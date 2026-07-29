@@ -1,13 +1,55 @@
+import { useEffect, useRef } from "react";
 import { Newspaper } from "lucide-react";
+
 import EmptyState from "../../../../ui/EmptyState";
-import PostCard from "../PostCard/PostCard";
-import type { TimelineContentProps } from "./TimelineContent.types";
 import ErrorState from "../../../../common/ErrorState";
 import Button from "../../../../ui/Button/Button";
-import PostCardSkeleton from "../../../../common/PostCardSkeleton";;
+import PostCardSkeleton from "../../../../common/PostCardSkeleton";
 
-const TimelineContent = ({ posts, handlers, loading,error,onRetry }: TimelineContentProps) => {
-  console.log(posts)
+import PostCard from "../PostCard/PostCard";
+
+import type { TimelineContentProps } from "./TimelineContent.types";
+
+const TimelineContent = ({
+  posts,
+  handlers,
+  loading,
+  loadingMore,
+  error,
+  onRetry,
+  hasMore,
+  onLoadMore,
+}: TimelineContentProps) => {
+  const sentinelRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!hasMore) return;
+
+    const sentinel = sentinelRef.current;
+
+    if (!sentinel) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        console.log("Observer fired:", entries[0].isIntersecting);
+
+        if (entries[0].isIntersecting && !loadingMore) {
+          console.log("Loading more...");
+          onLoadMore();
+        }
+      },
+      {
+        root: null,
+        rootMargin: "200px",
+        threshold: 0,
+      },
+    );
+
+    observer.observe(sentinel);
+
+    return () => observer.disconnect();
+  }, [hasMore, loadingMore, onLoadMore]);
+
   if (loading) {
     return <PostCardSkeleton count={3} />;
   }
@@ -35,8 +77,12 @@ const TimelineContent = ({ posts, handlers, loading,error,onRetry }: TimelineCon
   return (
     <>
       {posts.map((post) => (
-        <PostCard handlers={handlers} key={post.id} post={post} />
+        <PostCard key={post.id} post={post} handlers={handlers} />
       ))}
+
+      {hasMore && <div ref={sentinelRef} />}
+
+      {loadingMore && <PostCardSkeleton count={2} />}
     </>
   );
 };

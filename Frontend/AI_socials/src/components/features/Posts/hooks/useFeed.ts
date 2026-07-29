@@ -47,6 +47,7 @@ export const useFeed = (mode: FeedMode) => {
   };
 
   const loadMore = async () => {
+    console.log("loadMore() called");
     if (!nextCursor || loadingMore) return;
 
     setLoadingMore(true);
@@ -128,10 +129,18 @@ export const useFeed = (mode: FeedMode) => {
   return {
     posts,
     setPosts,
+
     loading,
-    loadMore,
+    loadingMore,
+
     error,
     refreshFeed,
+    loadMore,
+
+    hasMore: nextCursor !== null,
+
+    nextCursor,
+
     toggleLike,
     toggleBookmark,
     toggleRepost,

@@ -14,8 +14,11 @@ const Timeline = ({
   onReply,
   onRepost,
   onDelete,
+  loadingMore,
+  hasMore,
   loading,
   error,
+  onLoadMore,
   onRetry,
 }: TimelineProps) => {
   const handlers: PostCardHandlers = {
@@ -35,8 +38,11 @@ const Timeline = ({
         handlers={handlers}
         posts={posts}
         loading={loading}
+        loadingMore={loadingMore}
         error={error}
         onRetry={onRetry}
+        hasMore={hasMore}
+        onLoadMore={onLoadMore}
       />
     </section>
   );

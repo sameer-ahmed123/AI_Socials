@@ -9,8 +9,10 @@ import WidgetFooter from "./components/WidgetFooter/WidgetFooter";
 import NewsSection from "./components/NewsSection/NewsSection";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSmartSticky } from "../../../hooks/useSmartSticky";
 
 const Widgets = () => {
+  const stickyRef = useSmartSticky();
   const navigate = useNavigate();
   const [query, setQuery] = useState("");
 
@@ -23,7 +25,7 @@ const Widgets = () => {
   };
 
   return (
-    <aside className="widgets">
+    <aside className="widgets" ref={stickyRef}>
       <SearchBar value={query} onChange={setQuery} onSubmit={handleSubmit} />
       <NewsSection />
       <TrendingSection />
