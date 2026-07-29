@@ -1,5 +1,5 @@
+from email.feedparser import FeedParser
 from django.db.models import Q
-
 from posts.models import Post
 
 
@@ -21,6 +21,7 @@ class FeedService:
 
     def __init__(self, user):
         self.user = user
+        self.ranker = FeedParser()
 
     def get_feed(self, mode: str):
         """
@@ -44,8 +45,8 @@ class FeedService:
         Ordered newest first.
         """
 
-        return (
-            #following_feed should return only the posts made by people you are following 
+        query_set = (
+            # following_feed should return only the posts made by people you are following
             Post.objects.filter(
                 Q(author__follower_relationships__follower=self.user)
             )
@@ -54,6 +55,7 @@ class FeedService:
             .distinct()
             .order_by("-created_at")
         )
+        return self.ranker.rank(query_set)
 
     def get_for_you_feed(self):
         """
@@ -68,8 +70,10 @@ class FeedService:
             - trending
         """
 
-        return (
+        query_set = (
             Post.objects.select_related("author")
             .prefetch_related("media")
             .order_by("-created_at")
         )
+
+        return self.ranker.rank(query_set)

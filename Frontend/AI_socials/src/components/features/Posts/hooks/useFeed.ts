@@ -53,6 +53,7 @@ export const useFeed = (mode: FeedMode) => {
     setLoadingMore(true);
 
     try {
+      await new Promise((resolve) => setTimeout(resolve, 500));
       const response = await getFeed(mode, nextCursor);
 
       setPosts((previous) => [...previous, ...response.results]);

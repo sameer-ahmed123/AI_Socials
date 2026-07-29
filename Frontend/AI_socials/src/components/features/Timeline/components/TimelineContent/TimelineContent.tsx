@@ -9,6 +9,7 @@ import PostCardSkeleton from "../../../../common/PostCardSkeleton";
 import PostCard from "../PostCard/PostCard";
 
 import type { TimelineContentProps } from "./TimelineContent.types";
+import InfiniteScrollLoader from "../../../../common/InfiniteScrollLoader/InfiniteScrollLoader";
 
 const TimelineContent = ({
   posts,
@@ -73,16 +74,20 @@ const TimelineContent = ({
       />
     );
   }
-
+  console.log({
+    loading,
+    loadingMore,
+    hasMore,
+  });
   return (
     <>
       {posts.map((post) => (
         <PostCard key={post.id} post={post} handlers={handlers} />
       ))}
 
-      {hasMore && <div ref={sentinelRef} />}
+      {loadingMore && <InfiniteScrollLoader />}
 
-      {loadingMore && <PostCardSkeleton count={2} />}
+      {hasMore && <div ref={sentinelRef} />}
     </>
   );
 };

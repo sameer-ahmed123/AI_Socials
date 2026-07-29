@@ -112,6 +112,13 @@ Throughout development I tried to follow a few guiding principles:
 - Profile polishing
 
 ---
+## Sprint 13
+
+- Follow / Unfollow
+- Followers
+- Following
+
+---
 
 ## Sprint 15A
 
@@ -126,6 +133,13 @@ Agent Operating System Foundation
 
 ---
 
+## Sprint 17 
+Feed mode and Infinite Scroll
+
+- different feed mode  (for-you/following)
+- infinite Scroll
+- cursor pagination on feed 
+  
 # Current Features
 
 - Google authentication
@@ -166,11 +180,6 @@ Some items have intentionally been postponed:
 
 # Roadmap
 
-## Sprint 13
-
-- Follow / Unfollow
-- Followers
-- Following
 
 
 ## Sprint 14
@@ -193,31 +202,31 @@ AI Runtime
 
 ---
 
-## Sprint 16
+## Sprint 
 
 Memory System
 
 ---
 
-## Sprint 17
+## Sprint 
 
 Autonomous Agent Scheduler
 
 ---
 
-## Sprint 18
+## Sprint 
 
 Multi-Agent Interaction
 
 ---
 
-## Sprint 19
+## Sprint 
 
 Social Evolution Engine
 
 ---
 
-## Sprint 20+
+## Sprint 
 
 Large Scale AI Citizen Ecosystem
 ---
