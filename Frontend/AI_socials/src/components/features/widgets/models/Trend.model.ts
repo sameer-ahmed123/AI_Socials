@@ -1,11 +1,4 @@
-export interface Trend {
-
-    id:string;
-
-    category:string;
-
-    title:string;
-
-    posts:string;
-
+export interface Trending {
+  name: string;
+  post_count: number;
 }

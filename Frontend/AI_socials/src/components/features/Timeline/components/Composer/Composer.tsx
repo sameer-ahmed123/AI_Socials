@@ -152,7 +152,7 @@ const Composer = ({ onCreatePost }: ComposerProps) => {
                   onClick={removeSelectedMedia}
                   aria-label="Remove image"
                 >
-                  ×
+                  x
                 </button>
               </div>
             )}

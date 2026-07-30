@@ -21,6 +21,7 @@ import PostDetail from "../pages/PostDetail";
 import { useAuth } from "../hooks/useAuth";
 import FollowersPage from "../pages/FollowersPage/FollowersPage";
 import FollowingPage from "../pages/FollowingPage/FollowingPage";
+import HashtagPage from "../pages/HashtagPage";
 const AppRouter = () => {
   const { loading } = useAuth();
 
@@ -34,6 +35,7 @@ const AppRouter = () => {
       >
         <Route path="/" element={<HomePage />} />
         <Route path="/posts/:postId" element={<PostDetail />} />
+        <Route path="/hashtag/:hashtag_name/" element={<HashtagPage />} />
 
         <Route path="/explore" element={<ExplorePage />} />
 

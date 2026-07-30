@@ -1,12 +1,15 @@
 import Card from "../../../../ui/card/Card";
 import TrendItem from "./components/TrendItem/TrendItem";
-import { MOCK_TRENDS } from "../../data/mockTrends";
 // import type { TrendingSectionProps } from "./TrendingSection.types";
 import "./TrendingSection.css";
 import EmptyState from "../../../../ui/EmptyState";
-import { TrendingUp } from "lucide-react";
+import { TrendingUp, AlertCircle } from "lucide-react";
+import type { Trending } from "../../models/Trend.model";
+import { useTrending } from "../../hooks/useTrending";
 
 const TrendingSection = () => {
+  const { hashtags, loading, error } = useTrending();
+
   return (
     <Card className="trending-section">
       <header className="trending-section__header">
@@ -14,8 +17,21 @@ const TrendingSection = () => {
       </header>
 
       <div className="trending-section__content">
-        {MOCK_TRENDS.length > 0 ? (
-          MOCK_TRENDS.map((trend) => <TrendItem key={trend.id} trend={trend} />)
+        {loading ? (
+          <div className="trending-section__loading">
+            <p>Loading trends...</p>
+          </div>
+        ) : error ? (
+          <EmptyState
+            className="empty-state--compact"
+            icon={<AlertCircle size={42} />}
+            title="Something went wrong"
+            description={error}
+          />
+        ) : hashtags.length > 0 ? (
+          hashtags.map((trend: Trending) => (
+            <TrendItem key={trend.name} trend={trend} />
+          ))
         ) : (
           <EmptyState
             className="empty-state--compact"

@@ -1,5 +1,5 @@
-import type { Trend } from "../../../../models";
+import type { Trending } from "../../../../models/Trend.model";
 
 export interface TrendItemProps {
-  trend: Trend;
+  trend: Trending;
 }
