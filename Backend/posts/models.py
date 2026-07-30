@@ -23,6 +23,12 @@ class Post(models.Model):
         blank=True,
         null=True
     )
+    
+    hashtags = models.ManyToManyField(
+        "Hashtag",
+        related_name="posts",
+        blank=True,
+    )
 
     created_at = models.DateTimeField(
         auto_now_add=True,
@@ -133,3 +139,20 @@ class Repost(models.Model):
         return (
             f"{self.user.username} reposted Post {self.post.id}"
         )
+
+
+class Hashtag(models.Model):
+    name = models.CharField(
+        max_length=100,
+        unique=True,
+    )
+
+    created_at = models.DateTimeField(
+        auto_now_add=True,
+    )
+
+    class Meta:
+        ordering = ["name"]
+
+    def __str__(self):
+        return f"#{self.name}"

@@ -3,14 +3,16 @@ from rest_framework.response import Response
 from rest_framework import status
 
 from users.firebase import get_current_user
+from posts.services.trending_service import get_trending_hashtags
 from django.shortcuts import get_object_or_404
 from posts.services.feed_service import FeedService
 from posts.pagination import FeedPagination
-from .models import Post, Like, Bookmark, Repost
-from .serializers import (
+from posts.models import Post, Like, Bookmark, Repost, Hashtag
+from posts.serializers import (
     CreatePostSerializer,
     PostSerializer,
 )
+from posts.trending_serializers import TrendingHashtagSerializer
 
 
 @api_view(["GET", "POST"])
@@ -280,3 +282,37 @@ def feed(request):
     )
 
     return paginator.get_paginated_response(serializer.data)
+
+
+@api_view(["GET"])
+def hashtag_posts(request, hashtag_name):
+    name = hashtag_name.lower()
+    hashtag = get_object_or_404(Hashtag, name=name)
+    posts = (
+        Post.objects
+        .select_related("author")
+        .prefetch_related("media")
+        .prefetch_related("hashtags")
+        .order_by("-created_at")
+        .filter(hashtags=hashtag)
+    )
+
+    serializer = PostSerializer(
+        posts,
+        many=True,
+        context={"request": request}
+    )
+
+    return Response(serializer.data)
+
+
+@api_view(["GET"])
+def trending_hashtags(request):
+    hashtags = get_trending_hashtags()
+
+    serializer = TrendingHashtagSerializer(
+        hashtags,
+        many=True,
+    )
+
+    return Response(serializer.data)

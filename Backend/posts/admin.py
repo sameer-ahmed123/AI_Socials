@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Post, Like, Bookmark
+from .models import Post, Like, Bookmark, Hashtag
 
 
 @admin.register(Post)
@@ -27,3 +27,4 @@ class PostAdmin(admin.ModelAdmin):
 
 admin.site.register(Like)
 admin.site.register(Bookmark)
+admin.site.register(Hashtag)

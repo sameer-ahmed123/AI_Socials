@@ -7,6 +7,9 @@ from media_app.serializers import PostMediaSerializer
 from users.firebase import get_current_user
 from users.serializers import PublicUserSerializer
 
+from posts.services.hashtag_parser import extract_hashtags
+from posts.services.hashtag_service import get_or_create_hashtags
+
 
 class PostSerializer(serializers.ModelSerializer):
 
@@ -156,6 +159,10 @@ class CreatePostSerializer(serializers.ModelSerializer):
         )
 
         post = Post.objects.create(**validated_data)
+        hashtags = extract_hashtags(post.content)
+        if hashtags:
+            hashtag_objects = get_or_create_hashtags(hashtags)
+            post.hashtags.set(hashtag_objects)
 
         if uploaded_media:
             PostMedia.objects.create(

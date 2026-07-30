@@ -34,4 +34,14 @@ urlpatterns = [
         toggle_repost,
         name="toggle_repost",
     ),
+    path(
+        "hashtag/<str:hashtag_name>/",
+        hashtag_posts,
+        name="hashtag_post"
+    ),
+    path(
+        "trending/",
+        trending_hashtags,
+        name="trending_hashtags",
+    ),
 ]
