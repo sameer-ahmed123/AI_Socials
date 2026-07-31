@@ -1,0 +1,78 @@
+.discover-person-item-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 10px;
+  background-color: var(--color-surface-secondary, #ffffff);
+  border: 1px solid var(--color-border, #e1e8ed);
+  border-radius: 12px;
+  text-align: center;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.discover-person-item-card:hover {
+  border-color: var(--color-border-hover, #ccc);
+}
+
+.discover-person-item__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.discover-person-item__info {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.discover-person-item__name {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text-primary, #111);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.discover-person-item__username {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary, #777);
+  margin-top: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* Follow Button */
+.discover-person-item__follow-btn {
+  margin-top: 12px;
+  width: 100%;
+  padding: 4px 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #0066cc;
+  background-color: transparent;
+  border: 1px solid #0066cc;
+  border-radius: 16px;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.discover-person-item__follow-btn:hover {
+  background-color: #0066cc;
+  color: #ffffff;
+}

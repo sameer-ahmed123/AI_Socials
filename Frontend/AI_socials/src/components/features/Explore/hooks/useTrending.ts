@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getTrendingHashtags } from "../api/trending";
-import type { Trending } from "../models/Trend.model";
+import type { Trending } from "../types/Trend.model";
 
 export const useTrending = () => {
   const [hashtags, setHashtags] = useState<Trending[]>([]);

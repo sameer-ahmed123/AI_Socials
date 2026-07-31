@@ -9,20 +9,22 @@ import SearchResults from "../../components/features/Search/components/SearchRes
 import { useSearch } from "../../components/features/Search/hooks";
 import type { SearchScope } from "../../components/features/Search/hooks";
 import { useDebounce } from "../../hooks/useDebounce";
+import DiscoveryDashboard from "./components/DiscoveryDashboard/DiscoveryDashboard";
 
 const ExplorePage = () => {
-  const hasInitialized = useRef(false);
-  const { scope, results, loading, error, search } = useSearch();
   const [searchParams, setSearchParams] = useSearchParams();
   const initialQuery = searchParams.get("q") ?? "";
+  const [input, setInput] = useState(initialQuery);
+  const debouncedQuery = useDebounce(input, 300);
+  const hasQuery = input.trim().length > 0;
+  const hasInitialized = useRef(false);
+  const { scope, results, loading, error, search } = useSearch();
   const rawScope = searchParams.get("scope");
   const initialScope: SearchScope =
     rawScope === "posts" || rawScope === "users" || rawScope === "hashtags"
       ? rawScope
       : "posts";
 
-  const [input, setInput] = useState(initialQuery);
-  const debouncedQuery = useDebounce(input, 300);
 
   const performSearch = (nextQuery: string, nextScope: SearchScope = scope) => {
     search(nextQuery, nextScope);
@@ -37,7 +39,6 @@ const ExplorePage = () => {
     });
   };
 
-  
   useEffect(() => {
     if (hasInitialized.current) return;
     hasInitialized.current = true;
@@ -48,7 +49,6 @@ const ExplorePage = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  
   useEffect(() => {
     if (!hasInitialized.current) return;
     performSearch(debouncedQuery, scope);
@@ -64,14 +64,17 @@ const ExplorePage = () => {
           scope={scope}
           onChange={(nextScope) => performSearch(input, nextScope)}
         />
-
-        <SearchResults
-          input={input}
-          scope={scope}
-          results={results}
-          loading={loading}
-          error={error}
-        />
+        {hasQuery ? (
+          <SearchResults
+            input={input}
+            scope={scope}
+            results={results}
+            loading={loading}
+            error={error}
+          />
+        ) : (
+          <DiscoveryDashboard />
+        )}
       </Card>
     </PageContent>
   );

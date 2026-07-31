@@ -44,4 +44,9 @@ urlpatterns = [
         trending_hashtags,
         name="trending_hashtags",
     ),
+    path(
+        "popular/",
+        popular_posts,
+        name="popular_posts",
+    ),
 ]

@@ -1,10 +1,11 @@
+from django.shortcuts import get_object_or_404
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 
 from users.firebase import get_current_user
 from posts.services.trending_service import get_trending_hashtags
-from django.shortcuts import get_object_or_404
+from posts.services.popularity_service import PopularityService
 from posts.services.feed_service import FeedService
 from posts.pagination import FeedPagination
 from posts.models import Post, Like, Bookmark, Repost, Hashtag
@@ -236,23 +237,40 @@ def feed(request):
         - following (default)
         - for-you
     """
-
     user = get_current_user(request)
-
-    if user is None:
-        return Response(
-            {
-                "detail": "Authentication required."
-            },
-            status=status.HTTP_401_UNAUTHORIZED,
-        )
-
     mode = request.GET.get(
         "mode",
         "following",
     )
-
+    paginator = FeedPagination()
     print("current mode is ", mode)
+
+    if user is None:
+        service = FeedService(None)
+        try:
+            queryset = service.get_unauthorized_feed()
+            page = paginator.paginate_queryset(
+                queryset,
+                request,
+            )
+            serializer = PostSerializer(
+                page,
+                many=True,
+                context={
+                    "request": request,
+                },
+            )
+
+            return paginator.get_paginated_response(serializer.data)
+
+        except ValueError:
+            return Response(
+                {
+                    "detail": "Error fetching feed.",
+                },
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
     service = FeedService(user)
 
     try:
@@ -266,13 +284,10 @@ def feed(request):
             status=status.HTTP_400_BAD_REQUEST,
         )
 
-    paginator = FeedPagination()
-
     page = paginator.paginate_queryset(
         queryset,
         request,
     )
-
     serializer = PostSerializer(
         page,
         many=True,
@@ -313,6 +328,19 @@ def trending_hashtags(request):
     serializer = TrendingHashtagSerializer(
         hashtags,
         many=True,
+    )
+
+    return Response(serializer.data)
+
+
+@api_view(["GET"])
+def popular_posts(request):
+    posts = PopularityService.ranked_posts()
+
+    serializer = PostSerializer(
+        posts,
+        many=True,
+        context={"request": request},
     )
 
     return Response(serializer.data)

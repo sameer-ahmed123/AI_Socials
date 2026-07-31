@@ -4,8 +4,8 @@ import TrendItem from "./components/TrendItem/TrendItem";
 import "./TrendingSection.css";
 import EmptyState from "../../../../ui/EmptyState";
 import { TrendingUp, AlertCircle } from "lucide-react";
-import type { Trending } from "../../models/Trend.model";
-import { useTrending } from "../../hooks/useTrending";
+import type { Trending } from "../../../Explore/types/Trend.model";
+import { useTrending } from "../../../Explore/hooks/useTrending";
 
 const TrendingSection = () => {
   const { hashtags, loading, error } = useTrending();

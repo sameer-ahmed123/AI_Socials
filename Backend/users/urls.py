@@ -1,30 +1,27 @@
 from django.urls import path
-
-from . import views
+from users.views import *
 
 urlpatterns = [
     path(
         "me/",
-        views.update_profile,
+        update_profile,
         name="update_profile",
     ),
-
+    path(
+        "discover/",
+        discover_people,
+        name="discover_people",
+    ),
     path(
         "<str:username>/",
-        views.profile,
+        profile,
         name="profile",
     ),
 
     path(
         "<str:username>/posts/",
-        views.profile_posts,
+        profile_posts,
         name="profile_posts",
     ),
-
-    # path(
-    #     "<str:username>/replies/",
-    #     views.profile_replies,
-    #     name="profile_replies",
-    # ),
 
 ]

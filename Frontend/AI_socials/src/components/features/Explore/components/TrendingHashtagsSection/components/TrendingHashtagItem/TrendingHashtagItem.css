@@ -1,0 +1,35 @@
+.trending-hashtag-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px 12px;
+  background-color: var(--color-surface-secondary, #f7f9fa);
+  border: 1px solid var(--color-border, #e1e8ed);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.trending-hashtag-item:hover {
+  background-color: var(--color-surface-hover, #ebebeb);
+  border-color: var(--color-border-hover, #ccc);
+}
+
+.trending-hashtag-item__name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-text-primary, #111);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.trending-hashtag-item__count {
+  font-size: 0.75rem;
+  margin: 4px 0 0 0;
+  color: var(--color-text-secondary, #666);
+}

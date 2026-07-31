@@ -5,7 +5,8 @@ from rest_framework.response import Response
 from rest_framework import status
 from .firebase import get_current_user, verify_firebase_token
 from .models import User
-from .serializers import ProfileSerializer, UpdateProfileSerializer, UserSerializer
+from users.services.discover_people_service import get_discover_people
+from .serializers import ProfileSerializer, PublicUserSerializer, UpdateProfileSerializer, UserSerializer
 
 
 @api_view(["GET"])
@@ -215,3 +216,29 @@ def profile_posts(request, username):
 #     )
 
 #     return Response(serializer.data)
+
+
+
+@api_view(["GET"])
+def discover_people(request):
+    user = get_current_user(request)
+
+    if user is None:
+        return Response(
+            {
+                "detail": "Authentication required."
+            },
+            status=status.HTTP_401_UNAUTHORIZED,
+        )
+
+    users = get_discover_people(
+        current_user=user,
+    )
+
+    serializer = PublicUserSerializer(
+        users,
+        many=True,
+        context={"request": request},
+    )
+
+    return Response(serializer.data)

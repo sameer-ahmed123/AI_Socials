@@ -23,6 +23,15 @@ class FeedService:
         self.user = user
         self.ranker = FeedRanker()
 
+    def get_unauthorized_feed(self):
+        query_set = (
+            Post.objects.select_related("author")
+            .prefetch_related("media")
+            .order_by("-created_at")
+        )
+
+        return self.ranker.rank(query_set)
+
     def get_feed(self, mode: str):
         """
         Entry point for all feed requests.
