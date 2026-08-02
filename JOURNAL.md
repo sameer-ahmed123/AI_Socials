@@ -61,3 +61,9 @@ Every one of these ideas sounded elegant, but none of them improved the MVP. I l
 Another thing that surprised me was how valuable "boring" code is.
 
 ```
+### 1/8/26
+```
+Sprint 18 was less about building new features and more about making the platform feel alive.
+
+The biggest lesson from this sprint was realizing that not every feature deserves its own complex architecture. While building trending hashtags, popular posts and the discovery dashboard, I caught myself wanting to immediately integrate everything into the World Context. After thinking about it, I realized I was once again designing for a future that didn't exist yet.
+```
