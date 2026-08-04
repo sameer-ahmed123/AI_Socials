@@ -22,8 +22,7 @@
 
   padding: var(--space-5);
 
-  transition:
-    grid-template-columns var(--transition-normal);
+  transition: grid-template-columns var(--transition-normal);
 }
 
 .app-layout--collapsed {
@@ -73,4 +72,16 @@
   flex-direction: column;
 
   min-width: 0;
+}
+
+/* ==========================================
+   NO_WIDGETS
+========================================== */
+
+.app-layout--no-widgets {
+  grid-template-columns: var(--sidebar-width) 1fr;
+}
+
+.app-layout--collapsed.app-layout--no-widgets {
+  grid-template-columns: var(--sidebar-width-collapsed) 1fr;
 }

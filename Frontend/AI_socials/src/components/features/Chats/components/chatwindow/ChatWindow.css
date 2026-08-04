@@ -1,0 +1,9 @@
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 80vh;
+}
+.inbox_area{
+  flex: 1;
+}

@@ -1,23 +1,21 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import Button from "../../../../ui/Button/Button";
 import FollowButton from "../../../../ui/FollowButton/FollowButton";
 
-import {
-  followUser,
-  unfollowUser,
-} from "../../services/api/follow";
+import { followUser, unfollowUser } from "../../services/api/follow";
 
 import "./ProfileActions.css";
 
 import type { ProfileActionsProps } from "./ProfileActions.types";
+import { useStartConversation } from "../../../Chats/hooks/useStartConversation";
 
-const ProfileActions = ({
-  profile,
-  onProfileChange,
-}: ProfileActionsProps) => {
+const ProfileActions = ({ profile, onProfileChange }: ProfileActionsProps) => {
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const { createConversation } = useStartConversation();
 
   async function handleFollow() {
     if (loading) return;
@@ -39,6 +37,12 @@ const ProfileActions = ({
     }
   }
 
+  async function handleMessage() {
+    const conversation = await createConversation(profile.username);
+
+    navigate(`/messages/${conversation.conversation_id}`);
+  }
+
   if (profile.is_me) {
     return (
       <section className="profile-actions">
@@ -56,6 +60,8 @@ const ProfileActions = ({
         loading={loading}
         onClick={handleFollow}
       />
+
+      <Button onClick={handleMessage}>Message</Button>
     </section>
   );
 };

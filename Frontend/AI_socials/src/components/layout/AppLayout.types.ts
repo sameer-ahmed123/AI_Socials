@@ -5,5 +5,5 @@ export interface AppLayoutProps {
 
   // timeline: ReactNode;
 
-  widgets: ReactNode;
+  widgets?: ReactNode;
 }

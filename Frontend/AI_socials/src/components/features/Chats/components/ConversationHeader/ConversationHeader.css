@@ -1,0 +1,59 @@
+.conversation-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1rem 1.5rem;
+
+  border-bottom: 1px solid var(--color-border);
+
+  background: white;
+}
+
+.conversation-back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.conversation-back-button:hover {
+  opacity: 0.7;
+}
+
+.conversation-avatar {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+.conversation-user-info {
+  flex: 1;
+}
+
+.conversation-user-info h3 {
+  margin: 0;
+
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.conversation-user-info p {
+  margin: 2px 0 0;
+
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.conversation-status {
+  color: #28c840;
+
+  font-size: 0.85rem;
+}

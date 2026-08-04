@@ -1,13 +1,10 @@
 .card {
   background: var(--color-paper);
-
   border: var(--border-width) solid var(--color-border);
-
   border-radius: var(--radius-sm);
-
   filter: var(--sketch-filter);
-
   transition: var(--transition-normal);
+  width: 100%;
 }
 
 /* ---------- Variants ---------- */

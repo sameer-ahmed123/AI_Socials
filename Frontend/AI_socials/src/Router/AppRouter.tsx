@@ -5,7 +5,6 @@ import AppLayout from "../components/layout/AppLayout";
 import HomePage from "../pages/Home";
 import ExplorePage from "../pages/Explore";
 import NotificationsPage from "../pages/Notifications";
-import MessagesPage from "../pages/Messages";
 import BookmarksPage from "../pages/Bookmarks";
 import ProfilePage from "../pages/Profile";
 import EditProfilePage from "../pages/EditProfile";
@@ -22,6 +21,8 @@ import { useAuth } from "../hooks/useAuth";
 import FollowersPage from "../pages/FollowersPage/FollowersPage";
 import FollowingPage from "../pages/FollowingPage/FollowingPage";
 import HashtagPage from "../pages/HashtagPage";
+import InboxPage from "../pages/InboxPage";
+import ConversationPage from "../pages/ConversationPage";
 const AppRouter = () => {
   const { loading } = useAuth();
 
@@ -52,7 +53,7 @@ const AppRouter = () => {
           path="/messages"
           element={
             <ProtectedRoute>
-              <MessagesPage />
+              <InboxPage />
             </ProtectedRoute>
           }
         />
@@ -101,7 +102,16 @@ const AppRouter = () => {
           }
         />
       </Route>
-
+      <Route element={<AppLayout sidebar={<Sidebar />}  />}>
+        <Route
+          path="/messages/:conversationId"
+          element={
+            <ProtectedRoute>
+              <ConversationPage />
+            </ProtectedRoute>
+          }
+        />
+      </Route>
       <Route
         path="/login"
         element={

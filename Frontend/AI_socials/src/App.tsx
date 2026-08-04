@@ -6,7 +6,7 @@ const App = () => {
   return (
     <>
       <SketchFilter />
-      <AppRouter />;
+      <AppRouter />
     </>
   );
 };
