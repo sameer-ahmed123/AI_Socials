@@ -10,4 +10,5 @@ export interface Message {
   sender: MessageSender;
   content: string;
   created_at: string;
+  optimistic?: boolean;
 }

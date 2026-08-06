@@ -13,14 +13,14 @@ interface Props {
 
 const ChatWindow = ({ conversationId }: Props) => {
   const { user } = useAuth();
-  const { conversation, messages, loading, error } =
+  const { conversation, messages, loading, error, send } =
     useConversation(conversationId);
-  console.log(conversation);
+
   if (loading) {
     return <LoadingScreen />;
   }
 
-  if (error || !conversation) {
+  if (error || !conversation || !user) {
     return (
       <EmptyState
         title="Conversation unavailable"
@@ -32,9 +32,9 @@ const ChatWindow = ({ conversationId }: Props) => {
   return (
     <div className="chat-window">
       <ConversationHeader user={conversation.conversation.other_user} />
-      <MessageList messages={messages} currentUserId={user!.id} />
+      <MessageList messages={messages} currentUserId={user.id} />
 
-      <MessageComposer conversationId={conversationId} />
+      <MessageComposer currentUser={user} onSend={send} />
     </div>
   );
 };

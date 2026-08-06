@@ -1,16 +1,21 @@
 .message-bubble {
   display: flex;
-  gap: 0.75rem;
+  gap: 0.5rem;
   align-items: flex-end;
 }
 
 .message-bubble--own {
-  justify-content: flex-end;
+  flex-direction: row-reverse;
+  align-self: flex-end;
+}
+
+.message-bubble--other {
+  align-self: flex-start;
 }
 
 .message-bubble__avatar {
-  width: 42px;
-  height: 42px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
@@ -20,7 +25,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
-  max-width: 70%;
+  margin: 0;
 }
 
 .message-bubble__header {
@@ -40,20 +45,57 @@
 }
 
 .message-bubble__text {
-  padding: 0.8rem 1rem;
+  padding: 0.6rem 0.9rem;
   border-radius: 18px;
   line-height: 1.45;
   word-break: break-word;
   background: var(--surface-secondary, #e4e6eb);
   color: var(--text-primary, #000000);
+  margin: 0;
 }
 
 .message-bubble--own .message-bubble__text {
   background: var(--accent-color, #0084ff);
   color: #ffffff;
-  border-bottom-right-radius: 6px;
 }
 
-.message-bubble:not(.message-bubble--own) .message-bubble__text {
-  border-bottom-left-radius: 6px;
+.message-bubble__time {
+  font-size: 0.75rem;
+  color: var(--text-secondary, #888);
+  align-self: flex-end;
+  margin-bottom: 0.2rem;
+}
+
+
+.message-bubble--own.message-bubble--first .message-bubble__text {
+  border-radius: 18px 18px 4px 18px;
+}
+
+.message-bubble--own.message-bubble--middle .message-bubble__text {
+  border-radius: 18px 4px 4px 18px;
+}
+
+.message-bubble--own.message-bubble--last .message-bubble__text {
+  border-radius: 18px 4px 18px 18px;
+}
+
+.message-bubble--own.message-bubble--single .message-bubble__text {
+  border-radius: 18px;
+}
+
+
+.message-bubble--other.message-bubble--first .message-bubble__text {
+  border-radius: 18px 18px 18px 4px;
+}
+
+.message-bubble--other.message-bubble--middle .message-bubble__text {
+  border-radius: 4px 18px 18px 4px;
+}
+
+.message-bubble--other.message-bubble--last .message-bubble__text {
+  border-radius: 4px 18px 18px 18px;
+}
+
+.message-bubble--other.message-bubble--single .message-bubble__text {
+  border-radius: 18px;
 }

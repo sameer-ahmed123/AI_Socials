@@ -1,0 +1,24 @@
+.message-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  max-width: 70%;
+  width: fit-content;
+}
+
+.message-group--own {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.message-group--other {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.message-group__sender {
+  margin-bottom: 0.2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-secondary, #666);
+}

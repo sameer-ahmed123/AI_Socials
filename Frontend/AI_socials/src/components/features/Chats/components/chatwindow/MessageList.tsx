@@ -1,21 +1,23 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import EmptyState from "../../../../ui/EmptyState";
-import MessageBubble from "./MessageBubble";
-import "./MessageList.css";
+import DateSeparator from "./DateSeparator";
+import MessageGroup from "./MessageGroup";
 import type { Message } from "../../types/message.model";
+import "./MessageList.css";
+import { groupMessages } from "../../utils/groupMessages";
+import { formatMessageDate, isSameDay } from "../../utils/formatMessageDate"; // Adjust path to your date utils file
 
-interface MessageListProps {
+interface Props {
   messages: Message[];
   currentUserId: number;
 }
 
-const MessageList = ({ messages, currentUserId }: MessageListProps) => {
+const MessageList = ({ messages, currentUserId }: Props) => {
   const bottomRef = useRef<HTMLDivElement>(null);
+  const groupedMessages = groupMessages(messages);
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({
-      behavior: "smooth",
-    });
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
   if (!messages.length) {
@@ -28,13 +30,27 @@ const MessageList = ({ messages, currentUserId }: MessageListProps) => {
 
   return (
     <section className="message-list">
-      {messages.map((message) => (
-        <MessageBubble
-          key={message.id}
-          message={message}
-          isOwnMessage={message.sender.id === currentUserId}
-        />
-      ))}
+      {groupedMessages.map((group, index) => {
+        const currentDate = new Date(group.messages[0].created_at);
+        const previousDate =
+          index > 0
+            ? new Date(groupedMessages[index - 1].messages[0].created_at)
+            : null;
+
+        const isNewDay = !previousDate || !isSameDay(currentDate, previousDate);
+
+        const formattedDateLabel = formatMessageDate(currentDate);
+
+        return (
+          <React.Fragment key={group.messages[0].id}>
+            {isNewDay && <DateSeparator label={formattedDateLabel} />}
+            <MessageGroup
+              group={group}
+              isOwnMessage={group.senderId === currentUserId}
+            />
+          </React.Fragment>
+        );
+      })}
 
       <div ref={bottomRef} />
     </section>

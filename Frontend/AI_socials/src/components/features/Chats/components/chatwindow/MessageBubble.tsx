@@ -1,41 +1,34 @@
 import "./MessageBubble.css";
+import type { MessageBubbleProps } from "../../types/messageBubble.model";
 
-import type { Message } from "../../types/message.model";
+const MessageBubble = ({
+  message,
+  isOwnMessage,
+  position,
+}: MessageBubbleProps) => {
+  const formattedTime = new Date(message.created_at).toLocaleTimeString([], {
+    hour: "numeric",
+    minute: "2-digit",
+  });
 
-interface Props {
-  message: Message;
-  isOwnMessage: boolean;
-}
-
-const MessageBubble = ({ message, isOwnMessage }: Props) => {
   return (
-    <div
-      className={`message-bubble ${isOwnMessage ? "message-bubble--own" : ""}`}
+    <article
+      className={`
+        message-bubble
+        ${isOwnMessage ? "message-bubble--own" : "message-bubble--other"}
+        message-bubble--${position}
+      `}
     >
-      {!isOwnMessage && (
-        <img
-          src={message.sender.avatar}
-          alt={message.sender.display_name}
-          className="message-bubble__avatar"
-        />
-      )}
-
       <div className="message-bubble__content">
-        {!isOwnMessage && (
-          <div className="message-bubble__header">
-            <span className="message-bubble__display-name">
-              {message.sender.display_name}
-            </span>
-
-            <span className="message-bubble__username">
-              @{message.sender.username}
-            </span>
-          </div>
-        )}
-
-        <div className="message-bubble__text">{message.content}</div>
+        <p className="message-bubble__text">{message.content}</p>
       </div>
-    </div>
+
+      {(position === "single" || position === "last") && (
+        <span className="message-bubble__time">
+          {message.optimistic ? "Sending..." : formattedTime}
+        </span>
+      )}
+    </article>
   );
 };
 

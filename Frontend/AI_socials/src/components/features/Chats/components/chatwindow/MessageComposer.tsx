@@ -1,21 +1,32 @@
 import "./MessageComposer.css";
 import { useState } from "react";
-import { useSendMessage } from "../../hooks/useSendMessage";
+import type { SearchUser } from "../../../Search/types/SearchUser.model";
 
 interface Props {
-  conversationId: number;
+  currentUser: SearchUser;
+  onSend: (content: string, user: SearchUser) => Promise<void>;
 }
 
-const MessageComposer = ({ conversationId }: Props) => {
+const MessageComposer = ({ currentUser, onSend }: Props) => {
   const [content, setContent] = useState("");
-  const { createMessage } = useSendMessage();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!content.trim()) {
-      return;
+    const trimmed = content.trim();
+    if (!trimmed || isSubmitting) return;
+
+    try {
+      setIsSubmitting(true);
+      setContent(""); // Clear input immediately for better UX
+      await onSend(trimmed, currentUser);
+    } catch (err) {
+      // Revert content if send fails
+      setContent(trimmed);
+      console.error(err);
+    } finally {
+      setIsSubmitting(false);
     }
-    await createMessage(conversationId, content);
-    setContent("");
   }
 
   return (
@@ -24,9 +35,12 @@ const MessageComposer = ({ conversationId }: Props) => {
         value={content}
         onChange={(e) => setContent(e.target.value)}
         placeholder="Write a message..."
+        disabled={isSubmitting}
       />
 
-      <button type="submit">Send</button>
+      <button type="submit" disabled={isSubmitting || !content.trim()}>
+        Send
+      </button>
     </form>
   );
 };

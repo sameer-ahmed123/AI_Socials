@@ -23,6 +23,7 @@ import FollowingPage from "../pages/FollowingPage/FollowingPage";
 import HashtagPage from "../pages/HashtagPage";
 import InboxPage from "../pages/InboxPage";
 import ConversationPage from "../pages/ConversationPage";
+import { InboxProvider } from "../components/features/Chats/context/InboxContext";
 const AppRouter = () => {
   const { loading } = useAuth();
 
@@ -53,7 +54,9 @@ const AppRouter = () => {
           path="/messages"
           element={
             <ProtectedRoute>
-              <InboxPage />
+              <InboxProvider>
+                <InboxPage />
+              </InboxProvider>
             </ProtectedRoute>
           }
         />
@@ -102,12 +105,14 @@ const AppRouter = () => {
           }
         />
       </Route>
-      <Route element={<AppLayout sidebar={<Sidebar />}  />}>
+      <Route element={<AppLayout sidebar={<Sidebar />} />}>
         <Route
           path="/messages/:conversationId"
           element={
             <ProtectedRoute>
-              <ConversationPage />
+              <InboxProvider>
+                <ConversationPage />
+              </InboxProvider>
             </ProtectedRoute>
           }
         />

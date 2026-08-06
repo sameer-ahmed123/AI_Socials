@@ -1,6 +1,6 @@
 import "./Inbox.css";
 import ConversationCard from "./ConversationCard";
-import { useInbox } from "../../hooks/useInbox";
+import { useInbox } from "../../context/InboxContext";
 import LoadingScreen from "../../../../common/loadingScreen/LoadingScreen";
 import EmptyState from "../../../../ui/EmptyState";
 

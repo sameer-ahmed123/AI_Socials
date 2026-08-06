@@ -67,3 +67,10 @@ Sprint 18 was less about building new features and more about making the platfor
 
 The biggest lesson from this sprint was realizing that not every feature deserves its own complex architecture. While building trending hashtags, popular posts and the discovery dashboard, I caught myself wanting to immediately integrate everything into the World Context. After thinking about it, I realized I was once again designing for a future that didn't exist yet.
 ```
+
+### 6/8/26
+```
+To be honest i havent really learned anything new in this sprint , i just hastly put together a messaging system and copied some code from an already exisiting project 
+
+lets hope to do better next time 
+```

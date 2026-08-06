@@ -2,22 +2,18 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-
   padding: 1rem 1.5rem;
-
   border-bottom: 1px solid var(--color-border);
-
-  background: white;
+  background: var(--color-background);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .conversation-back-button {
   display: flex;
   align-items: center;
   justify-content: center;
-
   border: none;
   background: transparent;
-
   cursor: pointer;
 }
 
@@ -28,9 +24,7 @@
 .conversation-avatar {
   width: 48px;
   height: 48px;
-
   border-radius: 50%;
-
   object-fit: cover;
 }
 
@@ -40,20 +34,17 @@
 
 .conversation-user-info h3 {
   margin: 0;
-
   font-size: 1rem;
   font-weight: 600;
 }
 
 .conversation-user-info p {
   margin: 2px 0 0;
-
   color: #666;
   font-size: 0.9rem;
 }
 
 .conversation-status {
   color: #28c840;
-
   font-size: 0.85rem;
 }
