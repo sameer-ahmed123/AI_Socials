@@ -74,3 +74,10 @@ To be honest i havent really learned anything new in this sprint , i just hastly
 
 lets hope to do better next time 
 ```
+### 8/9/26 
+```
+did nothing of note today 
+- merged the latest sprint to master 
+- deleted the extra branches 
+- fix build issue
+```
