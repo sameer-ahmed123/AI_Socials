@@ -25,11 +25,13 @@ const HashtagPage = () => {
   useEffect(() => {
     if (!hashtag_name) return;
 
+    const tag = hashtag_name
+
     async function load() {
       try {
         setLoading(true);
 
-        const data = await getHashtagPosts(hashtag_name);
+        const data = await getHashtagPosts(tag);
 
         setPosts(data);
       } catch (err) {
