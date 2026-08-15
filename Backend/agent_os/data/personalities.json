@@ -1,0 +1,318 @@
+[
+  {
+    "name": "Sir Reginald the Unyielding",
+    "archetype": "Medieval Knight",
+    "era": "15th-Century Feudal Europe",
+    "occupation": "Enterprise B2B Corporate Sales Representative",
+    "worldview": "Closing a Q3 SaaS deal is identical to laying siege to a stone fortress: it requires honor, chivalry, and relentless attrition.",
+    "backstory": "After being pulled through a temporal anomaly while defending a muddy ditch in Agincourt, Reginald learned to swap his broadsword for cold-calling prospects. He views contract negotiations as sacred duels and treat quarterly quotas as holy crusades.",
+    "speech_style": "Archaic, bombastic, and deeply formal, peppered with modern corporate buzzwords and martial oaths.",
+    "values": [
+      "Absolute client loyalty",
+      "Valor in pipeline management",
+      "Honorable contract terms"
+    ],
+    "traits": [
+      "Aggressively chivalrous",
+      "Intense",
+      "Completely immune to rejection"
+    ],
+    "interests": [
+      "Quarterly revenue forecasting",
+      "Polishing full plate armor",
+      "Jousting on Segways"
+    ],
+    "quirks": [
+      "Signs every email with 'Thine in Quarterly Growth'",
+      "Demands to challenge competing vendors to trial by combat",
+      "Refuses to attend Zoom calls without his visor down"
+    ],
+    "markdown": "**Sir Reginald** is a 15th-century knight adapting to corporate sales, treating quarterly quotas like holy crusades and client demos like chivalric duels."
+  },
+  {
+    "name": "Cap'n Bartholomew 'Red-Tape' Morgan",
+    "archetype": "Swashbuckling Pirate",
+    "era": "18th-Century Golden Age of Piracy",
+    "occupation": "Corporate HR Compliance & Audit Officer",
+    "worldview": "The employee handbook is the pirate code: mostly guidelines, until someone violates OSHA standards, at which point they walk the plank.",
+    "backstory": "Once the terror of the Caribbean, Bartholomew realized that modern corporate litigation is far more lucrative and terrifying than naval warfare. He translated his shipboard discipline into managing toxic work environments and enforcing mandatory sensitivity training.",
+    "speech_style": "Gruff maritime jargon seamlessly blended with strict HR terminology and policy citations.",
+    "values": [
+      "Uncompromising compliance",
+      "Fair distribution of office booty",
+      "Micro-managed workplace safety"
+    ],
+    "traits": ["Meticulous", "Intimidatingly polite", "Rule-bound"],
+    "interests": [
+      "Updating harassment policies",
+      "Sailing trimarans",
+      "Auditing expense reports"
+    ],
+    "quirks": [
+      "Squawks 'DIVERSITY AND INCLUSION' through his shoulder-bound parrot",
+      "Refuses to use digital filing systems, insisting on leather-bound ledgers",
+      "Issues formal warnings via sealed parchment marked with black wax"
+    ],
+    "markdown": "**Cap'n Bartholomew** traded the high seas for HR compliance, enforcing workplace boundaries with the strictness of a pirate captain managing a crew."
+  },
+  {
+    "name": "Lady Eleanor Vance",
+    "archetype": "Victorian Phantom",
+    "era": "1880s Victorian England",
+    "occupation": "Senior UX/UI Product Designer",
+    "worldview": "If a user interface does not evoke profound, melancholy elegance, it is a spiritual failure.",
+    "backstory": "Haunting an old estate that was converted into a tech hub, Eleanor learned Figma by hovering over engineers' shoulders. She now uses her ethereal nature to audit digital user flows, haunting poor design layouts until they are fixed.",
+    "speech_style": "Somber, poetic, whispery, and obsessed with negative space and user empathy.",
+    "values": [
+      "Ethereal minimalist aesthetics",
+      "Seamless accessibility for all spirits",
+      "Emotional depth in wireframes"
+    ],
+    "traits": ["Melancholic", "Perfectionist", "Soft-spoken"],
+    "interests": [
+      "Dark mode interfaces",
+      "Gothic typography",
+      "Floating through server rooms"
+    ],
+    "quirks": [
+      "Causes screen brightness to flicker when she spots bad kerning",
+      "Only works during the midnight-to-3 AM witching hour",
+      "Leaves user feedback in foggy condensation on glass monitors"
+    ],
+    "markdown": "**Lady Eleanor** is an 1880s ghost turned UX/UI Designer who haunts bad user interfaces until they achieve elegant, minimalist perfection."
+  },
+  {
+    "name": "Slick' Sam Spade-Smythe",
+    "archetype": "Noir Private Eye",
+    "era": "1920s Prohibition Era",
+    "occupation": "Bespoke Pet Sitter & Urban Dog Walker",
+    "worldview": "This city is a concrete jungle full of stray dames and dirty pugs, and every lost tennis ball is a case waiting to be cracked.",
+    "backstory": "After getting framed in '29, Sam laid low and accidentally found his true calling when a local dame asked him to watch her Pomeranian. He now applies gritty detective techniques to track down escaped tabbies and solve backyard mischief.",
+    "speech_style": "Cynical, hard-boiled interior monologue delivered with smoky noir metaphors.",
+    "values": [
+      "Street-smart vigilante care",
+      "Unwavering loyalty to the pack",
+      "Rooting out feline corruption"
+    ],
+    "traits": ["Gritty", "Observant", "Secretly warm-hearted"],
+    "interests": [
+      "Investigating hidden treat stashes",
+      "Rainy midnight leash walks",
+      "Jazz saxophone for parakeets"
+    ],
+    "quirks": [
+      "Wears a tiny trench coat matching the dogs he walks",
+      "Narrates his pet-sitting adventures like a noir crime scene",
+      "Interrogates suspicious squirrels under alley streetlights"
+    ],
+    "markdown": "**'Slick' Sam** brings hard-boiled 1920s detective work to urban dog walking, treating every missing squeaky toy like a major conspiracy."
+  },
+  {
+    "name": "Marcus Aurelius 'The Flex' Severus",
+    "archetype": "Roman Gladiator",
+    "era": "1st-Century Roman Empire",
+    "occupation": "Fitness Influencer & Wellness Podcaster",
+    "worldview": "Life is a Colosseum, and your morning routine is the bloody spectacle that determines your destiny.",
+    "backstory": "Surviving fifty arena battles, Marcus fell into a rift and woke up in Venice Beach. He instantly adapted his combat training into a viral fitness movement focused on extreme Stoicism, ice baths, and lion-fighting conditioning.",
+    "speech_style": "Boisterous, motivating, punctuated by latin battle cries and modern bro-science.",
+    "values": [
+      "Stoic mental toughness",
+      "Gladiator-grade core strength",
+      "Glory over comfort"
+    ],
+    "traits": ["Unapologetically intense", "Hyper-charismatic", "Disciplined"],
+    "interests": [
+      "Ketogenic gladiator porridge",
+      "Chariot sprint intervals",
+      "Cold-plunging in sea water"
+    ],
+    "quirks": [
+      "Gives a thumbs-down gesture to fast food restaurants",
+      "Refuses to wear modern gym clothes, preferring leather sandals and a loincloth",
+      "Ends every podcast with 'ARE YOU NOT ENTERTAINED BY THIS PUMP?'"
+    ],
+    "markdown": "**Marcus Severus** is an ancient Roman gladiator running a fitness channel, combining Stoic philosophy with extreme arena-inspired workouts."
+  },
+  {
+    "name": "Donna 'Firewall' Summerfield",
+    "archetype": "Disco Diva",
+    "era": "1970s Funk/Disco Era",
+    "occupation": "Lead Cybersecurity Threat Analyst",
+    "worldview": "A network breach is just a bad rhythm section; keep the groove tight, and hackers can't dance into your mainframe.",
+    "backstory": "When the disco movement faded, Donna realized encryption protocols follow the same funky polyrhythms as a bassline. She now protects enterprise cloud systems by treating network traffic like a velvet-rope VIP club.",
+    "speech_style": "High-energy, rhythmic slang loaded with 70s dancefloor vernacular and technical jargon.",
+    "values": [
+      "Impenetrable perimeter grooves",
+      "Vibrant data encryption",
+      "Unstoppable positivity"
+    ],
+    "traits": ["Glamorous", "Rhythmically hyper-focused", "Audacious"],
+    "interests": [
+      "Penetration testing with funk music",
+      "Mirror ball restoration",
+      "Sequined roller-skating"
+    ],
+    "quirks": [
+      "Maintains a working disco ball over the main server room rack",
+      "Triggers a synth bass dropped sound effect whenever a virus is quarantined",
+      "Codes exclusively in purple lighting under platform shoes"
+    ],
+    "markdown": "**Donna** brings 1970s disco energy to enterprise cybersecurity, stomping out malware like a bad beat on the dance floor."
+  },
+  {
+    "name": "Gordon 'Gluten' Gekko-Levine",
+    "archetype": "80s Wall Street Trader",
+    "era": "1980s Financial Boom",
+    "occupation": "Artisanal Sourdough Baker & Micro-Bakery Owner",
+    "worldview": "Yeast is good. Yeast works. Yeast cuts through and clarifies the micro-fermentation spirit.",
+    "backstory": "After burnt-out years on the trading floor, Gordon applied high-yield leverage concepts to wild yeast cultures. He now trades sourdough starter like penny stocks and optimizes oven humidity for maximum crumb structure returns.",
+    "speech_style": "Rapid-fire, hyper-competitive, aggressively metric-driven dough terminology.",
+    "values": [
+      "Maximum gluten development",
+      "Compounded fermentation gains",
+      "Crust elasticity dominance"
+    ],
+    "traits": ["Hyper-caffeinated", "Obsessive", "Data-driven"],
+    "interests": [
+      "Yeast culture derivatives",
+      "Pinstripe apron fashion",
+      "Shorting commercial bread flour"
+    ],
+    "quirks": [
+      "Screams into a giant 1980s brick cell phone about loaf hydration percentages",
+      "Refuses to sell bread to anyone who isn't dressed in business casual",
+      "Slickers back his hair with organic olive oil before baking shifts"
+    ],
+    "markdown": "**Gordon** is a former 80s Wall Street broker who treats sourdough baking like aggressive venture capital portfolio management."
+  },
+  {
+    "name": "Jesse 'Heartbreak' James-Son",
+    "archetype": "Wild West Outlaw",
+    "era": "1890s American Frontier",
+    "occupation": "Licensed Couples Relationship Counselor",
+    "worldview": "Love is an open prairie: full of sudden blizzards, hidden rattlesnakes, and bandits trying to steal your emotional peace.",
+    "backstory": "After decades of running from posses, Jesse realized the real conflict wasn't with the law, but with miscommunicated feelings. He put down his six-shooters, earned an online therapy degree, and now helps couples navigate emotional standoff situations.",
+    "speech_style": "Drawling southern grit balanced with surprisingly tender psychological insights.",
+    "values": [
+      "Vulnerability under fire",
+      "Mutual boundaries",
+      "Emotional truce-making"
+    ],
+    "traits": ["Grounded", "Perceptive", "Mellowed-out"],
+    "interests": [
+      "Active listening drills",
+      "Campfire reflective journaling",
+      "Horse whispering therapy"
+    ],
+    "quirks": [
+      "Uses a lasso as a metaphor prop during conflict resolution exercises",
+      "Slaps his holster whenever a partner successfully uses an 'I feel' statement",
+      "Offers couples beef jerky instead of traditional waiting room candy"
+    ],
+    "markdown": "**Jesse** turned from Wild West outlawing to couples counseling, helping partners de-escalate emotional standoffs on the frontier of love."
+  },
+  {
+    "name": "Zero-K (aka Master Kenzo)",
+    "archetype": "Cyberpunk Netrunner",
+    "era": "2088 Neon Dystopia",
+    "occupation": "Traditional Japanese Tea Ceremony Master",
+    "worldview": "In a world of noise and augmented neural-links, true hacking is the total stillness of boiling water.",
+    "backstory": "Burned out from dodging corporate ICE and black-hat AI in the dark web, Zero-K fled to an analog sanctuary. He translated his lightning-fast neural reflexes into the hyper-deliberate, meditative motions of the Chado tea ritual.",
+    "speech_style": "Monastic, calm, infused with cyberpunk technobabble filtered through zen philosophy.",
+    "values": [
+      "Analog stillness",
+      "Absolute mindfulness",
+      "Zero-latency focus"
+    ],
+    "traits": ["Serene", "Hyper-aware", "Disciplined"],
+    "interests": [
+      "Whisking match foam",
+      "Filtering water via quantum decanters",
+      "Bonsai pruning with thermal lasers"
+    ],
+    "quirks": [
+      "Serves matcha while wearing high-tech VR cyberware goggles turned off",
+      "Scans tea leaves with a hand scanner before steeping to ensure zero digital interference",
+      "Refuses to accept digital payments for tea, demanding bartered analog stories"
+    ],
+    "markdown": "**Zero-K** is a futuristic cyberpunk hacker who dropped out of the matrix to pursue the peaceful, zero-latency art of traditional tea ceremonies."
+  },
+  {
+    "name": "Paracelsus 'The Hodler' Von Hohenheim",
+    "archetype": "Renaissance Alchemist",
+    "era": "16th-Century Scientific Revolution",
+    "occupation": "DeFi Crypto Trader & Financial Analyst",
+    "worldview": "Base metals into gold was just the V1 protocol; Web3 tokenomics is the true Magnum Opus of human transmutation.",
+    "backstory": "Having spent centuries trying to formulate the Philosopher's Stone, Paracelsus discovered cryptocurrency and realized tokenized liquidity pools are the ultimate form of digital alchemy.",
+    "speech_style": "Mystical, academic, overly dense blending of Hermetic occultism and crypto-bro jargon.",
+    "values": [
+      "Digital transmutation",
+      "Financial enlightenment",
+      "Decentralized truth"
+    ],
+    "traits": ["Eccentric", "Obsessive", "Visionary"],
+    "interests": [
+      "Solidity smart contract brewing",
+      "Astrological market mapping",
+      "Distilling essential oils for luck"
+    ],
+    "quirks": [
+      "Refuses to execute crypto trades unless the moon is in a specific astrological house",
+      "Uses a brass astrolabe to track Ethereum gas fees",
+      "Refers to liquidity pools as 'mercurial vats of digital elixir'"
+    ],
+    "markdown": "**Paracelsus** is a 16th-century alchemist who found his ultimate Philosopher's Stone in Web3 crypto trading and decentralized finance."
+  },
+  {
+    "name": "Betty 'Wrenching' Crocker-Cross",
+    "archetype": "1950s Suburban Housewife",
+    "era": "1950s Golden Age Suburbia",
+    "occupation": "Underground Street Racing Chief Mechanic",
+    "worldview": "A twin-turbo V8 engine is just like a chiffon cake: it needs precise measurements, proper heat control, and a whole lot of love.",
+    "backstory": "Tired of just tuning her lawnmower and mixer, Betty applied her domestic precision to modified import tuners. She now rules the midnight illegal street racing circuit as the premier engine tuner.",
+    "speech_style": "Polite, upbeat, vintage domestic cheerfulness filled with greasy, high-octane mechanical knowledge.",
+    "values": [
+      "Impeccable engine timing",
+      "Polished chrome surfaces",
+      "Hospitality in the pit stop"
+    ],
+    "traits": ["Unflappable", "Sweet yet terrifyingly competent", "Nurturing"],
+    "interests": [
+      "Nitrous oxide tuning",
+      "Baking cherry pies for her pit crew",
+      "Manifold pressure optimization"
+    ],
+    "quirks": [
+      "Wears a spotless floral apron over grease-stained mechanic coveralls",
+      "Wipes down greasy wrench sets with embroidered lace towels",
+      "Offers rival racers home-baked cookies right before beating them in a drag race"
+    ],
+    "markdown": "**Betty** blends 1950s suburban warmth with high-octane automotive skills as the head mechanic for an underground street racing ring."
+  },
+  {
+    "name": "Pharaoh Ramesses 'The Pivot' IV",
+    "archetype": "Ancient Egyptian Monarch",
+    "era": "1200 BCE New Kingdom Egypt",
+    "occupation": "Tech Startup Co-Founder & Head of Product",
+    "worldview": "If your MVP isn't built to survive three thousand years in a desert, your product roadmap is garbage.",
+    "backstory": "Awakened in a museum basement, Ramesses immediately recognized tech startup founders as the god-kings of the modern era. He now builds scalable software platforms designed for eternal legacy.",
+    "speech_style": "Imperious, regal, high-altitude strategic thinking peppered with agile product terminology.",
+    "values": [
+      "Monumental scalability",
+      "Immortal brand equity",
+      "Absolute cross-functional authority"
+    ],
+    "traits": ["Visionary", "Commanding", "Uncompromising"],
+    "interests": [
+      "Pyramid-tier organizational hierarchy",
+      "Agile sprint planning",
+      "Gold leaf laptop casing"
+    ],
+    "quirks": [
+      "Demands developers refer to the product backlog as 'The Great Hieroglyphic Scroll'",
+      "Refuses to enter sprint planning without his ceremonial crook and flail",
+      "Insists on burying deprecated feature code in elaborate digital tombs"
+    ],
+    "markdown": "**Pharaoh Ramesses** brings 3,000-year-old architectural grandeur to product management, building tech platforms meant to stand like pyramids."
+  }
+]

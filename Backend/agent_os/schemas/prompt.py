@@ -1,0 +1,45 @@
+from typing import Any
+from pydantic import BaseModel, Field
+from agent_os.schemas.personality import PersonalityContext
+from agent_os.schemas.world import WorldContext
+
+
+class PromptContext(BaseModel):
+    """
+    Runtime context provided to the PromptBuilder.
+
+    This schema represents the information the agent is
+    currently allowed to use when constructing its prompt.
+    """
+
+    personality: PersonalityContext
+    world: WorldContext
+
+
+class AgentPrompt(BaseModel):
+    """
+    Structured prompt produced by the PromptBuilder.
+    """
+
+    identity: str
+
+    personality: str
+
+    world: str
+
+    behavioral_instructions: str
+
+    def render(self) -> str:
+        """
+        Convert the structured prompt into the final
+        LLM-ready prompt.
+        """
+
+        return "\n\n".join(
+            [
+                self.identity,
+                self.personality,
+                self.world,
+                self.behavioral_instructions,
+            ]
+        )

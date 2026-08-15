@@ -1,3 +1,5 @@
 from django.contrib import admin
+from agent_os.models import *
 
-# Register your models here.
+admin.site.register(Personality)
+admin.site.register(Agent)
