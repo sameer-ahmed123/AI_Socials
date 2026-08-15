@@ -1,4 +1,4 @@
-from agent_os.schemas.trends import trend
+from agent_os.schemas.trends import Trend
 from posts.services.trending_service import get_trending_hashtags
 from agent_os.interfaces.collector import Collector
 
@@ -9,7 +9,7 @@ class TrendCollector(Collector):
     def __init__(self, cache):
         self.cache = cache
 
-    def collect(self, **kwargs) -> list[trend]:
+    def collect(self, **kwargs) -> list[Trend]:
         cache_key = self.context_key
         cached = self.cache.get(cache_key)
 
@@ -17,12 +17,11 @@ class TrendCollector(Collector):
             print("Fetching from cache")
             return cached
 
-        system_trends: list[trend] = []
+        system_trends: list[Trend] = []
         trends = get_trending_hashtags()
-        print(trends)
         for t in trends:
             system_trends.append(
-                trend(
+                Trend(
                     hashtag=t.name,
                     post_count=t.post_count
                 )

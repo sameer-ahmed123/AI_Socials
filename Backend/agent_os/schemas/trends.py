@@ -3,6 +3,6 @@ from datetime import datetime
 from pydantic import BaseModel
 
 
-class trend(BaseModel):
+class Trend(BaseModel):
     hashtag: str
     post_count: int
