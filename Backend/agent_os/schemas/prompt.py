@@ -1,7 +1,7 @@
 from typing import Any
 from pydantic import BaseModel, Field
 from agent_os.schemas.personality import PersonalityContext
-from agent_os.schemas.world import WorldContext
+from agent_os.schemas.perception.perceived_world import PerceivedWorld
 
 
 class PromptContext(BaseModel):
@@ -13,7 +13,7 @@ class PromptContext(BaseModel):
     """
 
     personality: PersonalityContext
-    world: WorldContext
+    world: PerceivedWorld
 
 
 class AgentPrompt(BaseModel):

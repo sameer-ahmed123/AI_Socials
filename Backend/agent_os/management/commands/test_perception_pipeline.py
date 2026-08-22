@@ -14,9 +14,14 @@ from agent_os.perception.judges.providers.gemini import (
     GeminiLLMClient,
 )
 from agent_os.perception.perception_filter import PerceptionFilter
+from agent_os.builders.prompt_builder import (
+    PromptBuilder,
+)
+from agent_os.schemas.prompt import PromptContext
 from agent_os.schemas.perception.perception_profile import (
     PerceptionProfile,
 )
+from agent_os.schemas.personality import PersonalityContext
 
 from agent_os.models import Agent
 
@@ -240,9 +245,6 @@ class Command(BaseCommand):
         """
         Convert the persisted Agent/Personality model into the
         compact perception profile consumed by PerceptionFilter.
-
-        The full Personality remains in the database. Only the
-        attention-relevant fields are passed into perception.
         """
 
         personality = agent.personality
@@ -265,6 +267,35 @@ class Command(BaseCommand):
             traits=list(
                 personality.traits or []
             ),
+        )
+
+    # ==============================================================
+    # PERSONALITY CONTEXT BUILDER
+    # ==============================================================
+
+    @staticmethod
+    def _build_personality_context(
+        agent: Agent,
+    ) -> PersonalityContext:
+        """
+        Map the Django Personality ORM model into the Pydantic
+        PersonalityContext schema expected by PromptContext.
+        """
+        personality = agent.personality
+
+        return PersonalityContext(
+            name=getattr(personality, "name", ""),
+            archetype=getattr(personality, "archetype", ""),
+            era=getattr(personality, "era", ""),
+            occupation=getattr(personality, "occupation", ""),
+            worldview=getattr(personality, "worldview", ""),
+            backstory=getattr(personality, "backstory", ""),
+            speech_style=getattr(personality, "speech_style", ""),
+            values=list(getattr(personality, "values", []) or []),
+            traits=list(getattr(personality, "traits", []) or []),
+            interests=list(getattr(personality, "interests", []) or []),
+            quirks=list(getattr(personality, "quirks", []) or []),
+            markdown=getattr(personality, "markdown", ""),
         )
 
     # ==============================================================
@@ -381,12 +412,52 @@ class Command(BaseCommand):
             ) from exc
 
         # ----------------------------------------------------------
-        # Display result
+        # Display perception result & get total item count
         # ----------------------------------------------------------
 
-        self._print_perceived_world(
+        total_items = self._print_perceived_world(
             perceived_world=perceived_world,
         )
+
+        # ----------------------------------------------------------
+        # Construct & print prompt if perceived items exist
+        # ----------------------------------------------------------
+
+        if total_items == 0:
+            self.stdout.write("")
+            self.stdout.write(
+                self.style.WARNING(
+                    "No perceived items; skipping PromptBuilder."
+                )
+            )
+            return
+
+        try:
+            personality_context = self._build_personality_context(
+                agent,
+            )
+
+            prompt_context = PromptContext(
+                personality=personality_context,
+                world=perceived_world,
+            )
+            
+            agent_prompt = PromptBuilder().build(prompt_context)
+
+        except Exception as exc:
+            raise CommandError(
+                (
+                    "Prompt construction failed for "
+                    f"agent '{agent.user.username}': {exc}"
+                )
+            ) from exc
+
+        self.stdout.write("")
+        self.stdout.write(
+            "CONSTRUCTED PROMPT"
+        )
+        self.stdout.write("-" * 80)
+        self.stdout.write(agent_prompt.render())
 
     # ==============================================================
     # OUTPUT
@@ -396,7 +467,7 @@ class Command(BaseCommand):
         self,
         *,
         perceived_world,
-    ) -> None:
+    ) -> int:
 
         self.stdout.write("")
         self.stdout.write(
@@ -436,3 +507,5 @@ class Command(BaseCommand):
                 f"TOTAL PERCEIVED: {total_items}"
             )
         )
+
+        return total_items

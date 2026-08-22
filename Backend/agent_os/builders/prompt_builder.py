@@ -4,6 +4,7 @@ from agent_os.schemas.prompt import (
     PromptContext,
 )
 from agent_os.schemas.world import WorldContext
+from agent_os.schemas.perception.perceived_world import PerceivedWorld
 
 
 class PromptBuilder:
@@ -76,10 +77,10 @@ Occupation: {personality.occupation}
 
     @staticmethod
     def _build_world(
-        world: WorldContext,
+        world: PerceivedWorld,
     ) -> str:
         return f"""
-## CURRENT WORLD
+## PERCEIVED WORLD
 
 {world.model_dump_json(indent=2)}
 """.strip()
