@@ -114,7 +114,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 # Database
 DATABASES = {
     "default": {
