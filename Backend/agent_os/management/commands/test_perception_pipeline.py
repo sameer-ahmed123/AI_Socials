@@ -7,6 +7,7 @@ from django.core.management.base import (
     CommandError,
 )
 
+from agent_os.decision.decision_matrix_builder import DecisionMatrixBuilder
 from agent_os.cache.memory_cache import MemoryCache
 from agent_os.collectors.news_collector import NewsCollector
 from agent_os.perception.judges.llm import LLMRelevanceJudge
@@ -77,6 +78,7 @@ class Command(BaseCommand):
         try:
             gemini_client = GeminiLLMClient(
                 model=model,
+                rate_limiter=30
             )
         except Exception as exc:
             raise CommandError(
@@ -436,10 +438,11 @@ class Command(BaseCommand):
             personality_context = self._build_personality_context(
                 agent,
             )
-
+            decision_matrix = DecisionMatrixBuilder().build()
             prompt_context = PromptContext(
                 personality=personality_context,
                 world=perceived_world,
+                decision_matrix = decision_matrix
             )
             
             agent_prompt = PromptBuilder().build(prompt_context)

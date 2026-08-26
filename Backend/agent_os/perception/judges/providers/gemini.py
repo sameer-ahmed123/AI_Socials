@@ -34,7 +34,7 @@ class GeminiLLMClient(LLMClient):
         GEMINI_MODEL=gemini-2.5-flash
     """
 
-    DEFAULT_MODEL = "gemini-3.5-flash"
+    DEFAULT_MODEL = "gemini-3.6-flash"
 
     def __init__(
         self,
@@ -76,14 +76,17 @@ class GeminiLLMClient(LLMClient):
             )
         )
 
-        self._rate_limiter = (
-            rate_limiter
-            if rate_limiter is not None
-            else LLMRateLimiter(
+        if isinstance(rate_limiter, LLMRateLimiter):
+            self._rate_limiter = rate_limiter
+        elif isinstance(rate_limiter, int):
+            self._rate_limiter = LLMRateLimiter(
+                max_requests_per_minute=rate_limiter
+            )
+        else:
+            self._rate_limiter = LLMRateLimiter(
                 max_requests_per_minute=5,
                 max_requests_per_day=20,
             )
-        )
 
     @property
     def model(self) -> str:

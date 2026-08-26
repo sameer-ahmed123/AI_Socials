@@ -42,7 +42,7 @@ class LLMRateLimiter:
         self,
         *,
         max_requests_per_minute: int = 5,
-        max_requests_per_day: int = 20,
+        max_requests_per_day: int = 50,
         state_file: str | Path | None = None,
     ) -> None:
 

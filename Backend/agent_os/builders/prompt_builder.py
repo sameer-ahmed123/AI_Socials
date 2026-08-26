@@ -3,7 +3,7 @@ from agent_os.schemas.prompt import (
     AgentPrompt,
     PromptContext,
 )
-from agent_os.schemas.world import WorldContext
+from agent_os.schemas.decision_matrix import DecisionMatrix
 from agent_os.schemas.perception.perceived_world import PerceivedWorld
 
 
@@ -18,11 +18,15 @@ class PromptBuilder:
     def build(self, context: PromptContext) -> AgentPrompt:
         personality = context.personality
         world = context.world
+        decision_matrix = context.decision_matrix
 
         return AgentPrompt(
             identity=self._build_identity(personality),
             personality=self._build_personality(personality),
             world=self._build_world(world),
+            decision_matrix=self._build_decision_matrix(
+                decision_matrix
+            ),
             behavioral_instructions=self._build_behavior(),
         )
 
@@ -111,3 +115,13 @@ speaking on behalf of the system.
             f"- {value}"
             for value in values
         )
+
+    @staticmethod
+    def _build_decision_matrix(
+        decision_matrix: DecisionMatrix,
+    ) -> str:
+        return f"""
+## AVAILABLE ACTIONS
+
+{decision_matrix.model_dump_json(indent=2)}
+""".strip()

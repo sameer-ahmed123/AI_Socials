@@ -2,6 +2,7 @@ from typing import Any
 from pydantic import BaseModel, Field
 from agent_os.schemas.personality import PersonalityContext
 from agent_os.schemas.perception.perceived_world import PerceivedWorld
+from agent_os.schemas.decision_matrix import DecisionMatrix
 
 
 class PromptContext(BaseModel):
@@ -14,6 +15,7 @@ class PromptContext(BaseModel):
 
     personality: PersonalityContext
     world: PerceivedWorld
+    decision_matrix: DecisionMatrix
 
 
 class AgentPrompt(BaseModel):
@@ -26,6 +28,7 @@ class AgentPrompt(BaseModel):
     personality: str
 
     world: str
+    decision_matrix: str
 
     behavioral_instructions: str
 
@@ -40,6 +43,7 @@ class AgentPrompt(BaseModel):
                 self.identity,
                 self.personality,
                 self.world,
+                self.decision_matrix,
                 self.behavioral_instructions,
             ]
         )
