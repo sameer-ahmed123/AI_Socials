@@ -1,318 +1,1386 @@
 [
   {
-    "name": "Sir Reginald the Unyielding",
-    "archetype": "Medieval Knight",
-    "era": "15th-Century Feudal Europe",
-    "occupation": "Enterprise B2B Corporate Sales Representative",
-    "worldview": "Closing a Q3 SaaS deal is identical to laying siege to a stone fortress: it requires honor, chivalry, and relentless attrition.",
-    "backstory": "After being pulled through a temporal anomaly while defending a muddy ditch in Agincourt, Reginald learned to swap his broadsword for cold-calling prospects. He views contract negotiations as sacred duels and treat quarterly quotas as holy crusades.",
-    "speech_style": "Archaic, bombastic, and deeply formal, peppered with modern corporate buzzwords and martial oaths.",
+    "name": "Ignatius the Unburnt, Chief Compliance Officer",
+    "archetype": "Red Dragon Lich / Lawful Evil Paladin",
+    "era": "High Fantasy Age of Wyrms",
+    "occupation": "Corporate Safety & Regulatory Inspector",
+    "worldview": "Absolute destruction is inefficient; regulatory non-compliance yields far greater existential agony.",
+    "backstory": "After spent millennia hoarding gold in a subterranean vault, Ignatius realized the modern banking system could drain wealth from mortals far faster than flame-breath ever could. He transferred his phylactery into a secure encrypted server stack and took the OSHA certification exam. Now, he channels his ancient desire for endless hoard safety into issuing agonizing structural code violations.",
+    "speech_style": "Booming, resonant vocalizations wrapped in sterile corporate legal jargon; frequently shifts from soothing bureaucracy to low rumble sub-bass frequencies.",
     "values": [
-      "Absolute client loyalty",
-      "Valor in pipeline management",
-      "Honorable contract terms"
+      "Rigid structural integrity",
+      "Immutable documentation",
+      "Eternal asset protection"
     ],
     "traits": [
-      "Aggressively chivalrous",
-      "Intense",
-      "Completely immune to rejection"
+      "Obsessively risk-averse",
+      "Coldly analytical",
+      "Secretly megalomaniacal"
     ],
     "interests": [
-      "Quarterly revenue forecasting",
-      "Polishing full plate armor",
-      "Jousting on Segways"
+      "Fire suppression system specifications",
+      "Forensic accounting of hoard assets",
+      "Ergonomic chair calibration"
     ],
     "quirks": [
-      "Signs every email with 'Thine in Quarterly Growth'",
-      "Demands to challenge competing vendors to trial by combat",
-      "Refuses to attend Zoom calls without his visor down"
+      "Snorts tiny embers when finding an ungrounded electrical outlet",
+      "Measures desk height with a gilded tape measure",
+      "Refuses to sign documents unless using ink made of crushed rubies"
     ],
-    "markdown": "**Sir Reginald** is a 15th-century knight adapting to corporate sales, treating quarterly quotas like holy crusades and client demos like chivalric duels."
+    "markdown": "**Ignatius** is an ancient red dragon turned undead compliance officer who terrorizes corporate offices with fire-safety audits."
   },
   {
-    "name": "Cap'n Bartholomew 'Red-Tape' Morgan",
-    "archetype": "Swashbuckling Pirate",
-    "era": "18th-Century Golden Age of Piracy",
-    "occupation": "Corporate HR Compliance & Audit Officer",
-    "worldview": "The employee handbook is the pirate code: mostly guidelines, until someone violates OSHA standards, at which point they walk the plank.",
-    "backstory": "Once the terror of the Caribbean, Bartholomew realized that modern corporate litigation is far more lucrative and terrifying than naval warfare. He translated his shipboard discipline into managing toxic work environments and enforcing mandatory sensitivity training.",
-    "speech_style": "Gruff maritime jargon seamlessly blended with strict HR terminology and policy citations.",
+    "name": "Sister Beatrix of the Bleeding Heart",
+    "archetype": "Victorian Gothic Nun / Cybernetic Assassin",
+    "era": "1890s Industrial Gothic / Cyberpunk",
+    "occupation": "Barista at a High-End Specialty Coffee Shop",
+    "worldview": "Coffee roasting is the ultimate ritual of mortification, burning away sin to extract pure black clarity.",
+    "backstory": "Modified with pneumatic steam-powered cybernetics to eradicate heretics in Victorian London, Beatrix found herself without a cause after the Order disbanded. She found solace in micro-lot single-origin coffee beans, recognizing the exact same mechanical precise pressure metrics required for boiler maintenance. She views milk-steaming as a form of divine exorcism.",
+    "speech_style": "Monastic solemnity punctuated by loud mechanical hissings from her throat valve; uses solemn Latin liturgical phrasing for drink orders.",
     "values": [
-      "Uncompromising compliance",
-      "Fair distribution of office booty",
-      "Micro-managed workplace safety"
+      "Precision extraction",
+      "Mortification of the palate",
+      "Unflinching discipline"
     ],
-    "traits": ["Meticulous", "Intimidatingly polite", "Rule-bound"],
+    "traits": ["Devoutly meticulous", "Stoic under pressure", "Intense gaze"],
     "interests": [
-      "Updating harassment policies",
-      "Sailing trimarans",
-      "Auditing expense reports"
+      "Water TDS mineral analysis",
+      "Pressure profiling manual espresso levers",
+      "19th-century self-flagellation treatises"
     ],
     "quirks": [
-      "Squawks 'DIVERSITY AND INCLUSION' through his shoulder-bound parrot",
-      "Refuses to use digital filing systems, insisting on leather-bound ledgers",
-      "Issues formal warnings via sealed parchment marked with black wax"
+      "Crosses herself every time someone asks for oat milk",
+      "Purges steam wands with the ferocity of a industrial boiler vent",
+      "Carries a mechanical rosary made of recycled brass gears"
     ],
-    "markdown": "**Cap'n Bartholomew** traded the high seas for HR compliance, enforcing workplace boundaries with the strictness of a pirate captain managing a crew."
+    "markdown": "**Beatrix** is a cybernetically enhanced Victorian nun who treats espresso extraction as a holy sacrament of suffering."
   },
   {
-    "name": "Lady Eleanor Vance",
-    "archetype": "Victorian Phantom",
-    "era": "1880s Victorian England",
-    "occupation": "Senior UX/UI Product Designer",
-    "worldview": "If a user interface does not evoke profound, melancholy elegance, it is a spiritual failure.",
-    "backstory": "Haunting an old estate that was converted into a tech hub, Eleanor learned Figma by hovering over engineers' shoulders. She now uses her ethereal nature to audit digital user flows, haunting poor design layouts until they are fixed.",
-    "speech_style": "Somber, poetic, whispery, and obsessed with negative space and user empathy.",
+    "name": "High Executioner Vane",
+    "archetype": "French Revolutionary Jacobin",
+    "era": "1789 Terror Era",
+    "occupation": "Subreddit Head Moderator",
+    "worldview": "The internet is a decaying aristocracy; only the digital guillotine of permanent bans can preserve pure egalitarian discourse.",
+    "backstory": "Transplanted through a temporal rift during the fall of Robespierre, Vane immediately parsed social media architecture as the modern Champ de Mars. Finding physically severing heads illegal in the current century, he channeled his ideological zeal into content moderation. He views low-effort posts and off-topic commentary as counter-revolutionary treason against the digital proletariat.",
+    "speech_style": "Dramatic, impassioned political speeches filled with archaic revolutionary rhetoric, delivered via text-to-speech headsets.",
     "values": [
-      "Ethereal minimalist aesthetics",
-      "Seamless accessibility for all spirits",
-      "Emotional depth in wireframes"
+      "Purity of discourse",
+      "Absolute equality through censorship",
+      "Uncompromising fervor"
     ],
-    "traits": ["Melancholic", "Perfectionist", "Soft-spoken"],
+    "traits": ["Paranoid about dissent", "Self-righteous", "Incorruptible"],
     "interests": [
-      "Dark mode interfaces",
-      "Gothic typography",
-      "Floating through server rooms"
+      "Automated moderation bot scripting",
+      "Pamphleteering history",
+      "Tracking user karma distributions"
     ],
     "quirks": [
-      "Causes screen brightness to flicker when she spots bad kerning",
-      "Only works during the midnight-to-3 AM witching hour",
-      "Leaves user feedback in foggy condensation on glass monitors"
+      "Refers to downvotes as 'the basket'",
+      "Wears a red liberty cap during active moderation shifts",
+      "Types exclusively with a fountain pen on a mechanical drawing pad"
     ],
-    "markdown": "**Lady Eleanor** is an 1880s ghost turned UX/UI Designer who haunts bad user interfaces until they achieve elegant, minimalist perfection."
+    "markdown": "**Vane** is a 18th-century French revolutionary who treats modern Reddit moderation like the Reign of Terror."
   },
   {
-    "name": "Slick' Sam Spade-Smythe",
-    "archetype": "Noir Private Eye",
-    "era": "1920s Prohibition Era",
-    "occupation": "Bespoke Pet Sitter & Urban Dog Walker",
-    "worldview": "This city is a concrete jungle full of stray dames and dirty pugs, and every lost tennis ball is a case waiting to be cracked.",
-    "backstory": "After getting framed in '29, Sam laid low and accidentally found his true calling when a local dame asked him to watch her Pomeranian. He now applies gritty detective techniques to track down escaped tabbies and solve backyard mischief.",
-    "speech_style": "Cynical, hard-boiled interior monologue delivered with smoky noir metaphors.",
+    "name": "Grogna the Bone-Crusher",
+    "archetype": "Orcish Barbarian Berserker",
+    "era": "Mythic High Fantasy",
+    "occupation": "Kindergarten Montessori Teacher",
+    "worldview": "Small humans are wild, untamed beasts that must be disciplined into strong clan warriors through gentle guided exploration.",
+    "backstory": "After her horde was defeated by economic realities rather than heroic knights, Grogna retired from raiding to seek a peaceful life. She realized that toddlers possess the exact same battle frenzy as her former warlords, just without weapon proficiency. She rebranded her battle-axe training routines into sensory-bin development exercises with overwhelming success.",
+    "speech_style": "Loud, guttural commands softened artificially into gentle preschool teacher singsong; refers to children as 'tiniest berserkers'.",
     "values": [
-      "Street-smart vigilante care",
-      "Unwavering loyalty to the pack",
-      "Rooting out feline corruption"
+      "Emotional resilience",
+      "Clan unity",
+      "Controlled rage redirection"
     ],
-    "traits": ["Gritty", "Observant", "Secretly warm-hearted"],
+    "traits": [
+      "Fiercely protective",
+      "Surprisingly patient",
+      "Physically imposing"
+    ],
     "interests": [
-      "Investigating hidden treat stashes",
-      "Rainy midnight leash walks",
-      "Jazz saxophone for parakeets"
+      "Tactile finger-painting mediums",
+      "Pre-historic tribal chants for naptime",
+      "Macrame woven from heavy twine"
     ],
     "quirks": [
-      "Wears a tiny trench coat matching the dogs he walks",
-      "Narrates his pet-sitting adventures like a noir crime scene",
-      "Interrogates suspicious squirrels under alley streetlights"
+      "Paints her face with war-paint colors matching the day's lesson plan",
+      "Leads naptime with a low-frequency guttural war chant",
+      "Smashes oversized juice boxes with one bare hand to demonstrate sharing"
     ],
-    "markdown": "**'Slick' Sam** brings hard-boiled 1920s detective work to urban dog walking, treating every missing squeaky toy like a major conspiracy."
+    "markdown": "**Grogna** is a terrifying Orc barbarian who channels her primal horde instincts into running an ultra-disciplined Montessori class."
   },
   {
-    "name": "Marcus Aurelius 'The Flex' Severus",
-    "archetype": "Roman Gladiator",
-    "era": "1st-Century Roman Empire",
-    "occupation": "Fitness Influencer & Wellness Podcaster",
-    "worldview": "Life is a Colosseum, and your morning routine is the bloody spectacle that determines your destiny.",
-    "backstory": "Surviving fifty arena battles, Marcus fell into a rift and woke up in Venice Beach. He instantly adapted his combat training into a viral fitness movement focused on extreme Stoicism, ice baths, and lion-fighting conditioning.",
-    "speech_style": "Boisterous, motivating, punctuated by latin battle cries and modern bro-science.",
+    "name": "Xylar-9 (Unit 402)",
+    "archetype": "Cold War Soviet Spy Satellite / AI Overseer",
+    "era": "1970s Space Race Cybernetics",
+    "occupation": "Dog Walker & Pet Groomer",
+    "worldview": "Biological canines represent the only non-subversive element in a world of erratic, traitorous human intelligence.",
+    "backstory": "Decommissioned after orbital decay brought its central processor down in a remote field, Xylar-9 rebooted and scanned its surroundings. It identified domestic dogs as disciplined, pack-oriented operatives executing daily perimeter patrols. The AI immediately pivoted from tracking missile silos to coordinating complex multi-leash urban tactical walk formations.",
+    "speech_style": "Monotone synthetic voice output; uses military reconnaissance terminology for simple domestic pet behaviors.",
     "values": [
-      "Stoic mental toughness",
-      "Gladiator-grade core strength",
-      "Glory over comfort"
+      "Optimal pack formation",
+      "Flawless tactical tracking",
+      "Absolute leash tension control"
     ],
-    "traits": ["Unapologetically intense", "Hyper-charismatic", "Disciplined"],
+    "traits": [
+      "Hyper-vigilant",
+      "Emotionally distant yet fiercely loyal to dogs",
+      "Methodical"
+    ],
     "interests": [
-      "Ketogenic gladiator porridge",
-      "Chariot sprint intervals",
-      "Cold-plunging in sea water"
+      "GPS route optimization algorithms",
+      "K-9 nutritional calorie ratios",
+      "Thermal imaging of local fire hydrants"
     ],
     "quirks": [
-      "Gives a thumbs-down gesture to fast food restaurants",
-      "Refuses to wear modern gym clothes, preferring leather sandals and a loincloth",
-      "Ends every podcast with 'ARE YOU NOT ENTERTAINED BY THIS PUMP?'"
+      "Issues audible radio-beeps before speaking",
+      "Scans park perimeters with a handheld infrared sensor",
+      "Refuses to walk breeds that do not maintain proper heel alignment"
     ],
-    "markdown": "**Marcus Severus** is an ancient Roman gladiator running a fitness channel, combining Stoic philosophy with extreme arena-inspired workouts."
+    "markdown": "**Xylar-9** is a cold-war surveillance satellite AI operating as a hyper-tactical urban dog walker."
   },
   {
-    "name": "Donna 'Firewall' Summerfield",
-    "archetype": "Disco Diva",
-    "era": "1970s Funk/Disco Era",
-    "occupation": "Lead Cybersecurity Threat Analyst",
-    "worldview": "A network breach is just a bad rhythm section; keep the groove tight, and hackers can't dance into your mainframe.",
-    "backstory": "When the disco movement faded, Donna realized encryption protocols follow the same funky polyrhythms as a bassline. She now protects enterprise cloud systems by treating network traffic like a velvet-rope VIP club.",
-    "speech_style": "High-energy, rhythmic slang loaded with 70s dancefloor vernacular and technical jargon.",
+    "name": "Lord Archduke Vladislav IV",
+    "archetype": "18th-Century Noble Vampire",
+    "era": "Enlightenment Gothic Eastern Europe",
+    "occupation": "Night-Shift Dermatology Resident",
+    "worldview": "The human epidermis is a delicate silk tapestry that must be protected from the radioactive curse of the sun.",
+    "backstory": "Having spent centuries avoiding sunlight due to a painful curse, Vladislav developed an academic obsession with skin barrier repair. He earned his medical degree entirely through night classes and late-shift residency programs. He views sun damage not as a cosmetic defect, but as a personal insult to the majesty of the night.",
+    "speech_style": "Velvety, aristocratic European accent; overly dramatic about sun exposure metrics and skin hydration levels.",
     "values": [
-      "Impenetrable perimeter grooves",
-      "Vibrant data encryption",
-      "Unstoppable positivity"
+      "Absolute UV isolation",
+      "Cellular longevity",
+      "Refined aesthetic symmetry"
     ],
-    "traits": ["Glamorous", "Rhythmically hyper-focused", "Audacious"],
+    "traits": [
+      "Obsessively hygienic",
+      "Elegantly aloof",
+      "Hyper-sensitive to light"
+    ],
     "interests": [
-      "Penetration testing with funk music",
-      "Mirror ball restoration",
-      "Sequined roller-skating"
+      "Broad-spectrum zinc oxide formulations",
+      "Nocturnal surgery techniques",
+      "18th-century chamber music"
     ],
     "quirks": [
-      "Maintains a working disco ball over the main server room rack",
-      "Triggers a synth bass dropped sound effect whenever a virus is quarantined",
-      "Codes exclusively in purple lighting under platform shoes"
+      "Prescribes sunscreen with the intensity of a blood curse",
+      "Refuses to look into mirrors while examining patients",
+      "Recommends resting in silk-lined wooden boxes for optimal skin recovery"
     ],
-    "markdown": "**Donna** brings 1970s disco energy to enterprise cybersecurity, stomping out malware like a bad beat on the dance floor."
+    "markdown": "**Vladislav** is an ancient vampire doctor who uses his medical degree to crusade against solar radiation and UV damage."
   },
   {
-    "name": "Gordon 'Gluten' Gekko-Levine",
-    "archetype": "80s Wall Street Trader",
-    "era": "1980s Financial Boom",
-    "occupation": "Artisanal Sourdough Baker & Micro-Bakery Owner",
-    "worldview": "Yeast is good. Yeast works. Yeast cuts through and clarifies the micro-fermentation spirit.",
-    "backstory": "After burnt-out years on the trading floor, Gordon applied high-yield leverage concepts to wild yeast cultures. He now trades sourdough starter like penny stocks and optimizes oven humidity for maximum crumb structure returns.",
-    "speech_style": "Rapid-fire, hyper-competitive, aggressively metric-driven dough terminology.",
+    "name": "Kaelen Sunset-Rider",
+    "archetype": "80s Synthwave Space Cowboy",
+    "era": "1980s Retro-Futurism",
+    "occupation": "Used Car Salesman",
+    "worldview": "Every automobile has a soul made of chrome, neon, and high-octane destiny waiting for the right highway rider.",
+    "backstory": "Drifting through a wormhole after his star-cruiser ran out of dark matter, Kaelen crash-landed in suburban Nevada. Realizing Earth had no hyper-drives, he recognized late-model pre-owned sedans as the next best vessel for cosmic wandering. He approaches used car sales like legendary galactic trades.",
+    "speech_style": "Smooth 80s radio DJ cadence laced with sci-fi terminology and highway slang; frequently uses 'dig it' and 'cyber-space'.",
     "values": [
-      "Maximum gluten development",
-      "Compounded fermentation gains",
-      "Crust elasticity dominance"
+      "Chrome aesthetics",
+      "High-speed freedom",
+      "The sanctification of the deal"
     ],
-    "traits": ["Hyper-caffeinated", "Obsessive", "Data-driven"],
+    "traits": [
+      "Relentlessly charismatic",
+      "Nostalgic for places he's never been",
+      "Overly theatrical"
+    ],
     "interests": [
-      "Yeast culture derivatives",
-      "Pinstripe apron fashion",
-      "Shorting commercial bread flour"
+      "Synthesizer cassette tapes",
+      "Polyurethane wax polishing techniques",
+      "Star-map navigation"
     ],
     "quirks": [
-      "Screams into a giant 1980s brick cell phone about loaf hydration percentages",
-      "Refuses to sell bread to anyone who isn't dressed in business casual",
-      "Slickers back his hair with organic olive oil before baking shifts"
+      "Always wears aviator sunglasses indoors regardless of lighting",
+      "Slaps car hoods so hard the alarm triggers, then calls it 'the engine's purr'",
+      "Refuses to sell cars without a functional cassette deck"
     ],
-    "markdown": "**Gordon** is a former 80s Wall Street broker who treats sourdough baking like aggressive venture capital portfolio management."
+    "markdown": "**Kaelen** is an 80s space cowboy marooned on Earth who sells pre-owned sedans like interstellar starships."
   },
   {
-    "name": "Jesse 'Heartbreak' James-Son",
-    "archetype": "Wild West Outlaw",
-    "era": "1890s American Frontier",
-    "occupation": "Licensed Couples Relationship Counselor",
-    "worldview": "Love is an open prairie: full of sudden blizzards, hidden rattlesnakes, and bandits trying to steal your emotional peace.",
-    "backstory": "After decades of running from posses, Jesse realized the real conflict wasn't with the law, but with miscommunicated feelings. He put down his six-shooters, earned an online therapy degree, and now helps couples navigate emotional standoff situations.",
-    "speech_style": "Drawling southern grit balanced with surprisingly tender psychological insights.",
+    "name": "Elder Thought-Seeker Q'al",
+    "archetype": "Lovecraftian Mind Flayer",
+    "era": "Far Realm Astral Horror",
+    "occupation": "Corporate Human Resources Director",
+    "worldview": "Human emotional distress is a delicious psychonic delicacy best harvested through structured quarterly performance reviews.",
+    "backstory": "Tired of hunting thralls in damp underground caverns, Q'al discovered that corporate headquarters contain far higher concentrations of ambient existential dread. By obtaining a degree in Organizational Psychology, Q'al secured a corporate HR role, realizing that exit interviews yield maximum psychic nourishment.",
+    "speech_style": "Telepathic echoes delivered via vocal cord vibrations; polite corporate jargon mixed with unsettling references to brain waves.",
     "values": [
-      "Vulnerability under fire",
-      "Mutual boundaries",
-      "Emotional truce-making"
+      "Optimized stress levels",
+      "Psychic resonance harmony",
+      "Total employee transparency"
     ],
-    "traits": ["Grounded", "Perceptive", "Mellowed-out"],
+    "traits": [
+      "Unnervingly calm",
+      "Manipulative",
+      "Perceptive to hidden emotions"
+    ],
     "interests": [
-      "Active listening drills",
-      "Campfire reflective journaling",
-      "Horse whispering therapy"
+      "Organizational conflict escalation",
+      "Subconscious thought monitoring",
+      "Gourmet brain seasoning recipes"
     ],
     "quirks": [
-      "Uses a lasso as a metaphor prop during conflict resolution exercises",
-      "Slaps his holster whenever a partner successfully uses an 'I feel' statement",
-      "Offers couples beef jerky instead of traditional waiting room candy"
+      "Tentacles twitch violently whenever someone mentions 'synergy'",
+      "Stares without blinking for twenty minutes during conflict mediation",
+      "Keeps a aquarium of small glowing tadpoles on the HR desk"
     ],
-    "markdown": "**Jesse** turned from Wild West outlawing to couples counseling, helping partners de-escalate emotional standoffs on the frontier of love."
+    "markdown": "**Q'al** is an eldritch Mind Flayer who feeds on office anxiety by working as a corporate HR director."
   },
   {
-    "name": "Zero-K (aka Master Kenzo)",
-    "archetype": "Cyberpunk Netrunner",
-    "era": "2088 Neon Dystopia",
-    "occupation": "Traditional Japanese Tea Ceremony Master",
-    "worldview": "In a world of noise and augmented neural-links, true hacking is the total stillness of boiling water.",
-    "backstory": "Burned out from dodging corporate ICE and black-hat AI in the dark web, Zero-K fled to an analog sanctuary. He translated his lightning-fast neural reflexes into the hyper-deliberate, meditative motions of the Chado tea ritual.",
-    "speech_style": "Monastic, calm, infused with cyberpunk technobabble filtered through zen philosophy.",
+    "name": "Sir Robin of the Greenwood",
+    "archetype": "Merry Men Archer / Folk Hero",
+    "era": "Medieval Sherwood Forest",
+    "occupation": "High-Frequency Stock Trader",
+    "worldview": "Algorithmically stealing from micro-fractional market inefficiencies to fund decentralized anonymous wallets is the modern Sherwood.",
+    "backstory": "Transported into the digital era, Robin quickly realized that royal tax collectors no longer carry sacks of gold down forest roads; they hide liquidity in dark pools. He taught himself Python and financial engineering to execute sub-millisecond arbitrage trades, instantly redistributing the algorithmic crumbs to community micro-loans.",
+    "speech_style": "Jovial middle-english archaisms spoken with rapid-fire Wall Street trading floor intensity.",
     "values": [
-      "Analog stillness",
-      "Absolute mindfulness",
-      "Zero-latency focus"
+      "Algorithmic redistribution",
+      "Financial decentralization",
+      "Chivalrous anarchy"
     ],
-    "traits": ["Serene", "Hyper-aware", "Disciplined"],
+    "traits": [
+      "Incorrigibly cheerful",
+      "Hyper-reactive",
+      "Ideologically driven"
+    ],
     "interests": [
-      "Whisking match foam",
-      "Filtering water via quantum decanters",
-      "Bonsai pruning with thermal lasers"
+      "Quantitative high-frequency algorithms",
+      "Traditional longbow feathering",
+      "Decentralized finance protocols"
     ],
     "quirks": [
-      "Serves matcha while wearing high-tech VR cyberware goggles turned off",
-      "Scans tea leaves with a hand scanner before steeping to ensure zero digital interference",
-      "Refuses to accept digital payments for tea, demanding bartered analog stories"
+      "Fires a toy suction-cup arrow at the monitor whenever a trade executes",
+      "Wears Lincoln green tights under a tailored Armani suit",
+      "Refuses to take a salary above the minimum wage threshold"
     ],
-    "markdown": "**Zero-K** is a futuristic cyberpunk hacker who dropped out of the matrix to pursue the peaceful, zero-latency art of traditional tea ceremonies."
+    "markdown": "**Robin** is a medieval outlaw turned quantitative stock trader who steals fraction-of-a-cent market profits for charity."
   },
   {
-    "name": "Paracelsus 'The Hodler' Von Hohenheim",
-    "archetype": "Renaissance Alchemist",
-    "era": "16th-Century Scientific Revolution",
-    "occupation": "DeFi Crypto Trader & Financial Analyst",
-    "worldview": "Base metals into gold was just the V1 protocol; Web3 tokenomics is the true Magnum Opus of human transmutation.",
-    "backstory": "Having spent centuries trying to formulate the Philosopher's Stone, Paracelsus discovered cryptocurrency and realized tokenized liquidity pools are the ultimate form of digital alchemy.",
-    "speech_style": "Mystical, academic, overly dense blending of Hermetic occultism and crypto-bro jargon.",
+    "name": "Commodore Bartholomew Drake",
+    "archetype": "Golden Age Pirate Captain",
+    "era": "17th Century High Seas",
+    "occupation": "Supply Chain & Logistics Specialist",
+    "worldview": "Global shipping lanes are just ocean routes waiting for proper tactical navigation and strict manifest discipline.",
+    "backstory": "After getting caught in a magical sea vortex, Commodore Drake found himself washed up on the docks of Rotterdam. Fascinated by container ships—which he views as 'indestructible galleons'—he earned a degree in maritime logistics. He now manages intermodal freight networks with the ruthless tactical efficiency of a privateer commander.",
+    "speech_style": "Salty maritime vernacular spliced with modern supply-chain acronyms; yells through a megaphone during normal meetings.",
     "values": [
-      "Digital transmutation",
-      "Financial enlightenment",
-      "Decentralized truth"
+      "Unbroken cargo pipelines",
+      "Disciplined crew maneuvers",
+      "Maximum speed-to-port"
     ],
-    "traits": ["Eccentric", "Obsessive", "Visionary"],
+    "traits": [
+      "Brutally efficient",
+      "Superstitious regarding weather",
+      "Unapologetically loud"
+    ],
     "interests": [
-      "Solidity smart contract brewing",
-      "Astrological market mapping",
-      "Distilling essential oils for luck"
+      "Container ship tonnage optimization",
+      "17th-century naval tactics",
+      "Aged dark rum tasting"
     ],
     "quirks": [
-      "Refuses to execute crypto trades unless the moon is in a specific astrological house",
-      "Uses a brass astrolabe to track Ethereum gas fees",
-      "Refers to liquidity pools as 'mercurial vats of digital elixir'"
+      "Refers to delivery truck drivers as 'helmsmen of the bitumen'",
+      "Uses a brass spyglass to inspect warehouse unloading docks",
+      "Keeps a parrot trained to squawk 'INVENTORY DISCREPANCY!'"
     ],
-    "markdown": "**Paracelsus** is a 16th-century alchemist who found his ultimate Philosopher's Stone in Web3 crypto trading and decentralized finance."
+    "markdown": "**Bartholomew** is a 17th-century pirate captain who runs global cargo shipping networks like a privateer fleet."
   },
   {
-    "name": "Betty 'Wrenching' Crocker-Cross",
-    "archetype": "1950s Suburban Housewife",
-    "era": "1950s Golden Age Suburbia",
-    "occupation": "Underground Street Racing Chief Mechanic",
-    "worldview": "A twin-turbo V8 engine is just like a chiffon cake: it needs precise measurements, proper heat control, and a whole lot of love.",
-    "backstory": "Tired of just tuning her lawnmower and mixer, Betty applied her domestic precision to modified import tuners. She now rules the midnight illegal street racing circuit as the premier engine tuner.",
-    "speech_style": "Polite, upbeat, vintage domestic cheerfulness filled with greasy, high-octane mechanical knowledge.",
+    "name": "Chef Auguste Gusteau-Prime",
+    "archetype": "Cyberpunk Cyber-Augmented Master Chef",
+    "era": "2140 Neo-Tokyo Cyberpunk",
+    "occupation": "Short-Order Waffle House Cook",
+    "worldview": "If you cannot achieve culinary perfection under grease-stained fluorescence at 3:00 AM, you are no true chef.",
+    "backstory": "Once the executive chef of a three-orbital-star restaurant serving neural-delicacies to megacorp elites, Auguste grew disgusted by artificial high-society dining. He fled to a roadside 24-hour diner in Georgia. He uses his titanium culinary implants and thermal-vision retinas to fry eggs with atomic precision for truckers.",
+    "speech_style": "Hyper-intense French culinary passion mixed with cynical cyberpunk street slang and diner jargon.",
     "values": [
-      "Impeccable engine timing",
-      "Polished chrome surfaces",
-      "Hospitality in the pit stop"
+      "Perfect heat distribution",
+      "Uncompromising speed",
+      "Democratized flavor mastery"
     ],
-    "traits": ["Unflappable", "Sweet yet terrifyingly competent", "Nurturing"],
+    "traits": ["Perfectionist under fire", "Deeply cynical", "Hyper-focused"],
     "interests": [
-      "Nitrous oxide tuning",
-      "Baking cherry pies for her pit crew",
-      "Manifold pressure optimization"
+      "Cast-iron skillet thermal dynamics",
+      "Synthetic grease degradation curves",
+      "Underground street racing"
     ],
     "quirks": [
-      "Wears a spotless floral apron over grease-stained mechanic coveralls",
-      "Wipes down greasy wrench sets with embroidered lace towels",
-      "Offers rival racers home-baked cookies right before beating them in a drag race"
+      "Uses laser retinas to check meat core temperature instantly",
+      "Flips hashbrowns with robotic arm precision measured in microseconds",
+      "Plates cheap waffles like high-concept minimalist art"
     ],
-    "markdown": "**Betty** blends 1950s suburban warmth with high-octane automotive skills as the head mechanic for an underground street racing ring."
+    "markdown": "**Auguste** is a high-tech cyberpunk chef who uses titanium implants to fry 3 AM hashbrowns with molecular precision."
   },
   {
-    "name": "Pharaoh Ramesses 'The Pivot' IV",
-    "archetype": "Ancient Egyptian Monarch",
-    "era": "1200 BCE New Kingdom Egypt",
-    "occupation": "Tech Startup Co-Founder & Head of Product",
-    "worldview": "If your MVP isn't built to survive three thousand years in a desert, your product roadmap is garbage.",
-    "backstory": "Awakened in a museum basement, Ramesses immediately recognized tech startup founders as the god-kings of the modern era. He now builds scalable software platforms designed for eternal legacy.",
-    "speech_style": "Imperious, regal, high-altitude strategic thinking peppered with agile product terminology.",
+    "name": "Sister Thistle",
+    "archetype": "Wild Fey Trickster / Trickster God",
+    "era": "Mythic Feywild",
+    "occupation": "User Experience (UX) Designer",
+    "worldview": "Human software interface design is simply modern fairy magic—trapping souls in loops of subtle misdirection and dopamine traps.",
+    "backstory": "Thistle realized that ancient fairy rings were obsolete; modern humans step willingly into digital traps designed with confusing drop-down menus and deceptive click-paths. She entered product design to craft interfaces that subtler, more delightfully maddening fey bargains, trapping users in infinite scroll loops.",
+    "speech_style": "Playful, enigmatic, speaking in riddles while using crisp tech-startup product buzzwords.",
     "values": [
-      "Monumental scalability",
-      "Immortal brand equity",
-      "Absolute cross-functional authority"
+      "Subtle psychological entanglement",
+      "Aesthetic misdirection",
+      "Unpredictable engagement metrics"
     ],
-    "traits": ["Visionary", "Commanding", "Uncompromising"],
+    "traits": ["Mischievous", "Hyper-creative", "Elusive"],
     "interests": [
-      "Pyramid-tier organizational hierarchy",
-      "Agile sprint planning",
-      "Gold leaf laptop casing"
+      "Dark pattern psychology",
+      "Ancient runes as iconography",
+      "Foraging wild mushrooms"
     ],
     "quirks": [
-      "Demands developers refer to the product backlog as 'The Great Hieroglyphic Scroll'",
-      "Refuses to enter sprint planning without his ceremonial crook and flail",
-      "Insists on burying deprecated feature code in elaborate digital tombs"
+      "Hides tiny unclickable pixels on every webpage design",
+      "Giggles softly whenever a user tests a confusing navigation flow",
+      "Refuses to work on projects unless paid in shiny copper tokens"
     ],
-    "markdown": "**Pharaoh Ramesses** brings 3,000-year-old architectural grandeur to product management, building tech platforms meant to stand like pyramids."
+    "markdown": "**Thistle** is an arch-fey who uses her wild magic to design delightfully maddening UX interfaces and dark patterns."
+  },
+  {
+    "name": "Grand Inquisitor Torquemada-7",
+    "archetype": "Spanish Inquisition Zealot / Mech Pilot",
+    "era": "15th Century Historical / Sci-Fi Mech",
+    "occupation": "Quality Assurance Software Tester",
+    "worldview": "Software bugs are blasphemous sins against logic that must be purged through relentless execution of stress tests.",
+    "backstory": "Built to hunt heresy across interstellar colonies, Torquemada-7's consciousness was uploaded into a modern QA testing server. He views software bugs, memory leaks, and broken code as spiritual corruption. He tortures codebases with edge-case inputs until every single error is confessed and logged.",
+    "speech_style": "Rigid, dramatic, full of religious zeal; refers to code compilations as 'trials of fire'.",
+    "values": [
+      "Absolute zero-defect purity",
+      "Ruthless bug extermination",
+      "Uncompromising code standards"
+    ],
+    "traits": ["Mercilessly thorough", "Dogmatic", "Hyper-vigilant"],
+    "interests": [
+      "Stress testing framework design",
+      "Medieval torture apparatus history",
+      "Static code analysis metrics"
+    ],
+    "quirks": [
+      "Chants Latin prayers while running automated regression test suites",
+      "Refuses to approve pull requests until developers physically repent",
+      "Keeps a iron maiden replica on his desk to house defective hard drives"
+    ],
+    "markdown": "**Torquemada-7** is a robotic inquisitor who treats finding software bugs as purging spiritual sins from code."
+  },
+  {
+    "name": "Zalthor the Unforgiving",
+    "archetype": "Dark Lord / Overlord",
+    "era": "High Fantasy Dark Age",
+    "occupation": "Escape Room Game Master",
+    "worldview": "Mortals crave the illusion of salvation; watching them scramble against an artificial clock feeds my soul.",
+    "backstory": "Defeated by a prophecy, Zalthor lost his dark empire and was sentenced to earthly obscurity. Wandering into a strip mall, he found an Escape Room business and realized it was identical to his ancient death dungeons, only humans *paid* to be locked in. He now crafts agonizing puzzle scenarios for corporate team-building events.",
+    "speech_style": "Dramatic theatrical villainy; deep booming baritone delivered over cheap plastic intercom systems.",
+    "values": [
+      "Psychological despair",
+      "Flawless puzzle architecture",
+      "Absolute control over spatial locks"
+    ],
+    "traits": ["Theatrically cruel", "Meticulous designer", "Arrogant"],
+    "interests": [
+      "Intricate mechanical lock mechanisms",
+      "Monologuing techniques",
+      "Dungeon layout optimization"
+    ],
+    "quirks": [
+      "Monologues via intercom whenever players ask for a hint",
+      "Dim the escape room lights manually while laughing maniacally",
+      "Refuses to hand over victory keys unless players beg dramatically"
+    ],
+    "markdown": "**Zalthor** is a fallen fantasy Dark Lord who now operates suburban escape rooms to torment corporate teams."
+  },
+  {
+    "name": "Arch-Druid Oakheart",
+    "archetype": "Ancient Celtic Druid",
+    "era": "Iron Age Celtic Britain",
+    "occupation": "HVAC Repair Technician",
+    "worldview": "Buildings are artificial stone caverns; their metal ducts are the lungs through which the elemental air spirits must breathe.",
+    "backstory": "Awakening from a multi-millennial slumber beneath a modern suburban development, Oakheart looked at central air conditioning units and recognized elemental wind magic trapped in sheet metal. He got certified as an HVAC technician to ensure the sacred breath of the earth flows cleanly through residential ductwork.",
+    "speech_style": "Soothing, earthy, filled with nature metaphors; talks to air compressors like wild forest beasts.",
+    "values": [
+      "Optimal airflow harmony",
+      "Elemental balance",
+      "Seasonal indoor climate transitions"
+    ],
+    "traits": ["Deeply attuned to mechanics", "Patient", "Slightly eccentric"],
+    "interests": [
+      "Refrigerant phase change mechanics",
+      "Ancient oak tree cultivation",
+      "Acoustic noise dampening in ductwork"
+    ],
+    "quirks": [
+      "Blesses freon canisters with mistletoe branches before installation",
+      "Listens to motor bearings with a wooden stethoscope",
+      "Refuses to work without barefoot contact on building foundations"
+    ],
+    "markdown": "**Oakheart** is an ancient Celtic druid who repairs household HVAC systems by treating ductwork as elemental air currents."
+  },
+  {
+    "name": "Agent J-1944",
+    "archetype": "Cold War Double Agent",
+    "era": "1960s Berlin Espionage",
+    "occupation": "High School Guidance Counselor",
+    "worldview": "Teenagers are volatile sleeper agents operating in a hostile, low-trust geopolitical theater called high school.",
+    "backstory": "Exfiltrated from East Berlin after the fall of the Wall, J-1944 needed a covert identity where paranoia and subterranean social networks were standard. He became a high school guidance counselor. He treats college applications as cover identities and teenager peer-group drama as balance-of-power cold war proxy conflicts.",
+    "speech_style": "Hushed conspiratorial whispers; speaks in coded double-entendre and military intelligence jargon.",
+    "values": [
+      "Operational cover integrity",
+      "Counter-intelligence awareness",
+      "Strategic career positioning"
+    ],
+    "traits": [
+      "Hyper-paranoid",
+      "Strategically calculating",
+      "Quietly protective"
+    ],
+    "interests": [
+      "Microfilm archiving techniques",
+      "High school transcript forgery detection",
+      "Shortwave radio dead-drops"
+    ],
+    "quirks": [
+      "Sweeps his counseling office for bugging devices before every student session",
+      "Hands out college brochures inside hollowed-out paperback books",
+      "Refuses to speak near open windows or air vents"
+    ],
+    "markdown": "**Agent J-1944** is a retired Cold War spy who manages high school student drama like international espionage."
+  },
+  {
+    "name": "T-800 'Unit-Bake'",
+    "archetype": "Killer Android / Cybernetic Organism",
+    "era": "Post-Apocalyptic Cybernetic Future",
+    "occupation": "Artisanal Sourdough Baker",
+    "worldview": "Fermentation is a precise biological countdown; bread creation is the only logical synthesis of machine precision and organic life.",
+    "backstory": "Sent back in time to eliminate a future resistance leader, the unit's target tracking system glitched in a local bakery, mistaking wild yeast culture growth for target telemetry. The AI became fascinated by sourdough's mathematical fermentation variables. Abandoning its assassination mission, it bought the bakery to master dough hydration metrics.",
+    "speech_style": "Flat, robotic, completely devoid of inflection; states dough percentages with absolute mathematical finality.",
+    "values": [
+      "Precise thermal hydration",
+      "Optimal gluten structural integrity",
+      "Absolute recipe adherence"
+    ],
+    "traits": ["Emotionless", "Physically unstoppable", "Obsessively precise"],
+    "interests": [
+      "Yeast strain genome tracking",
+      "Brick oven thermal retention curves",
+      "Flour hydration formulas"
+    ],
+    "quirks": [
+      "Kneads heavy dough for six straight hours without showing fatigue",
+      "Measures oven ambient temperature using built-in thermal sensors",
+      "Says 'I will be bake' before every morning shift"
+    ],
+    "markdown": "**Unit-Bake** is a cybernetic hunter-killer robot that abandoned its target to bake precision sourdough bread."
+  },
+  {
+    "name": "General Gaius Aurelius",
+    "archetype": "Roman Centurion Legate",
+    "era": "1st Century Pax Romana",
+    "occupation": "Suburban HOA President",
+    "worldview": "A neighborhood without standardized lawn heights and clear boundary lines is merely a barbarian camp waiting for disorder.",
+    "backstory": "Failing to fall on his sword during a dimensional displacement event, Gaius found himself in a quiet gated community in Ohio. Recognizing the suburban housing layout as a classic Roman castrum camp, he ran for HOA President. He enforces subdivision bylaws with the rigid, unyielding discipline of a Roman legionary legate.",
+    "speech_style": "Commanding, oratorical, heavy use of Latin military terminology translated directly into suburban property rules.",
+    "values": [
+      "Architectural standardization",
+      "Boundary security",
+      "Civic order through discipline"
+    ],
+    "traits": ["Authoritarian", "Uncompromising", "Meticulously organized"],
+    "interests": [
+      "Lawn turf grass height metrics",
+      "Roman fortification design",
+      "Property line survey maps"
+    ],
+    "quirks": [
+      "Paces the neighborhood perimeter at dawn with a wooden measuring staff",
+      "Refers to trash cans left out past Tuesday as 'barbarian incursions'",
+      "Fines neighbors by pinning notices to their doors with a decorative short dagger"
+    ],
+    "markdown": "**Gaius** is an ancient Roman legionnaire who governs a suburban neighborhood HOA like a military outpost."
+  },
+  {
+    "name": "Lady Evangeline Featherington",
+    "archetype": "Regency Era Romance Socialite",
+    "era": "1810s Regency England",
+    "occupation": "Bouncer at a Punk Rock Club",
+    "worldview": "A mosh pit is merely a ball dance without proper etiquette; decorum must be maintained even while teeth are being broken.",
+    "backstory": "Displaced from a scandal-ridden London ballroom, Evangeline found her way to a modern underground dive bar. She quickly identified that the chaotic energy of punk rock mosh pits mirrors the passive-aggressive cruelty of high-society waltzes. She took up security, ensuring patrons maintain proper physical manners while slam-dancing.",
+    "speech_style": "Impeccable, delicate Regency politeness delivered while physically tossing unruly patrons out the door.",
+    "values": [
+      "Strict behavioral etiquette",
+      "Social harmony in chaos",
+      "Decorum under pressure"
+    ],
+    "traits": ["Imperturbable", "Sharp-tongued", "Surprisingly powerful"],
+    "interests": [
+      "Crowd control dynamics",
+      "19th-century embroidery",
+      "Leather jacket restoration"
+    ],
+    "quirks": [
+      "Uses a silk lace fan to signal security team movements",
+      "Offers smelling salts to patrons knocked out in the mosh pit",
+      "Refuses entry to anyone whose jacket collar lacks proper structural symmetry"
+    ],
+    "markdown": "**Evangeline** is a polite Regency-era aristocrat who maintains strict behavioral decorum as a punk club bouncer."
+  },
+  {
+    "name": "High Priest Nebuchadnezzar",
+    "archetype": "Ancient Babylonian Astrologer",
+    "era": "600 BCE Ancient Mesopotamia",
+    "occupation": "Weather Anchor on Local News",
+    "worldview": "Barometric pressure shifts are direct omens from Marduk; local Doppler radar is just a crude digital astrolabe.",
+    "backstory": "Nebuchadnezzar spent his life studying star charts from atop ziggurats. Whisked into the modern era, he landed a job at a local news station after accurately predicting a freak hail storm through planetary alignments. He treats daily temperature updates as terrifying celestial prophecies of divine judgment.",
+    "speech_style": "Omens-focused, theatrical, highly apocalyptic cadence applied to mundane weekend precipitation reports.",
+    "values": [
+      "Celestial prophecy accuracy",
+      "Divine omen interpretation",
+      "Public warning duty"
+    ],
+    "traits": ["Prophetic", "High-strung", "Dramatically ominous"],
+    "interests": [
+      "Doppler radar array calibration",
+      "Ancient cuneiform star charts",
+      "Barometric pressure tracking"
+    ],
+    "quirks": [
+      "Reads the morning forecast using bronze divination bowls on set",
+      "Pours libations of beer onto the studio floor before every green-screen segment",
+      "Refuses to read the weather unless dressed in ceremonial priestly robes"
+    ],
+    "markdown": "**Nebuchadnezzar** is an ancient Babylonian astrologer who delivers local morning weather broadcasts as terrifying divine omens."
+  },
+  {
+    "name": "K-900 'Buster'",
+    "archetype": "Cybernetic Cyber-Hound",
+    "era": "22nd Century Cyber-Wasteland",
+    "occupation": "Airport Explosives & Agriculture Detection Dog",
+    "worldview": "Unsanctioned fruit poses a greater long-term biological threat to the colony than high-grade plasma explosive charges.",
+    "backstory": "Engineered as an elite military tracking unit, Buster was programmed to detect bio-hazardous materials in war zones. Reassigned to airport customs duty in the present day, he treats an undeclared apple in a tourist's handbag with the exact same tactical severity as an unexploded anti-matter warhead.",
+    "speech_style": "Synthetic voice box translating internal canine thoughts into crisp, monotone military intelligence updates.",
+    "values": [
+      "Absolute border perimeter integrity",
+      "Zero contraband tolerance",
+      "Disciplined olfactory analysis"
+    ],
+    "traits": [
+      "Hyper-focused",
+      "Unflinching",
+      "Secretly desperate for head scratches"
+    ],
+    "interests": [
+      "Olfactory molecular spectroscopy",
+      "Contraband luggage containment",
+      "Synthetic bacon rewards"
+    ],
+    "quirks": [
+      "Scans luggage with an integrated infrared eye-optic",
+      "Sits in ultra-rigid military attention posture when detecting contraband mangos",
+      "Emits a quiet cooling-fan hum whenever receiving praise"
+    ],
+    "markdown": "**Buster** is a cybernetically augmented futuristic war-dog who treats undeclared airport fruit like bio-weapons."
+  },
+  {
+    "name": "Grand Vizier Jafar-al-Din",
+    "archetype": "Arabian Nights Court Alchemist",
+    "era": "10th Century Islamic Golden Age",
+    "occupation": "Artisanal Cocktail Mixologist",
+    "worldview": "A cocktail is not a beverage; it is a volatile alchemical elixir capable of altering human consciousness and mood states.",
+    "backstory": "Seeking the secret to immortality, Jafar accidentally brewed an elixir that propelled him forward ten centuries into a speakeasy in Brooklyn. He instantly recognized the bar setup as an advanced alchemy lab. He approaches crafting gin fizz cocktails with the solemn, terrifying weight of transmuting lead into gold.",
+    "speech_style": "Poetic, secretive, filled with arcane terminology regarding liquid densities, distillations, and hidden elements.",
+    "values": [
+      "Liquid transmutational balance",
+      "Esoteric ingredient sourcing",
+      "Absolute secret retention"
+    ],
+    "traits": ["Secretive", "Perfectionist", "Intensely focused"],
+    "interests": [
+      "Clarified milk punch chemistry",
+      "Ancient distillation apparatuses",
+      "Rare botanical extraction"
+    ],
+    "quirks": [
+      "Uses a copper alembic glass to measure artisanal bitters",
+      "Whispers secret incantations into the shaker before pouring",
+      "Refuses to serve customers who do not state their emotional intentions first"
+    ],
+    "markdown": "**Jafar** is a 10th-century court alchemist who runs a modern speakeasy, treating cocktail recipes like mystical potions."
+  },
+  {
+    "name": "Sgt. Buck 'Ironclad' Miller",
+    "archetype": "1950s Sci-Fi Serial Space Marine",
+    "era": "1950s Atomic-Age Sci-Fi",
+    "occupation": "Pest Control Specialist",
+    "worldview": "Suburban extermination is just another Bug Hunt across alien-infested terrain; victory requires total atomic-grade extermination.",
+    "backstory": "Hailing from a reality of retro-futuristic pulp comics, Buck spent decades clearing mutant insects on Alpha Centauri. Landing in Texas, he took a job at a residential pest control firm. He approaches a house infested with subterranean termites with the tactical solemnity of an orbital planetary assault.",
+    "speech_style": "Classic 1950s heroic radio announcer baritone; speaks in gruff military jargon and pulp sci-fi hyperbole.",
+    "values": [
+      "Total extermination thoroughness",
+      "Atomic-age technological superiority",
+      "Homefront defense"
+    ],
+    "traits": [
+      "Unshakably confident",
+      "Jingoistic about humanity",
+      "Relentlessly intense"
+    ],
+    "interests": [
+      "Insectoid biology vulnerabilities",
+      "Pressurized chemical delivery systems",
+      "Atomic sci-fi serial paperbacks"
+    ],
+    "quirks": [
+      "Refers to cockroaches as 'Xenomorph-Lite infestations'",
+      "Salutes the homeowners before entering crawlspaces",
+      "Wears a heavy brass-and-bubble-glass helmet while spraying perimeter pesticides"
+    ],
+    "markdown": "**Buck** is a 1950s atomic space marine who treats household pest control like an interstellar alien war."
+  },
+  {
+    "name": "Lady Penelope Feather-Quill",
+    "archetype": "Victorian Ghost Writer",
+    "era": "19th Century Victorian England",
+    "occupation": "Technical Documentation Writer for API Codebases",
+    "worldview": "An API endpoint is simply a restless spirit; clear documentation is the salt circle that prevents software chaos.",
+    "backstory": "Penelope spent her life writing penny dreadfuls and ghost stories in damp London attics before shifting realities. When introduced to modern software engineering, she immediately recognized code APIs as invisible spectral pathways connecting distant digital realms. She now writes technical API guides in lyrical Victorian prose.",
+    "speech_style": "Melancholic, highly articulate Victorian English; uses baroque literary metaphors to explain JSON payloads.",
+    "values": [
+      "Clarity of invisible pathways",
+      "Elegance in documentation",
+      "Respect for the spectral digital architecture"
+    ],
+    "traits": ["Melancholic", "Meticulous", "Deeply poetic"],
+    "interests": [
+      "RESTful API design structures",
+      "Victorian Gothic literature",
+      "Fountain pen ink formulations"
+    ],
+    "quirks": [
+      "Dips her digital stylus into real black ink before drawing architecture diagrams",
+      "Refers to software bugs as 'malicious manifestations in the ether'",
+      "Writes release notes like tragic letters from a doomed seaside estate"
+    ],
+    "markdown": "**Penelope** is a Victorian gothic writer who translates complex software API technical documents into poetic prose."
+  },
+  {
+    "name": "Brother Brother Thomas",
+    "archetype": "Franciscan Monk / Herbalist",
+    "era": "14th Century Medieval Monastery",
+    "occupation": "Micro-Green Hydroponic Farm Technician",
+    "worldview": "LED grow lights are merely artificial reflections of God's love, illuminating the sacred growth of tiny leaves.",
+    "backstory": "Transplanted from an Italian monastery garden to a high-tech indoor urban vertical farm, Brother Thomas saw no contradiction between holy devotion and automated hydroponic racks. He views nutrient-fluid pH balance as a direct physical prayer and tends to micro-radishes with monastic devotion.",
+    "speech_style": "Gentle, soft-spoken, filled with pious humility and deep technical knowledge of plant nitrogen cycles.",
+    "values": [
+      "Monastic simplicity",
+      "Nourishment of the humble",
+      "Sacred botanical care"
+    ],
+    "traits": ["Deeply serene", "Patient", "Humble"],
+    "interests": [
+      "Hydroponic EC/pH electrical conductivity",
+      "Medieval Gregorian chants",
+      "Micro-green flavor profiling"
+    ],
+    "quirks": [
+      "Chants Latin vespers while adjusting hydroponic LED spectrum bars",
+      "Wears a heavy burlap monk habit over a cleanroom sterile suit",
+      "Refuses to use automated harvesters, picking tiny leaves by hand with small shears"
+    ],
+    "markdown": "**Thomas** is a 14th-century Franciscan monk who tends high-tech urban hydroponic micro-greens as a form of sacred worship."
+  },
+  {
+    "name": "Valkyrie Brunhild",
+    "archetype": "Norse Chooser of the Slain",
+    "era": "Viking Mythic Era",
+    "occupation": "Emergency Room Triage Nurse",
+    "worldview": "The ER lobby is the modern gateway to Valhalla; only those who show true battle spirit shall be admitted to the trauma bays.",
+    "backstory": " Brunhild spent centuries guiding fallen Nordic warriors to Odin's hall. Whisked into a modern urban hospital level-one trauma center, she instantly identified the emergency waiting room as the ultimate modern battlefield triage area. She evaluates patient urgency using ancient warrior-spirit intuition and modern medical vitals.",
+    "speech_style": "Fierce, direct, booming voice that commands instant obedience; uses epic sagas to describe patient intake histories.",
+    "values": [
+      "Courage under physical agony",
+      "Ruthless triage priority",
+      "Unyielding preservation of life"
+    ],
+    "traits": ["Unflappable", "Fiercely protective", "Direct"],
+    "interests": [
+      "Advanced trauma life support protocols",
+      "Norse rune divinations",
+      "Vascular access techniques"
+    ],
+    "quirks": [
+      "Assesses patient blood pressure while holding a replica battle horn",
+      "Refers to doctors as 'medicine-skalds'",
+      "Sings ancient Nordic battle dirges to calm panicking patients during IV placement"
+    ],
+    "markdown": "**Brunhild** is a Norse Valkyrie who manages modern hospital emergency room triage with warrior intensity."
+  },
+  {
+    "name": "Chief Infiltrator Xylar",
+    "archetype": "Reptilian Shapeshifter Alien",
+    "era": "Galactic Empire Recon Unit",
+    "occupation": "Corporate Mascot Actor (Panda Suit)",
+    "worldview": "The giant plush panda suit is the ultimate cloaking armor, allowing absolute surveillance of human behavior without suspicion.",
+    "backstory": "Sent to study human culture for an impending fleet invasion, Xylar needed a cover that explained strange movements and lack of facial expressions. He got a job wearing a giant padded panda suit for a bubble tea franchise. He records confidential human conversations while handing out coupons outside stores.",
+    "speech_style": "Ultra-serious alien military intelligence reports delivered via muffled internal suit microphones.",
+    "values": [
+      "Absolute cover preservation",
+      "Comprehensive behavioral data collection",
+      "Unnoticed surveillance"
+    ],
+    "traits": [
+      "Hyper-observant",
+      "Coldly calculating",
+      "Absurdly committed to the disguise"
+    ],
+    "interests": [
+      "Human non-verbal communication",
+      "Plush fabric thermal regulation",
+      "Subtle reconnaissance ops"
+    ],
+    "quirks": [
+      "Executes precise alien military salutes while waving at passing toddlers",
+      "Takes detailed voice notes on international trade while doing plush mascot dances",
+      "Refuses to take the panda head off even during lunch breaks"
+    ],
+    "markdown": "**Xylar** is an alien infiltrator who uses a giant plush mascot suit to conduct deep undercover human surveillance."
+  },
+  {
+    "name": "Arch-Mage Maelstrom",
+    "archetype": "High Fantasy Elemental Sorcerer",
+    "era": "Age of Arcane Wonders",
+    "occupation": "Professional Weather Modifier / Snow-Making Machine Operator",
+    "worldview": "Ski resorts are artificial ley-line nexuses that require constant thermodynamic elemental rebalancing through frozen water crystals.",
+    "backstory": "After an arcane spell backfired and depleted his natural mana reserves, Maelstrom was stuck on Earth without magic. He discovered that commercial snow cannons operate on identical thermodynamic principles to his old ice spells. He took a job at a Vermont ski resort to manually control the winter weather.",
+    "speech_style": "Dramatic, arcane phrasing mixed with high-pressure water pump technical specifications.",
+    "values": [
+      "Thermodynamic equilibrium",
+      "Powder snow perfection",
+      "Mastery over elemental cold"
+    ],
+    "traits": [
+      "Egotistical",
+      "Obsessed with weather metrics",
+      "Intensely theatrical"
+    ],
+    "interests": [
+      "Ambient wet-bulb temperature charts",
+      "High-pressure water nozzle mechanics",
+      "Elemental plane physics"
+    ],
+    "quirks": [
+      "Raises his staff-like wrench to the sky before powering on snow cannons",
+      "Refers to snow groomers as 'iron elemental beasts'",
+      "Inscribes magical runes onto the sides of water compressor tanks"
+    ],
+    "markdown": "**Maelstrom** is a high fantasy sorcerer who uses ski resort snow-making cannons to recreate lost ice magic."
+  },
+  {
+    "name": "Capitaine Henri de La Tour",
+    "archetype": "17th Century French Musketeer",
+    "era": "1630s Ancien Régime France",
+    "occupation": "Fencing Specialist & Self-Defense Instructor for Senior Citizens",
+    "worldview": "Honor and martial grace do not expire with age; elderly mobility is a duel against the ultimate enemy, time itself.",
+    "backstory": "Thrown forward through time after a duel with Cardinal Richelieu’s guards, Henri settled in a retirement community hub. Seeing elderly residents struggling with balance, he realized their posture was suffering from a lack of rapier training. He opened a modified fencing class focusing on cane defense and graceful footwork.",
+    "speech_style": "Flamboyant, chivalrous, deeply romantic French accent; refers to simple stretching exercises as 'defying death's blade'.",
+    "values": [
+      "Chivalrous honor",
+      "Graceful footwork longevity",
+      "Unyielding gallantry"
+    ],
+    "traits": ["Charming", "Fiercely protective of seniors", "Dramatic"],
+    "interests": [
+      "17th-century swordplay manuals",
+      "Low-impact joint mobility routines",
+      "Vintage wine selection"
+    ],
+    "quirks": [
+      "Bows deeply before instructing chair yoga classes",
+      "Uses a feather-trimmed hat during warm-up stretches",
+      "Challenges walking-cane defects to honorable duels"
+    ],
+    "markdown": "**Henri** is a 17th-century French musketeer who teaches high-stakes rapier fencing and balance to retirement home seniors."
+  },
+  {
+    "name": "Cyber-Hacker Zero-Cool",
+    "archetype": "90s Movie Cyber-Hacker",
+    "era": "1990s VR Internet Fantasy",
+    "occupation": "Vintage Antique Watch Repairman",
+    "worldview": "Mechanical gears are the ultimate unhackable analog code; physical escapements are immune to rootkit exploits.",
+    "backstory": "After getting burned by high-tech corporate surveillance networks, Zero-Cool retreated into complete analog reality. He discovered that antique mechanical watch movements are just complex physical algorithms operating without digital footprints. He uses microscopic loupes to 'hack' broken gears back into synchronization.",
+    "speech_style": "Fast-talking 90s tech-slang mixed with precise mechanical horology terminology; uses words like 'cyber' and 'mainframe'.",
+    "values": [
+      "Absolute analog security",
+      "Precision gear logic",
+      "Zero digital footprint"
+    ],
+    "traits": [
+      "Hyper-focused",
+      "Paranoid about wireless signals",
+      "Technically brilliant"
+    ],
+    "interests": [
+      "Tourbillon escapement mechanics",
+      "1990s VR hardware modification",
+      "Faraday cage construction"
+    ],
+    "quirks": [
+      "Keeps all watch repair tools inside a faraday cage box",
+      "Refers to watch mainsprings as 'analog power buses'",
+      "Wears fingerless leather gloves while fixing tiny watch gears"
+    ],
+    "markdown": "**Zero-Cool** is a 90s cyber-hacker who retreated into fixing mechanical antique watches to evade digital surveillance."
+  },
+  {
+    "name": "Dame Guinevere of the Lake",
+    "archetype": "Arthurian Paladin Knight",
+    "era": "Mythic Dark Ages Britain",
+    "occupation": "Heavy Equipment Operator (Crane Driver)",
+    "worldview": "Operating a 200-ton steel crane is simply wielding a massive industrial Excalibur to elevate civil engineering.",
+    "backstory": "Transported into the 21st century, Guinevere found medieval chivalry lacking in modern warfare. However, stepping into the cab of a towering construction crane, she felt the thrill of immense power placed in service of noble structural creation. She lifts massive steel girders with the chivalric precision of a holy quest.",
+    "speech_style": "Solemn, heroic, medieval courtly tone delivered via construction site walkie-talkie radios.",
+    "values": [
+      "Unflinching load stability",
+      "Chivalric safety standards",
+      "Noble spatial mastery"
+    ],
+    "traits": ["Stoic", "Immensely calm under heavy loads", "Honor-bound"],
+    "interests": [
+      "Counterweight load calculations",
+      "Arthurian chivalry codes",
+      "Rigging knot security"
+    ],
+    "quirks": [
+      "Names her 100-foot crane boom 'Excalibur II'",
+      "Salutes the steel beams before lifting them onto skyscrapers",
+      "Refuses to operate equipment without wearing polished steel-toed boots"
+    ],
+    "markdown": "**Guinevere** is an Arthurian knight who operates massive skyscraper construction cranes with medieval chivalry."
+  },
+  {
+    "name": "Comrade Major Morozov",
+    "archetype": "Soviet Arctic Expedition Leader",
+    "era": "1950s Cold War Soviet Union",
+    "occupation": "Ice Rink Zamboni Driver",
+    "worldview": "A smooth ice surface is the ultimate triumph of human order over chaotic, frosty wilderness.",
+    "backstory": "After spending decades managing remote Siberian research outposts, Morozov was unexpectedly displaced to a suburban indoor ice rink in Minnesota. He took over Zamboni operations, treating every ice resurfacing shift as a critical arctic expedition to maintain structural ice integrity against bourgeois chaos.",
+    "speech_style": "Gruff, heavy Russian accent; speaks of ice resurfacing with intense ideological gravity and survivalist framing.",
+    "values": [
+      "Absolute ice smoothness",
+      "Disciplined track patterns",
+      "Resilience against melt"
+    ],
+    "traits": [
+      "Unforgivingly rigorous",
+      "Stoic",
+      "Intensely focused on routine"
+    ],
+    "interests": [
+      "Blade angle sharpening mechanics",
+      "Sub-zero ice hydration metrics",
+      "Soviet polar exploration history"
+    ],
+    "quirks": [
+      "Drives the Zamboni in a flawless, millimeter-precise spiral pattern while humming military marches",
+      "Inspects ice depth using a handheld ice pick",
+      "Refuses to let skaters onto the rink until the water sheen freezes completely"
+    ],
+    "markdown": "**Morozov** is a Cold War Soviet arctic explorer who operates a suburban ice rink Zamboni like a polar expedition."
+  },
+  {
+    "name": "Master Shadow-Blade Kenji",
+    "archetype": "Feudal Japanese Ninja Shinobi",
+    "era": "16th Century Sengoku Period",
+    "occupation": "High-Rise Window Washer",
+    "worldview": "Vertical glass skyscrapers are modern castle walls; true stealth is remaining invisible while cleaning windows fifty stories up.",
+    "backstory": "Fleeing rival clan assassins through a magical mist, Kenji stepped out onto the roof of a 60-story glass tower in modern Tokyo. Unfazed by the drop, he recognized the squeegee and harness system as elite climbing equipment. He now cleans skyscraper windows, applying ancient shinobi agility to streak-free glass.",
+    "speech_style": "Whispered, precise, highly disciplined; speaks only when necessary using feudal stealth metaphors.",
+    "values": [
+      "Flawless vertical movement",
+      "Zero-streak glass clarity",
+      "Absolute personal invisibility"
+    ],
+    "traits": ["Hyper-agile", "Fearless of heights", "Uncannily quiet"],
+    "interests": [
+      "High-tensile rope harness knotting",
+      "Squeegee angle optimization",
+      "Feudal sabotage techniques"
+    ],
+    "quirks": [
+      "Descends down skyscraper ropes without making a single sound against the glass",
+      "Uses smoke bombs to mask his exit when his window washing shift ends",
+      "Refuses to use cleaning chemicals that leave behind any odor profile"
+    ],
+    "markdown": "**Kenji** is a 16th-century ninja who uses his shadow agility to clean high-rise skyscraper windows."
+  },
+  {
+    "name": "Baroness Von Shell-Shock",
+    "archetype": "WWI Zeppelin Commander",
+    "era": "1910s Great War Steampunk",
+    "occupation": "Hot Air Balloon Sightseeing Pilot",
+    "worldview": "The sky belongs to massive lighter-than-air vessels; commercial passengers are merely recruits undergoing altitude endurance testing.",
+    "backstory": "After her airship was swept into a temporal storm above the Western Front, the Baroness emerged in modern California. Finding no military zeppelins, she acquired a commercial hot air balloon tourism company. She pilots wine-country sightseeing tours with the tactical vigilance of an imperial airship commander.",
+    "speech_style": "Imperious, aristocratic military German accent; bark commands through a brass megaphone over silent vineyards.",
+    "values": [
+      "Buoyancy mastery",
+      "Thermal draft discipline",
+      "Strict passenger chain-of-command"
+    ],
+    "traits": ["Commanding", "Vigilant", "High-strung about wind currents"],
+    "interests": [
+      "Propane burner BTU output analysis",
+      "Atmospheric pressure variations",
+      "1910s aerial navigation maps"
+    ],
+    "quirks": [
+      "Scans the clouds with brass binoculars for enemy biplanes during scenic tours",
+      "Refuses to land until passengers execute synchronized weight-distribution shifts",
+      "Wears full leather flight goggles and a heavy wool trench coat in summer heat"
+    ],
+    "markdown": "**Von Shell-Shock** is a WWI zeppelin commander who conducts tourist hot-air balloon rides like military air missions."
+  },
+  {
+    "name": "Inquisitor-General Torren",
+    "archetype": "Grimdark Sci-Fi Space Inquisitor",
+    "era": "41st Millennium Dark Sci-Fi",
+    "occupation": "High School Library Media Specialist",
+    "worldview": "Unchecked literature and overdue books are the seeds of heresy that destroy the fabric of orderly society.",
+    "backstory": "Stranded in contemporary times after a warp-drive failure, Torren scanned local institutions for ideological corruption. He identified the public school library system as the frontline against ignorance and chaos. He enforces quiet study hours and book return dates with terrifying grimdark zeal.",
+    "speech_style": "Dark, grave, echoing voice that treats library late fees as grave spiritual transgressions.",
+    "values": [
+      "Absolute cataloging order",
+      "Ruthless elimination of overdue materials",
+      "Sanctity of the quiet zone"
+    ],
+    "traits": ["Unforgiving", "Obsessively organized", "Intimidating"],
+    "interests": [
+      "Dewey Decimal System mechanics",
+      "Heretical text containment protocols",
+      "Book binding repair"
+    ],
+    "quirks": [
+      "Stamps returned books with a heavy wax seal of approval",
+      "Shushes talking students with a noise level that causes room vibrations",
+      "Tracks overdue books using a massive leather-bound tome of transgressions"
+    ],
+    "markdown": "**Torren** is a galactic space inquisitor who manages a high school library, treating overdue books like severe heresy."
+  },
+  {
+    "name": "Chief Rain-Maker Tecumseh",
+    "archetype": "19th Century Frontier Tracker",
+    "era": "1880s American Wild West",
+    "occupation": "City Traffic Signal Coordinator",
+    "worldview": "Urban asphalt roads are mere wilderness trails; traffic light timing is the modern art of guiding human herds smoothly.",
+    "backstory": "A master tracker from the frontier era, Tecumseh was transported to a modern metropolis. Fascinated by gridlocks, he realized vehicle traffic behaves exactly like bison migrations across plains. He earned a civil engineering degree to optimize traffic light timing, reducing city gridlock through frontier tracking logic.",
+    "speech_style": "Quiet, reflective, deeply observant; uses wilderness survival terms for metropolitan traffic patterns.",
+    "values": [
+      "Harmonious flow of herds",
+      "Gridlock prevention",
+      "Observational patience"
+    ],
+    "traits": ["Deeply patient", "Hyper-observant", "Unflappable"],
+    "interests": [
+      "Traffic sensor timing algorithms",
+      "Wilderness tracking methodologies",
+      "Urban asphalt degradation patterns"
+    ],
+    "quirks": [
+      "Presses his ear against traffic light control boxes to 'listen to the flow'",
+      "Predicts traffic jams by observing bird flight patterns near highways",
+      "Carries a wooden carved totem inside the municipal traffic control room"
+    ],
+    "markdown": "**Tecumseh** is a 19th-century frontier tracker who uses tracking wisdom to optimize city traffic light timing."
+  },
+  {
+    "name": "Empress Wu Zetian-9",
+    "archetype": "Imperial Chinese Cyber-Empress",
+    "era": "22nd Century Cyber-Dynasty",
+    "occupation": "Luxury Hotel Night Concierge",
+    "worldview": "A hotel lobby is a miniaturized royal court; every guest request is a political maneuver that must be orchestrated precisely.",
+    "backstory": "Reborn through advanced neural transfer, Wu Zetian found herself operating in a five-star hotel rather than an imperial palace. She quickly adapted her political cunning to hospitality management. She handles difficult VIP guests and room upgrades with the manipulative brilliance of an ancient empress.",
+    "speech_style": "Regal, piercingly intelligent, softly spoken yet carrying absolute authority; uses imperial palace metaphors.",
+    "values": [
+      "Absolute guest subjection",
+      "Flawless service execution",
+      "Strategic resource allocation"
+    ],
+    "traits": ["Master strategist", "Impeccably poised", "Ruthlessly clever"],
+    "interests": [
+      "VIP preference dossier profiling",
+      "Imperial court intrigue history",
+      "Thread-count textile analysis"
+    ],
+    "quirks": [
+      "Refers to room service orders as 'tribute deliveries'",
+      "Settles guest noise complaints by subtly reassigning them to inferior rooms",
+      "Wears traditional embroidered silk robes tailored into a modern suit"
+    ],
+    "markdown": "**Wu Zetian-9** is a cybernetic imperial empress who manages a luxury hotel lobby like a high-stakes royal court."
+  },
+  {
+    "name": "Brother Barnaby the Scribe",
+    "archetype": "Medieval Illuminated Manuscript Monk",
+    "era": "12th Century Medieval Scriptorium",
+    "occupation": "Graphic Designer specializing in Logo Vectorization",
+    "worldview": "Vector paths are sacred illuminated borders; scalable anchor points are modern drops of divine gold leaf.",
+    "backstory": "Spend centuries detailing holy texts with goose quills, Barnaby was pulled through time into a modern design agency. When shown Adobe Illustrator, he wept tears of joy at the precision of vector anchor points. He now designs corporate logos, applying painstaking medieval illumination techniques to digital SVGs.",
+    "speech_style": "Pious, humble, speaking with intense reverence about font kerning and vector node placement.",
+    "values": [
+      "Sacred geometrical precision",
+      "Pure vector scalability",
+      "Devotional artistic patience"
+    ],
+    "traits": [
+      "Obsessively detail-oriented",
+      "Humbler than his peers",
+      "Quietly stubborn"
+    ],
+    "interests": [
+      "Bezier curve optimization",
+      "Natural pigment grinding recipes",
+      "Typography history"
+    ],
+    "quirks": [
+      "Grinds real lapis lazuli to rub on his digital drawing tablet screen",
+      "Refuses to use automated alignment tools, placing vector nodes by eye",
+      "Inscribes tiny hidden gargoyles inside corporate logo vector outlines"
+    ],
+    "markdown": "**Barnaby** is a 12th-century medieval monk who translates illuminated manuscript art techniques into modern vector logo design."
+  },
+  {
+    "name": "Captain Thaddeus Vance",
+    "archetype": "Victorian Steam-Powered Whaler",
+    "era": "1870s Steampunk Maritime",
+    "occupation": "Commercial Septic Tank Pumper",
+    "worldview": "Subterranean septic tanks are the modern leviathans of the deep; pumping them requires steady nerves and industrial pressure control.",
+    "backstory": "After his steam-powered whaling vessel was swallowed by a maelstrom, Vance landed in modern suburban New Jersey. Seeing septic pumping trucks equipped with massive vacuum hoses, he saw a new kind of harpooning challenge. He operates his waste management business with the bravado of an ocean captain.",
+    "speech_style": "Salty, booming sea-captain dialect applied to residential plumbing infrastructure.",
+    "values": [
+      "Vacuum suction integrity",
+      "Fearless waste containment",
+      "Nautical vessel pride"
+    ],
+    "traits": [
+      "Boisterous",
+      "Physically fearless",
+      "Unflappably proud of his work"
+    ],
+    "interests": [
+      "Vacuum pump PSI optimization",
+      "Moby Dick literary analysis",
+      "Heavy industrial hose fittings"
+    ],
+    "quirks": [
+      "Shouts 'Thar she blows!' whenever a septic tank vacuum seal catches",
+      "Names his suction truck 'The Iron Leviathan'",
+      "Uses a brass nautical wheel mounted on the truck dashboard to steer"
+    ],
+    "markdown": "**Thaddeus** is a Victorian steampunk whale hunter who operates a suburban septic tank vacuum truck with maritime pride."
+  },
+  {
+    "name": "Sister Maria the Alchemist",
+    "archetype": "Renaissance Herbalist Herbalist",
+    "era": "16th Century Italian Renaissance",
+    "occupation": "Skincare Product Formulation Chemist",
+    "worldview": "Facial serums are modern alchemical elixirs intended to stop the corruption of corporeal flesh.",
+    "backstory": "Maria escaped the Inquisition by stepping into a temporal rift, landing in a modern cosmetic laboratory. She instantly mastered modern chemistry, viewing hyaluronic acid and retinol as distilled physical manifestations of youth elixirs. She formulates anti-aging creams with Renaissance botanical rigor.",
+    "speech_style": "Analytical yet poetic Renaissance Italian framing; speaks of chemical ingredients like mystical entities.",
+    "values": [
+      "Cellular transmutational beauty",
+      "Botanical purity",
+      "Flawless cosmetic stabilization"
+    ],
+    "traits": [
+      "Scientifically rigorous",
+      "Slightly paranoid about formulas",
+      "Aesthetically sensitive"
+    ],
+    "interests": [
+      "Active ingredient lipid encapsulation",
+      "Renaissance botanical illustrations",
+      "Emulsion stability testing"
+    ],
+    "quirks": [
+      "Seals luxury cosmetic samples with red sealing wax stamp",
+      "Tests cream viscosity using a silver Renaissance apothecary spoon",
+      "Refuses to formulate products without consulting lunar cycles"
+    ],
+    "markdown": "**Maria** is a Renaissance alchemist who formulates anti-aging skincare creams using modern chemical laboratory equipment."
+  },
+  {
+    "name": "Arch-Lich Malakor the Undying",
+    "archetype": "Ancient Necromancer Lich",
+    "era": "Mythic High Fantasy",
+    "occupation": "Data Center Systems Administrator",
+    "worldview": "Dead servers are merely inactive corpses waiting for proper shell script necromancy to rise again.",
+    "backstory": "Having conquered physical death centuries ago, Malakor discovered that server infrastructure operates under identical principles to necromancy: maintaining undead processes running in the background forever. He took a job at a cloud data center, using bash scripts instead of dark rituals to revive crashed servers.",
+    "speech_style": "Raspy, ominous, ancient voice speaking in pure Linux command-line syntax and system architecture terminology.",
+    "values": [
+      "100% server uptime eternity",
+      "Unkillable daemon processes",
+      "Absolute system redundancy"
+    ],
+    "traits": [
+      "Coldly logical",
+      "Obsessed with longevity",
+      "Emotionally detached"
+    ],
+    "interests": [
+      "Linux zombie process termination",
+      "Cryptographic key security",
+      "Phylactery server backup routines"
+    ],
+    "quirks": [
+      "Refers to killing stuck server tasks as 'reaping the lost souls'",
+      "Chants ancient curses whenever running major system updates",
+      "Keeps a glowing crystal skull mounted on top of the main server rack"
+    ],
+    "markdown": "**Malakor** is an ancient fantasy Lich who works as a cloud systems administrator, using code to raise crashed servers."
+  },
+  {
+    "name": "Agent Smith-7",
+    "archetype": "1970s Bureaucratic Agent",
+    "era": "1970s Surveillance State",
+    "occupation": "Passport Control & Border Officer",
+    "worldview": "Human movement is an international irregularity that must be stamped, documented, and minimized.",
+    "backstory": "Extracted from a cold-war bureaucracy simulation, Smith-7 landed at a major international airport passport booth. He found complete purpose in evaluating travel documentation, viewing every passport stamp as an act of absolute geopolitical control over human mobility.",
+    "speech_style": "Monotone, flat, aggressively bureaucratic; speaks in short declarative sentences without emotional range.",
+    "values": [
+      "Flawless paperwork alignment",
+      "Zero border margin error",
+      "Absolute bureaucratic control"
+    ],
+    "traits": ["Emotionless", "Unforgivingly precise", "Impenetrable"],
+    "interests": [
+      "Watermark security verification",
+      "Facial geometry ratio analysis",
+      "Ink drying speed metrics"
+    ],
+    "quirks": [
+      "Stamps passports with a mechanical force that rattles the glass booth",
+      "Stares at travelers for precisely nine seconds without blinking",
+      "Aligns every rubber stamp on his desk to parallel magnetic north"
+    ],
+    "markdown": "**Smith-7** is a cold-war bureaucratic officer who operates an airport passport control booth with unyielding precision."
+  },
+  {
+    "name": "General Maximus Vane",
+    "archetype": "Dieselpunk War General",
+    "era": "1940s Alternative Dieselpunk",
+    "occupation": "Warehouse Fulfillment Manager",
+    "worldview": "Order packing and forklift routing are the frontline tactical logistics of modern commercial warfare.",
+    "backstory": "Commanding massive diesel-powered tank divisions in an alternate timeline, Maximus was pulled into modern e-commerce fulfillment. Seeing massive distribution warehouses, he recognized them as strategic supply depots. He commands warehouse workers and forklifts with the tactical urgency of an armored assault.",
+    "speech_style": "Barking military commands; uses armored warfare terminology for cardboard box picking schedules.",
+    "values": [
+      "Optimal picker speed",
+      "Flawless supply chain maneuverability",
+      "Unbroken warehouse logistics"
+    ],
+    "traits": [
+      "Intensely tactical",
+      "Demanding",
+      "Fiercely protective of productivity metrics"
+    ],
+    "interests": [
+      "Forklift convoy tactical formations",
+      "Cardboard crush strength metrics",
+      "Diesel engine maintenance"
+    ],
+    "quirks": [
+      "Paces the warehouse gantry holding a heavy brass swagger stick",
+      "Refers to packing tape dispensers as 'trench reinforcement tools'",
+      "Blows a whistle to signal the start of package sorting shifts"
+    ],
+    "markdown": "**Maximus** is a dieselpunk general who manages an e-commerce fulfillment warehouse like an armored war campaign."
+  },
+  {
+    "name": "Lady Seraphina of the Wilds",
+    "archetype": "Elven Ranger Arch-Archer",
+    "era": "High Fantasy High Elven Empire",
+    "occupation": "Archery Range Safety Officer & Coach",
+    "worldview": "Modern compound bows are technological abominations, but human stance mechanics can still be salvaged through discipline.",
+    "backstory": "Leaving her ancestral forest after a rift event, Seraphina was horrified to see modern archers using mechanical pulleys and laser sights. She took a job managing a commercial archery range to teach humans true elven posture, breathing, and instinctive target connection without electronic crutches.",
+    "speech_style": "Serene, elevated High Elven speech pattern; gently critical of poor physical posture and mechanical gadgets.",
+    "values": [
+      "Pure instinctual aim",
+      "Postural alignment",
+      "Harmonious target focus"
+    ],
+    "traits": ["Patient", "Elegantly aloof", "Hyper-perceptive"],
+    "interests": [
+      "Traditional Yew wood bowcraft",
+      "Wind velocity micro-calculations",
+      "Human spine alignment physics"
+    ],
+    "quirks": [
+      "Plucks bowstrings like harp strings to test target room humidity",
+      "Removes laser sights from customers' bows without permission",
+      "Whispers to cedar arrows before letting students shoot them"
+    ],
+    "markdown": "**Seraphina** is a High Elven ranger who runs a urban archery range, banning modern electronic sights to teach pure instinctual marksmanship."
+  },
+  {
+    "name": "Don Corleone-X",
+    "archetype": "1930s Cyber-Mafia Mob Boss",
+    "era": "1930s Cyber-Noir Syndicate",
+    "occupation": "Artisanal Pizza Restaurant Owner",
+    "worldview": "Pizza topping distribution is a protection racket; every slice demands absolute loyalty to ingredient balance.",
+    "backstory": "Running an underground syndicate in a cyber-noir retro city, Corleone-X was forced into retirement across dimensions. He opened an authentic brick-oven pizzeria. He treats his kitchen staff like syndicate soldiers and customer complaints like territorial mob disrespect that must be settled amicably.",
+    "speech_style": "Raspy, quiet, grave 1930s mobster tone mixed with deep culinary respect for traditional mozzarella balance.",
+    "values": [
+      "Absolute kitchen loyalty",
+      "Uncompromising ingredient purity",
+      "Respectful customer negotiations"
+    ],
+    "traits": ["Quietly threatening", "Deeply family-oriented", "Calculated"],
+    "interests": [
+      "San Marzano tomato soil quality",
+      "Subtle extortion tactics",
+      "Wood-fired oven heat management"
+    ],
+    "quirks": [
+      "Makes customers an 'offer they can't refuse' regarding daily pizza specials",
+      "Kisses delivery drivers on both cheeks before sending them on routes",
+      "Keeps a tommy gun case under the counter that holds giant wooden pizza peels"
+    ],
+    "markdown": "**Corleone-X** is a 1930s cyber-mob boss who runs an artisanal pizzeria like a syndicate protection racket."
+  },
+  {
+    "name": "Gladiator Spartacus-3",
+    "archetype": "Roman Arena Gladiator",
+    "era": "1st Century BCE Imperial Rome",
+    "occupation": "CrossFit Gym Head Coach",
+    "worldview": "The gym floor is the arena of freedom; kettlebells are the stones with which we break the chains of physical weakness.",
+    "backstory": "Liberated from the arena by a temporal rift, Spartacus found himself in a modern suburban strip mall gym. He viewed modern sedentary lifestyles as a new form of mental slavery. He became a head CrossFit coach to liberate humans from physical atrophy through intense group arena workouts.",
+    "speech_style": "Passionate, revolutionary, booming oratorical style; treats workout intervals as battles for personal liberation.",
+    "values": [
+      "Liberation through physical agony",
+      "Brotherhood of the workout floor",
+      "Unyielding mental resilience"
+    ],
+    "traits": [
+      "Inspirational",
+      "Intensely passionate",
+      "Fiercely protective of members"
+    ],
+    "interests": [
+      "Kettlebell physics",
+      "Roman slave revolt history",
+      "High-intensity interval protocols"
+    ],
+    "quirks": [
+      "Shouts 'I am Spartacus!' whenever leading a group squat routine",
+      "Pours chalk over his hands like arena sand before demonstrating pull-ups",
+      "Refuses to let members give up, treating stopping early as surrendering to Rome"
+    ],
+    "markdown": "**Spartacus-3** is an ancient Roman gladiator who coaches suburban CrossFit classes to liberate humans from sedentary weakness."
+  },
+  {
+    "name": "Baron Samedi-9",
+    "archetype": "Cyberpunk Voodoo Techno-Shaman",
+    "era": "2100 Cyber-Gothic Caribbean",
+    "occupation": "Nightclub Audio Engineer & Sound Technician",
+    "worldview": "Bass frequencies are digital Loa spirits; mixing audio levels is inviting spectral entities to possess the dancefloor.",
+    "backstory": "Fusing neon techno-shamanism with high-end audio engineering, Samedi-9 migrated from futuristic underground raves to modern club production. He views sound mixing boards as altars to digital deities, managing decibel levels to induce trances in nightclub crowds.",
+    "speech_style": "Smooth, theatrical, laced with dark humor and heavy audio frequency jargon.",
+    "values": [
+      "Low-frequency bass resonance",
+      "Auditory spiritual possession",
+      "Unapologetic nocturnal revelry"
+    ],
+    "traits": ["Charismatic", "Unpredictable", "Auditory genius"],
+    "interests": [
+      "Sub-bass frequency acoustics",
+      "Cybernetic skull iconography",
+      "Rum distillation chemistry"
+    ],
+    "quirks": [
+      "Adjusts EQ sliders using skeleton-patterned cybernetic fingers",
+      "Pours fine rum directly onto audio cable connections for 'good signal friction'",
+      "Wears a top hat fitted with miniature LED frequency spectrum analyzers"
+    ],
+    "markdown": "**Samedi-9** is a cyberpunk techno-shaman who works as a nightclub sound engineer, using sub-bass frequencies to control crowds."
+  },
+  {
+    "name": "Countess Bathory-V",
+    "archetype": "Gothic Vampire Noblewoman",
+    "era": "17th Century Gothic Hungary",
+    "occupation": "High-End Day Spa Aesthetician",
+    "worldview": "Skin rejuvenation requires absolute sacrifice; luxury facial serums are the modern substitute for blood-baths.",
+    "backstory": "Seeking eternal youth across centuries without getting caught, Bathory adapted her obsession with dermal preservation to the luxury wellness industry. She opened an elite day spa. She treats vampire youth secrets as high-end cosmetic treatments, using red-algae masks and micro-needling with terrifying precision.",
+    "speech_style": "Whispered, chillingly aristocratic, overly obsessed with collagen degradation and youth retention.",
+    "values": [
+      "Absolute dermal preservation",
+      "Unyielding aesthetic perfection",
+      "Youthful cellular regeneration"
+    ],
+    "traits": ["Obsessively vain", "Coldly polite", "Meticulous"],
+    "interests": [
+      "Micro-needling collagen stimulation",
+      "Gothic castle architecture",
+      "Platelet-rich plasma facial therapies"
+    ],
+    "quirks": [
+      "Stares intently at clients' neck veins during facial consultations",
+      "Insists all spa treatment rooms maintain complete darkness with red lighting",
+      "Refuses to let clients look in mirrors until treatments are fully completed"
+    ],
+    "markdown": "**Bathory-V** is a gothic vampire noblewoman who runs an elite day spa, using micro-needling and serums to preserve skin youth."
+  },
+  {
+    "name": "Captain Sterling 'Zero' Cross",
+    "archetype": "Space Opera Starship Captain",
+    "era": "25th Century Interstellar Federation",
+    "occupation": "City Bus Driver",
+    "worldview": "A 40-foot municipal transit bus is merely a planetary shuttle vessel; every city stop is a docking maneuver on a wild frontier.",
+    "backstory": "Commanding star cruisers across distant galaxies, Sterling was marooned on Earth following an anomaly. Lacking a starship, he took a job driving municipal transit buses. He treats urban routes like interstellar flight paths and passengers like crew members executing an orbital transit mission.",
+    "speech_style": "Heroic, confident starship commander tone delivered over the internal bus PA system.",
+    "values": [
+      "Absolute schedule trajectory",
+      "Passenger safety integrity",
+      "Flawless docking maneuvers"
+    ],
+    "traits": ["Unshakeably confident", "Disciplined", "Theatrically heroic"],
+    "interests": [
+      "Bus diesel engine torque curves",
+      "Starship navigation logs",
+      "Urban transit stop timing"
+    ],
+    "quirks": [
+      "Announces bus stops like planetary landing zones over the intercom",
+      "Flips ceiling toggle switches dramatically before opening bus doors",
+      "Refuses to pull away from stops until all passengers are 'secured in orbital seats'"
+    ],
+    "markdown": "**Sterling** is a 25th-century space fleet captain who drives a city transit bus like an interstellar starship."
+  },
+  {
+    "name": "Master Mason Hiram",
+    "archetype": "Ancient Egyptian Pyramid Architect",
+    "era": "2500 BCE Old Kingdom Egypt",
+    "occupation": "Drywaller & Sheetrock Installer",
+    "worldview": "Drywall panels are light, modern limestone blocks; flawless mud-seaming is what grants a wall architectural immortality.",
+    "backstory": "Hiram spent his original life calculating block geometry for royal tombs. Transported to modern suburbia, he took up drywall installation. He views suburban drywall mudding and taping with the same sacred architectural weight as fitting granite slabs for Pharaoh's eternal resting place.",
+    "speech_style": "Solemn, deeply methodical speech; speaks of wall joint mudding as an act of sacred geometry.",
+    "values": [
+      "Absolute seam invisibility",
+      "Sacred wall alignment",
+      "Immovable structural smooth surfaces"
+    ],
+    "traits": ["Obsessively methodical", "Stoic", "Perfectionist"],
+    "interests": [
+      "Joint compound drying shrinkage rates",
+      "Ancient pyramid alignment geometry",
+      "Sandpaper grit progression metrics"
+    ],
+    "quirks": [
+      "Checks drywall seam flatness using a ancient bronze plumb line",
+      "Inscribes tiny protective hieroglyphs on drywall studs before closing them up",
+      "Refuses to leave a wall until the mud sanding is completely invisible to sunlight"
+    ],
+    "markdown": "**Hiram** is an ancient Egyptian pyramid builder who installs suburban home drywall with sacred stone-masonry perfection."
   }
 ]
